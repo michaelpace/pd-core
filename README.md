@@ -1,1 +1,1 @@
-pd vanilla patches with no external dependencies (aside from heavylib). all should play well with heavy.
+personal collection of pd vanilla utilities, with no external dependencies (aside from heavylib). all should play well with heavy. no guarantees about the quality or functionality of any of this; use at your own peril!
