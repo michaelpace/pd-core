@@ -755,7 +755,6 @@ a value.;
 #X connect 41 0 42 0;
 #X connect 42 0 4 0;
 #X restore 39 564 pd calculate_final_velocity;
-#X f 55;
 #X obj 358 101 t f f;
 #X obj 460 101 t f f;
 #X text 457 4 y (int 0...3);

@@ -7,8 +7,8 @@
 #X obj 59 226 f;
 #X obj 103 226 f;
 #X obj 267 198 inlet;
-#X obj 267 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 267 222 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 61 407 16step, f 44;
 #X obj 81 359 pack f f;
 #X obj 81 383 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
@@ -45,6 +45,7 @@ OUT ALL STATE \, RESETTING \; /// EVERYTHING BACK TO 0;
 #X connect 6 0 9 0;
 #X connect 7 0 8 0;
 #X connect 8 0 4 0;
+#X connect 8 0 13 1;
 #X connect 9 0 3 0;
 #X connect 10 0 11 0;
 #X connect 11 0 9 1;
