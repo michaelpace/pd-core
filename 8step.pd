@@ -1,0 +1,71 @@
+#N canvas 230 228 509 345 12;
+#X obj 18 38 inlet;
+#X obj 18 314 outlet;
+#X obj 18 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 60 149 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 92 150 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 124 148 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 156 150 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 188 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 220 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 254 152 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 82 66 inlet;
+#X obj 121 66 inlet;
+#X obj 160 66 inlet;
+#X obj 199 66 inlet;
+#X obj 238 66 inlet;
+#X obj 277 66 inlet;
+#X obj 316 66 inlet;
+#X obj 355 66 inlet;
+#X text 12 10 0-index of which note to play;
+#X obj 18 174 f \$1;
+#X obj 60 204 f \$2;
+#X obj 92 174 f \$3;
+#X obj 124 204 f \$4;
+#X obj 156 174 f \$5;
+#X obj 188 204 f \$6;
+#X obj 220 174 f \$7;
+#X obj 252 204 f \$8;
+#X obj 18 118 sel 0 1 2 3 4 5 6 7, f 39;
+#X text 277 19 \$1 - \$8 are the values to emit;
+#X connect 0 0 27 0;
+#X connect 2 0 19 0;
+#X connect 3 0 20 0;
+#X connect 4 0 21 0;
+#X connect 5 0 22 0;
+#X connect 6 0 23 0;
+#X connect 7 0 24 0;
+#X connect 8 0 25 0;
+#X connect 9 0 26 0;
+#X connect 10 0 19 1;
+#X connect 11 0 20 1;
+#X connect 12 0 21 1;
+#X connect 13 0 22 1;
+#X connect 14 0 23 1;
+#X connect 15 0 24 1;
+#X connect 16 0 25 1;
+#X connect 17 0 26 1;
+#X connect 19 0 1 0;
+#X connect 20 0 1 0;
+#X connect 21 0 1 0;
+#X connect 22 0 1 0;
+#X connect 23 0 1 0;
+#X connect 24 0 1 0;
+#X connect 25 0 1 0;
+#X connect 26 0 1 0;
+#X connect 27 0 2 0;
+#X connect 27 1 3 0;
+#X connect 27 2 4 0;
+#X connect 27 3 5 0;
+#X connect 27 4 6 0;
+#X connect 27 5 7 0;
+#X connect 27 6 8 0;
+#X connect 27 7 9 0;

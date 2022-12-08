@@ -1,0 +1,41 @@
+#N canvas 0 25 503 506 12;
+#X obj 14 130 inlet~;
+#X obj 250 130 inlet;
+#X obj 369 130 inlet;
+#X obj 250 154 f \$1;
+#X obj 301 130 loadbang;
+#X obj 369 154 f \$2;
+#X obj 250 355 *~;
+#X text 13 106 signal;
+#X obj 250 379 outlet~;
+#X text 18 4 /// DELAYS AN AUDIO SIGNAL AND FEEDS BACK INTO ITSELF
+;
+#X obj 250 331 vd~ broadcast-echo-\$0;
+#X obj 250 286 line~;
+#X msg 369 262 \$1 10;
+#X obj 369 286 line~;
+#X obj 250 178 max 1;
+#X obj 369 178 clip 0 0.95;
+#X text 229 107 \$1 delay time;
+#X text 367 108 \$2 feedback;
+#X text 16 21 /// SEEALSO: [delonce~] FOR A NON-ECHOING VERSION OF
+THIS \, \; /// OR [echo~] FOR A VERSION OF THIS THAT DOESN'T CHANGE
+\; /// PITCH AS YOU CHANGE DELAY TIME.;
+#X msg 250 262 \$1 50;
+#X obj 14 154 delwrite~ broadcast-echo-\$0 60000;
+#X connect 0 0 20 0;
+#X connect 1 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 14 0;
+#X connect 4 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 15 0;
+#X connect 6 0 8 0;
+#X connect 6 0 20 0;
+#X connect 10 0 6 0;
+#X connect 11 0 10 0;
+#X connect 12 0 13 0;
+#X connect 13 0 6 1;
+#X connect 14 0 19 0;
+#X connect 15 0 12 0;
+#X connect 19 0 11 0;

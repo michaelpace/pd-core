@@ -1,0 +1,9 @@
+#N canvas 835 68 195 248 12;
+#X obj 64 9 ffkb1;
+#X obj 64 24 ffkb2;
+#X obj 21 48 ffk1;
+#X obj 21 66 ffk2;
+#X obj 37 94 ffs;
+#X obj 37 149 ffx;
+#X obj 37 174 ffb;
+#X coords 0 -1 1 1 148 180 2 21 9;

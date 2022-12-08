@@ -1,0 +1,18 @@
+#N canvas 305 222 347 263 12;
+#X obj 142 74 inlet;
+#X obj 142 148 moses;
+#X msg 142 172 -1;
+#X obj 142 226 outlet;
+#X msg 174 172 1;
+#X text 4 1 /// RETURNS -1 IF THE f PASSED TO THE INLET IS \; /// NEGATIVE
+\; /// RETURNS 0 IF THE f IS 0 \; /// OTHERWISE RETURNS 1;
+#X msg 217 172 0;
+#X obj 142 98 sel 0;
+#X connect 0 0 7 0;
+#X connect 1 0 2 0;
+#X connect 1 1 4 0;
+#X connect 2 0 3 0;
+#X connect 4 0 3 0;
+#X connect 6 0 3 0;
+#X connect 7 0 6 0;
+#X connect 7 1 1 0;

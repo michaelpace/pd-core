@@ -1,0 +1,6 @@
+#N canvas 422 190 179 119 12;
+#X obj 55 22 noise~;
+#X obj 55 46 pow~ 4000;
+#X obj 55 70 outlet~;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

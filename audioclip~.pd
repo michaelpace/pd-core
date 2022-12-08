@@ -1,0 +1,21 @@
+#N canvas 88 64 447 261 12;
+#X text 189 104 /// \$1 the clip NAME in this patch;
+#X text 187 119 /// \$2 the # of samples;
+#X obj 22 96 loadbang;
+#X obj 22 120 t b b, f 13;
+#X obj 22 144 samplerate~;
+#X obj 110 144 f \$2;
+#X obj 22 168 /, f 13;
+#X obj 22 192 print \$1_hz;
+#X text 7 5 /// TO USE: (1) initialize with creation args \$1 and \$2.
+there needs to be a file at Broadcast/Assets/Audio/\$1-\$2.wav for
+this to work. (2) if using hv/unity \, load the audio file into clip-\$1
+with heavy's API. if just using pd \, use [__audioclip_load \$1 \$2].
+(3) prints out 1x playback rate.;
+#X obj 192 151 table clip-\$1 \$2;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 1;
+#X connect 6 0 7 0;

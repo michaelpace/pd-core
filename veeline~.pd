@@ -1,0 +1,26 @@
+#N canvas 573 208 450 350 12;
+#X obj 21 141 unpack f f f, f 44;
+#X obj 21 221 line~;
+#X obj 21 249 percentgraph~;
+#X obj 21 167 pipe f f 0, f 44;
+#X obj 21 193 pack f f, f 44;
+#X obj 21 273 outlet~;
+#X obj 21 87 inlet;
+#X obj 109 87 inlet;
+#X msg 109 111 clear;
+#X text 7 26 /// BANG RIGHT INLET TO STOP ANY CURRENT LINES;
+#X text 8 9 /// PASS A LIST INTO LEFT INLET \, SAME SYNTAX AS [vline~].
+;
+#X text 13 43 // TODO: NOTE THAT THIS IS UNTESTED WITH HEAVY... THE
+PIPE THING MAY NOT WORK;
+#X connect 0 0 3 0;
+#X connect 0 1 3 1;
+#X connect 0 2 3 2;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 1 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 3 0;

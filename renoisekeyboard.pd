@@ -1,0 +1,12 @@
+#N canvas 314 365 966 300 12;
+#X obj 393 217 outlet;
+#X obj 207 90 generickeyboard 60 44 108 46 59 47;
+#X obj 603 90 generickeyboard 72 105 57 111 48 112 91 61 93;
+#X obj 519 57 generickeyboard 60 113 50 119 51 101 114 53 116 54 121
+55 117;
+#X obj 25 57 generickeyboard 48 122 115 120 100 99 118 103 98 104 110
+106 109;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;

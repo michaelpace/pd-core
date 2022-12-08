@@ -1,0 +1,27 @@
+#N canvas 251 115 450 402 12;
+#X obj 21 161 unpack f f f, f 44;
+#X obj 21 187 pipe f f 0, f 44;
+#X obj 21 213 pack f f, f 44;
+#X obj 21 241 line;
+#X obj 21 269 percentgraph;
+#X obj 21 293 outlet;
+#X obj 21 107 inlet;
+#X obj 109 107 inlet;
+#X msg 109 131 clear;
+#X text 8 56 /// BANG RIGHT INLET TO STOP ANY CURRENT LINES;
+#X text 14 73 // TODO: NOTE THAT THIS IS UNTESTED WITH HEAVY... THE
+PIPE THING MAY NOT WORK;
+#X text 8 8 /// PASS A LIST INTO LEFT INLET. SYNTAX: [value duration
+delay_before_starting]. so a list of "1 200 800" will wait 800ms \,
+then ramp from its current value to 1 in 200ms.;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 0 2 1 2;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 0 0;
+#X connect 7 0 8 0;
+#X connect 8 0 1 0;

@@ -1,0 +1,8 @@
+#N canvas 0 25 450 124 12;
+#X obj 167 47 inlet;
+#X obj 167 95 outlet;
+#X text 14 12 /// x * x * x * x * x per https://easings.net/#easeInQuint
+;
+#X obj 167 71 pow 5;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;

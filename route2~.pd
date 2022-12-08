@@ -1,0 +1,28 @@
+#N canvas 0 25 553 339 12;
+#X obj 31 46 inlet~;
+#X obj 293 46 inlet;
+#X obj 293 100 clip 0 1;
+#X obj 293 148 t f f, f 12;
+#X obj 374 196 sig~;
+#X obj 293 172 oneminus;
+#X obj 293 196 sig~;
+#X obj 31 288 outlet~;
+#X obj 293 124 debounce 50;
+#X obj 151 291 outlet~;
+#X text 27 22 signal;
+#X obj 31 264 *~;
+#X obj 151 267 *~;
+#X text 150 19 0 is all first outlet \, and 1 is all second outlet
+;
+#X connect 0 0 11 0;
+#X connect 0 0 12 0;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 3 0 5 0;
+#X connect 3 1 4 0;
+#X connect 4 0 12 1;
+#X connect 5 0 6 0;
+#X connect 6 0 11 1;
+#X connect 8 0 3 0;
+#X connect 11 0 7 0;
+#X connect 12 0 9 0;

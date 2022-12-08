@@ -1,0 +1,11 @@
+#N canvas 541 269 172 185 12;
+#X obj 19 70 inlet;
+#X obj 19 118 t b s;
+#X obj 19 142 s, f 5;
+#X obj 19 94 symbol;
+#X text 7 7 /// PASS A MESSAGE TO \; /// HAVE IT SENT VIA \; /// AN
+[s].;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 3 0 1 0;

@@ -1,0 +1,162 @@
+#N canvas 0 23 1280 755 12;
+#X obj 211 719 outlet;
+#X obj 99 457 shuffledcollection;
+#X obj 349 457 shuffledcollection;
+#X obj 599 457 shuffledcollection;
+#X obj 849 457 shuffledcollection;
+#X obj 139 517 shuffledcollection;
+#X obj 389 517 shuffledcollection;
+#X obj 639 517 shuffledcollection;
+#X obj 889 517 shuffledcollection;
+#X obj 179 577 shuffledcollection;
+#X obj 429 577 shuffledcollection;
+#X obj 679 577 shuffledcollection;
+#X obj 929 577 shuffledcollection;
+#X obj 219 637 shuffledcollection;
+#X obj 469 637 shuffledcollection;
+#X obj 719 637 shuffledcollection;
+#X obj 969 637 shuffledcollection;
+#X obj 569 154 f;
+#X obj 47 347 f;
+#X obj 47 371 pack f f;
+#X obj 21 65 inlet;
+#X obj 1022 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1067 216 0;
+#X obj 21 299 f, f 14;
+#X obj 21 99 t b f f, f 8;
+#X obj 51 259 f, f 5;
+#X text 74 347 <- this float is the state we're transitioning from
+;
+#X text 91 206 <- this block says \, if this is the very first float
+we have received \, send it directly to the last phase \, not recording
+a transition in the process (since we don't have a state to transition
+_from_). otherwise \, it's ok to record the transition.;
+#X text 1290 272 <- clear all state we have;
+#X obj 21 184 isfirst;
+#X obj 523 100 isfirst;
+#X obj 211 675 t f f f f, f 119;
+#X obj 523 126 first, f 15;
+#X obj 1022 191 t b b b b b, f 20;
+#X text 597 155 <- this float is the state we're transitioning from
+;
+#X obj 1127 89 f;
+#X text 11 4 /// MARKOV CHAIN WITH 16 POSSIBLE STATES \, ENUMERATED
+WITH \$1 \, \$2 \, ... \, \$16.;
+#X obj 21 322 t f b f, f 8;
+#X text 91 99 ------------------------> \; this block says \, if this
+is the first time we're trying to bang to get a value \, then start
+from the very first state we were given. also \, add a transition from
+the current state to the first state \, so we don't have any dead ends.
+otherwise \, continue from the current state.;
+#X obj 569 178 16sel \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10 \$11
+\$12 \$13 \$14 \$15 \$16;
+#X obj 47 394 16route \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10 \$11
+\$12 \$13 \$14 \$15 \$16;
+#X obj 523 56 inlet;
+#X obj 523 80 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 1022 63 inlet;
+#X obj 1127 65 inlet;
+#X text 420 5 /// PASS A FLOAT TO FIRST INLET TO TRANSITION TO THAT
+STATE (RECORDING THE TRANSITION IN THE PROCESS). BANG SECOND INLET
+TO GENERATE A NEW STATE FROM THE CURRENT STATE.;
+#X text 840 5 /// BANG THIRD INLET TO CLEAR OUT ALL STATE. PASS A FLOAT
+TO LAST INLET TO SET THE CURRENT STATE TO THAT FLOAT.;
+#X connect 1 0 31 0;
+#X connect 2 0 31 0;
+#X connect 3 0 31 0;
+#X connect 4 0 31 0;
+#X connect 5 0 31 0;
+#X connect 6 0 31 0;
+#X connect 7 0 31 0;
+#X connect 8 0 31 0;
+#X connect 9 0 31 0;
+#X connect 10 0 31 0;
+#X connect 11 0 31 0;
+#X connect 12 0 31 0;
+#X connect 13 0 31 0;
+#X connect 14 0 31 0;
+#X connect 15 0 31 0;
+#X connect 16 0 31 0;
+#X connect 17 0 39 0;
+#X connect 18 0 19 0;
+#X connect 19 0 40 0;
+#X connect 20 0 24 0;
+#X connect 21 0 33 0;
+#X connect 22 0 17 1;
+#X connect 22 0 18 1;
+#X connect 23 0 37 0;
+#X connect 24 0 29 0;
+#X connect 24 1 23 1;
+#X connect 24 2 25 1;
+#X connect 25 0 31 0;
+#X connect 29 0 25 0;
+#X connect 29 1 23 0;
+#X connect 30 0 32 0;
+#X connect 30 1 17 0;
+#X connect 31 0 0 0;
+#X connect 31 1 17 1;
+#X connect 31 2 18 1;
+#X connect 31 3 32 1;
+#X connect 32 0 23 0;
+#X connect 33 0 4 2;
+#X connect 33 0 16 2;
+#X connect 33 0 15 2;
+#X connect 33 0 14 2;
+#X connect 33 0 13 2;
+#X connect 33 0 12 2;
+#X connect 33 0 11 2;
+#X connect 33 0 10 2;
+#X connect 33 0 9 2;
+#X connect 33 0 8 2;
+#X connect 33 0 7 2;
+#X connect 33 0 6 2;
+#X connect 33 0 5 2;
+#X connect 33 0 3 2;
+#X connect 33 0 2 2;
+#X connect 33 0 1 2;
+#X connect 33 1 22 0;
+#X connect 33 2 29 1;
+#X connect 33 3 30 1;
+#X connect 33 4 32 2;
+#X connect 35 0 31 0;
+#X connect 37 0 31 0;
+#X connect 37 1 18 0;
+#X connect 37 2 19 1;
+#X connect 39 0 1 0;
+#X connect 39 1 2 0;
+#X connect 39 2 3 0;
+#X connect 39 3 4 0;
+#X connect 39 4 5 0;
+#X connect 39 5 6 0;
+#X connect 39 6 7 0;
+#X connect 39 7 8 0;
+#X connect 39 8 9 0;
+#X connect 39 9 10 0;
+#X connect 39 10 11 0;
+#X connect 39 11 12 0;
+#X connect 39 12 13 0;
+#X connect 39 13 14 0;
+#X connect 39 14 15 0;
+#X connect 39 15 16 0;
+#X connect 40 0 1 1;
+#X connect 40 1 2 1;
+#X connect 40 2 3 1;
+#X connect 40 3 4 1;
+#X connect 40 4 5 1;
+#X connect 40 5 6 1;
+#X connect 40 6 7 1;
+#X connect 40 7 8 1;
+#X connect 40 8 9 1;
+#X connect 40 9 10 1;
+#X connect 40 10 11 1;
+#X connect 40 11 12 1;
+#X connect 40 12 13 1;
+#X connect 40 13 14 1;
+#X connect 40 14 15 1;
+#X connect 40 15 16 1;
+#X connect 41 0 42 0;
+#X connect 42 0 30 0;
+#X connect 43 0 21 0;
+#X connect 44 0 35 0;

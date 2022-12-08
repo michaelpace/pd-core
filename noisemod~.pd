@@ -1,0 +1,18 @@
+#N canvas 350 172 450 300 12;
+#X obj 129 120 noise~;
+#X obj 129 145 *~;
+#X obj 218 150 sig~;
+#X obj 218 51 inlet;
+#X obj 129 169 lop~ 10;
+#X obj 129 193 outlet~;
+#X obj 218 125 scaled 0 1 0 10000;
+#X obj 218 75 f \$1;
+#X obj 218 99 easeincubic;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 1;
+#X connect 3 0 7 0;
+#X connect 4 0 5 0;
+#X connect 6 0 2 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;

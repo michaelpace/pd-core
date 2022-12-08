@@ -1,0 +1,50 @@
+#N canvas 0 23 443 528 12;
+#X obj 10 67 inlet;
+#X obj 10 91 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 10 222 random 10000;
+#X obj 10 182 t b b, f 25;
+#X obj 182 222 random 10000;
+#X obj 10 324 t b l, f 14;
+#X obj 182 270 t f f;
+#X obj 167 404 del;
+#X obj 227 63 inlet;
+#X obj 227 87 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 227 136 stop;
+#X msg 147 145 0 0;
+#X obj 10 300 pack f f 0;
+#X obj 10 246 scaled 0 10000 0 1;
+#X obj 10 111 t b b, f 20;
+#X obj 17 423 veeline;
+#X obj 17 447 percentgraph;
+#X obj 17 474 outlet;
+#X obj 227 107 t b b;
+#X obj 182 246 scaled 0 10000 \$1 \$2;
+#X text 8 5 /// BANG TO GENERATE RANDOM VALUES FROM 0 TO 1 FROM LEFT
+OUTLET. BANG RIGHT OUTLET TO STOP. \$1 AND \$2 ARE REQUIRED AND REPRESENT
+MIN AND MAX POSSIBLE LINE DURATION \, RESPECTIVELY.;
+#X connect 0 0 1 0;
+#X connect 1 0 14 0;
+#X connect 2 0 13 0;
+#X connect 3 0 2 0;
+#X connect 3 1 4 0;
+#X connect 4 0 19 0;
+#X connect 5 0 7 0;
+#X connect 5 1 15 0;
+#X connect 6 0 12 1;
+#X connect 6 1 7 1;
+#X connect 7 0 3 0;
+#X connect 8 0 9 0;
+#X connect 9 0 18 0;
+#X connect 10 0 7 0;
+#X connect 11 0 15 0;
+#X connect 12 0 5 0;
+#X connect 13 0 12 0;
+#X connect 14 0 3 0;
+#X connect 14 1 11 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 18 0 10 0;
+#X connect 18 1 15 1;
+#X connect 19 0 6 0;

@@ -1,0 +1,231 @@
+#N canvas 0 65 1249 670 12;
+#X obj 18 88 inlet;
+#X obj 233 616 outlet;
+#X obj 18 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 233 576 5 0 0 0 - - -;
+#X obj 77 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 136 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 195 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 254 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 313 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 372 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 431 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 18 136 first, f 85;
+#X obj 18 258 sel 1 2 3 4 5 6 7 8, f 68;
+#X obj 18 312 bool;
+#X obj 18 356 t b b;
+#X obj 18 234 f, f 38;
+#X msg 50 381 2;
+#X obj 18 160 changed, f 29;
+#X obj 218 184 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 77 312 bool;
+#X obj 77 356 t b b;
+#X obj 136 312 bool;
+#X obj 136 356 t b b;
+#X obj 195 312 bool;
+#X obj 195 356 t b b;
+#X obj 254 312 bool;
+#X obj 254 356 t b b;
+#X obj 313 312 bool;
+#X obj 313 356 t b b;
+#X obj 372 312 bool;
+#X obj 372 356 t b b;
+#X obj 431 312 bool;
+#X obj 431 356 t b b;
+#X msg 109 381 3;
+#X msg 168 381 4;
+#X msg 228 381 5;
+#X msg 286 381 6;
+#X msg 345 381 7;
+#X msg 404 381 8;
+#X msg 463 381 1;
+#X obj 717 395 adder8, f 68;
+#X obj 717 375 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 717 463 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 753 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 812 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 871 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 930 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 989 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 1048 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 1107 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 1166 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 753 293 t b f f;
+#X obj 812 293 t b f f;
+#X obj 871 293 t b f f;
+#X obj 930 293 t b f f;
+#X obj 989 293 t b f f;
+#X obj 1048 293 t b f f;
+#X obj 1107 293 t b f f;
+#X obj 1166 293 t b f f;
+#X text 761 445 if all steps are enabled \, snap back to the same beat
+as the metronome;
+#X obj 753 229 inlet;
+#X msg 18 506 1;
+#X msg 77 506 2;
+#X msg 136 506 3;
+#X msg 195 506 4;
+#X msg 254 506 5;
+#X msg 313 506 6;
+#X msg 372 506 7;
+#X msg 431 506 8;
+#X obj 717 439 sel 8;
+#X obj 709 532 sel 0;
+#X obj 709 556 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 741 576 1;
+#X msg 709 576 0;
+#X obj 480 332 spigot, f 21;
+#X text 782 539 if no steps are enabled \, kill the cascade to prevent
+a stack overflow \; otherwise \, it's ok to let it wrap from step 8
+to step 1;
+#X obj 753 253 route 1 2 3 4 5 6 7 8, f 68;
+#X obj 18 112 t b f, f 42;
+#X text 423 23 /// PASS OUTPUT OF [metronome] TO LEFT INLET. \; ///
+PASS LISTS LIKE "3 0" OR "8 1" TO RIGHT INLET \; /// TO DISABLE THE
+THIRD STEP OR ENABLE THE LAST STEP \, \; /// RESPECTIVELY. \; /// SOMEWHAT
+INSPIRED BY THE "STEP JUMP" BUTTON ON THE \; /// VOLCA DRUM.;
+#X connect 0 0 77 0;
+#X connect 2 0 61 0;
+#X connect 3 0 1 0;
+#X connect 4 0 62 0;
+#X connect 5 0 63 0;
+#X connect 6 0 64 0;
+#X connect 7 0 65 0;
+#X connect 8 0 66 0;
+#X connect 9 0 67 0;
+#X connect 10 0 68 0;
+#X connect 11 0 17 0;
+#X connect 12 0 13 0;
+#X connect 12 1 19 0;
+#X connect 12 2 21 0;
+#X connect 12 3 23 0;
+#X connect 12 4 25 0;
+#X connect 12 5 27 0;
+#X connect 12 6 29 0;
+#X connect 12 7 31 0;
+#X connect 13 0 14 0;
+#X connect 13 1 19 0;
+#X connect 14 0 2 0;
+#X connect 14 1 16 0;
+#X connect 15 0 12 0;
+#X connect 16 0 15 1;
+#X connect 17 0 15 0;
+#X connect 17 1 18 0;
+#X connect 18 0 15 0;
+#X connect 19 0 20 0;
+#X connect 19 1 21 0;
+#X connect 20 0 4 0;
+#X connect 20 1 33 0;
+#X connect 21 0 22 0;
+#X connect 21 1 23 0;
+#X connect 22 0 5 0;
+#X connect 22 1 34 0;
+#X connect 23 0 24 0;
+#X connect 23 1 25 0;
+#X connect 24 0 6 0;
+#X connect 24 1 35 0;
+#X connect 25 0 26 0;
+#X connect 25 1 27 0;
+#X connect 26 0 7 0;
+#X connect 26 1 36 0;
+#X connect 27 0 28 0;
+#X connect 27 1 29 0;
+#X connect 28 0 8 0;
+#X connect 28 1 37 0;
+#X connect 29 0 30 0;
+#X connect 29 1 31 0;
+#X connect 30 0 9 0;
+#X connect 30 1 38 0;
+#X connect 31 0 32 0;
+#X connect 31 1 74 0;
+#X connect 32 0 10 0;
+#X connect 32 1 39 0;
+#X connect 33 0 15 1;
+#X connect 34 0 15 1;
+#X connect 35 0 15 1;
+#X connect 36 0 15 1;
+#X connect 37 0 15 1;
+#X connect 38 0 15 1;
+#X connect 39 0 15 1;
+#X connect 40 0 69 0;
+#X connect 41 0 40 0;
+#X connect 42 0 11 2;
+#X connect 43 0 51 0;
+#X connect 44 0 52 0;
+#X connect 45 0 53 0;
+#X connect 46 0 54 0;
+#X connect 47 0 55 0;
+#X connect 48 0 56 0;
+#X connect 49 0 57 0;
+#X connect 50 0 58 0;
+#X connect 51 0 41 0;
+#X connect 51 1 40 1;
+#X connect 51 2 13 1;
+#X connect 52 0 41 0;
+#X connect 52 1 40 2;
+#X connect 52 2 19 1;
+#X connect 53 0 41 0;
+#X connect 53 1 40 3;
+#X connect 53 2 21 1;
+#X connect 54 0 41 0;
+#X connect 54 1 40 4;
+#X connect 54 2 23 1;
+#X connect 55 0 41 0;
+#X connect 55 1 40 5;
+#X connect 55 2 25 1;
+#X connect 56 0 41 0;
+#X connect 56 1 40 6;
+#X connect 56 2 27 1;
+#X connect 57 0 41 0;
+#X connect 57 1 40 7;
+#X connect 57 2 29 1;
+#X connect 58 0 41 0;
+#X connect 58 1 40 8;
+#X connect 58 2 31 1;
+#X connect 60 0 76 0;
+#X connect 61 0 3 0;
+#X connect 62 0 3 0;
+#X connect 63 0 3 0;
+#X connect 64 0 3 0;
+#X connect 65 0 3 0;
+#X connect 66 0 3 0;
+#X connect 67 0 3 0;
+#X connect 68 0 3 0;
+#X connect 69 0 42 0;
+#X connect 69 1 70 0;
+#X connect 70 0 71 0;
+#X connect 70 1 72 0;
+#X connect 71 0 73 0;
+#X connect 72 0 74 1;
+#X connect 73 0 74 1;
+#X connect 74 0 13 0;
+#X connect 76 0 43 0;
+#X connect 76 1 44 0;
+#X connect 76 2 45 0;
+#X connect 76 3 46 0;
+#X connect 76 4 47 0;
+#X connect 76 5 48 0;
+#X connect 76 6 49 0;
+#X connect 76 7 50 0;
+#X connect 77 0 11 0;
+#X connect 77 1 11 1;

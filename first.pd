@@ -1,0 +1,30 @@
+#N canvas 764 201 450 301 12;
+#X obj 137 61 inlet;
+#X obj 137 179 isfirst, f 10;
+#X obj 137 203 f, f 15;
+#X obj 42 236 f, f 14;
+#X obj 137 155 t b f, f 15;
+#X obj 42 260 outlet;
+#X obj 204 61 inlet;
+#X obj 42 64 inlet;
+#X text 14 11 /// STORES THE FIRST f VALUE IT RECEIVES IN THE CENTER
+INLET. BANG THE LEFT INLET TO GET THE VALUE. BANG THE RIGHT INLET TO
+RESET ALL STATE.;
+#X obj 204 85 t b b;
+#X msg 236 114 0;
+#X obj 42 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 137 103 5 0 0 0 - - -;
+#X connect 0 0 12 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;
+#X connect 3 0 5 0;
+#X connect 4 0 1 0;
+#X connect 4 1 2 1;
+#X connect 6 0 9 0;
+#X connect 7 0 11 0;
+#X connect 9 0 1 1;
+#X connect 9 1 10 0;
+#X connect 10 0 3 1;
+#X connect 11 0 3 0;
+#X connect 12 0 4 0;

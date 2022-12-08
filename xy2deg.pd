@@ -1,0 +1,53 @@
+#N canvas 982 258 278 576 12;
+#X obj 42 205 pythagoras;
+#X floatatom 42 229 5 0 0 0 - - -;
+#X obj 42 252 t f f, f 6;
+#X obj 81 276 > 0.6;
+#X obj 42 320 spigot;
+#X obj 81 300 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 42 181 t f f, f 8;
+#X obj 110 181 t f f, f 10;
+#X obj 42 368 f, f 18;
+#X obj 74 392 f, f 16;
+#X obj 42 344 t b b;
+#X obj 42 416 swap, f 5;
+#X obj 42 440 atan2;
+#X floatatom 42 464 5 0 0 0 - - -;
+#X obj 42 487 scaled -3.14159 3.14159 0 360;
+#X obj 165 344 * -1;
+#X obj 183 368 * -1;
+#X floatatom 42 511 5 0 0 0 - - -;
+#X obj 42 534 outlet;
+#X obj 42 157 inlet;
+#X obj 110 157 inlet;
+#X text 7 11 /// GIVES THE ANGLE TO THE (x \, y) \; /// COORDINATES
+SPECIFIED BY THE \; /// TWO INLETS. \; /// RIGHT IS 0 DEGREES \, UP
+IS \; /// 90 DEGREES \, LEFT IS 180 DEGREES \; /// AND DOWN IS 270
+DEGREES. \; /// ONLY TAKES EFFECT IF x AND y ARE \; /// FAR ENOUGH
+FROM THE ORIGIN.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 2 1 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 10 0;
+#X connect 5 0 4 1;
+#X connect 6 0 0 0;
+#X connect 6 1 15 0;
+#X connect 7 0 0 1;
+#X connect 7 1 16 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 1;
+#X connect 10 0 8 0;
+#X connect 10 1 9 0;
+#X connect 11 0 12 0;
+#X connect 11 1 12 1;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 17 0;
+#X connect 15 0 8 1;
+#X connect 16 0 9 1;
+#X connect 17 0 18 0;
+#X connect 19 0 6 0;
+#X connect 20 0 7 0;

@@ -1,0 +1,109 @@
+#N canvas 0 23 871 420 12;
+#X obj 615 188 table fellmetro-\$0-retrig \$1, f 30;
+#X obj 615 207 table fellmetro-\$0-duration \$1;
+#N canvas 382 464 543 546 counter 0;
+#X obj 50 409 + 1;
+#X obj 37 15 inlet;
+#X obj 37 39 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 37 59 f;
+#X obj 37 83 sel 0, f 25;
+#X text 65 59 # of times to retrigger;
+#X obj 37 107 counter 4;
+#X obj 13 179 tabread fellmetro-\$0-retrig;
+#X obj 50 487 outlet;
+#X obj 124 517 outlet;
+#X obj 209 107 t b f;
+#X obj 241 131 - 1;
+#X obj 13 203 sel 0, f 14;
+#X obj 140 257 - 1;
+#X text 172 514 index to read from tables;
+#X obj 50 301 t f f, f 11;
+#X text 269 133 since we already triggered it once;
+#X text 169 257 since we already triggered it once;
+#X text 75 408 from 0-based index to 1-based beat;
+#X text 99 487 beat #;
+#X obj 37 131 t f f;
+#X obj 51 155 f;
+#X obj 108 227 t b f;
+#X connect 0 0 8 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 6 0;
+#X connect 4 1 10 0;
+#X connect 6 0 20 0;
+#X connect 7 0 12 0;
+#X connect 10 0 21 0;
+#X connect 10 1 11 0;
+#X connect 11 0 3 1;
+#X connect 12 0 6 0;
+#X connect 12 1 22 0;
+#X connect 13 0 3 1;
+#X connect 15 0 0 0;
+#X connect 15 1 9 0;
+#X connect 20 0 7 0;
+#X connect 20 1 21 1;
+#X connect 21 0 15 0;
+#X connect 22 0 21 0;
+#X connect 22 1 13 0;
+#X restore 15 328 pd counter;
+#X f 13;
+#X obj 15 308 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 15 352 outlet;
+#X obj 103 352 tabread fellmetro-\$0-duration;
+#X obj 103 376 del;
+#X obj 15 192 inlet;
+#X obj 15 216 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 15 284 spigot, f 7;
+#X obj 15 236 t f f, f 7;
+#X obj 15 260 sel 1;
+#X obj 61 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 324 192 inlet;
+#X obj 324 216 unpack f f f, f 38;
+#X obj 324 240 - 1;
+#X obj 324 312 f, f 19;
+#X obj 531 312 f, f 9;
+#X obj 324 264 t f f, f 30;
+#X obj 324 288 t b f, f 28;
+#X obj 531 288 t b f, f 30;
+#X obj 324 336 tabwrite fellmetro-\$0-retrig;
+#X obj 531 336 tabwrite fellmetro-\$0-duration;
+#X text 351 241 index is 0-based while beats are 1-based;
+#X text 23 15 /// TO USE: INITIALIZE WITH \$1 == TOTAL NUMBER OF STEPS
+\; /// FEED "s n d" LISTS INTO SECOND INLET \, WHERE \; /// "s" IS
+STEP # (BEGINNING AT 1) AND \; /// "n" IS NUMBER OF TIMES TO TRIGGER
+THAT STEP (0 MEANS \; /// DON'T TRIGGER \, 1 MEANS TRIGGER JUST ONCE
+\, LIKE A \; /// NORMAL SEQUENCER \, 2 MEANS TRIGGER TWICE \, ETC.)
+\; /// "d" IS DURATION THAT EACH TRIGGER OF THAT STEP SHOULD \; ///
+TAKE \, IN MILLISECONDS. \; /// SEND A 1 TO FIRST INLET TO START THE
+SEQUENCER AND \; /// SEND A 0 TO FIRST INLET TO STOP THE SEQUENCER.
+;
+#X connect 2 0 4 0;
+#X connect 2 1 5 0;
+#X connect 3 0 2 0;
+#X connect 5 0 6 0;
+#X connect 6 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 10 0;
+#X connect 9 0 3 0;
+#X connect 10 0 11 0;
+#X connect 10 1 12 0;
+#X connect 11 0 9 0;
+#X connect 12 0 9 1;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 14 1 16 1;
+#X connect 14 2 17 1;
+#X connect 15 0 18 0;
+#X connect 16 0 21 0;
+#X connect 17 0 22 0;
+#X connect 18 0 19 0;
+#X connect 18 1 20 0;
+#X connect 19 0 16 0;
+#X connect 19 1 21 1;
+#X connect 20 0 17 0;
+#X connect 20 1 22 1;

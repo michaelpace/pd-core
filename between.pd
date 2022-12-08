@@ -1,0 +1,23 @@
+#N canvas 724 277 450 300 12;
+#X obj 48 69 inlet;
+#X text 11 46 midi note to adjust;
+#X obj 197 69 inlet;
+#X obj 246 69 inlet;
+#X text 178 48 \$1 floor;
+#X text 247 47 \$2 ceil;
+#X obj 48 108 above \$1;
+#X obj 48 132 below \$2;
+#X obj 48 196 clip \$1 \$2;
+#X floatatom 48 220 5 0 0 0 - - -;
+#X obj 48 243 outlet;
+#X text 11 8 // MOVES THE OCTAVE OF A MIDI NOTE SO IT'S BETWEEN FLOOR
+AND CEIL;
+#X connect 0 0 6 0;
+#X connect 2 0 6 1;
+#X connect 2 0 8 1;
+#X connect 3 0 7 1;
+#X connect 3 0 8 2;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;

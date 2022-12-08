@@ -1,0 +1,36 @@
+#N canvas 77 25 450 300 12;
+#X obj 3 0 hsl 60 18 0 1 0 0 empty empty empty -2 -8 0 10 -262144 -1
+-1 1800 1;
+#X obj 88 130 loadbang;
+#X obj 246 178 f \$2;
+#X obj 167 178 f \$1;
+#X obj 167 202 pack f f, f 11;
+#X msg 167 226 range \$1 \$2;
+#X obj 1 103 outlet;
+#X floatatom 65 0 7 0 0 0 - - -;
+#X obj 289 94 inlet;
+#X obj 289 118 clip \$1 \$2;
+#X obj 152 76 clip \$1 \$2;
+#X obj 0 42 clip \$1 \$2;
+#X obj 88 154 t b b b, f 23;
+#X obj 88 178 f \$3;
+#X text 136 9 /// AN [hsl] WITH CUSTOMIZABLE RANGE. \; /// INITIALIZE
+WITH \$1 AND \$2 BEING THE \; /// DESIRED RANGE \, AND \$3 BEING THE
+\; /// DEFAULT / INITIAL VALUE.;
+#X connect 0 0 11 0;
+#X connect 1 0 12 0;
+#X connect 2 0 4 1;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 7 0 10 0;
+#X connect 8 0 9 0;
+#X connect 9 0 0 0;
+#X connect 9 0 7 0;
+#X connect 11 0 7 0;
+#X connect 11 0 6 0;
+#X connect 12 0 13 0;
+#X connect 12 1 3 0;
+#X connect 12 2 2 0;
+#X connect 13 0 9 0;
+#X coords 0 -1 1 1 116 18 2 0 0;

@@ -1,0 +1,51 @@
+#N canvas 0 25 967 300 12;
+#X obj 104 15 inlet;
+#X obj 104 207 additive_voice~;
+#X obj 104 87 *, f 18;
+#X obj 104 111 t b f, f 6;
+#X obj 104 159 pack f f;
+#X obj 104 183 route 0 1 2 3, f 79;
+#X obj 104 135 counter 4, f 42;
+#X obj 104 39 t b f b, f 35;
+#X obj 104 63 countrange 1 5;
+#X obj 241 207 additive_voice~;
+#X obj 379 207 additive_voice~;
+#X obj 516 207 additive_voice~;
+#X obj 351 240 *~ 0.25;
+#X obj 351 264 outlet~;
+#X obj 500 102 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 510 102 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 520 102 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 530 102 vsl 10 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 417 22 /// WAYS TO IMPROVE THIS PATCH: HAVE INLETS FOR THE
+OVERTONE VOLUMES INSTEAD OF SLIDERS \, HAVE MORE OVERTONES (MAKE AN
+8 AND 16? VERSION) \, HAVE THE VOLUME ADJUSTMENTS BE CLEANER \, ALLOW
+DEFINING INITIAL VOLUMES VIA CREATION ARGS.;
+#X connect 0 0 7 0;
+#X connect 1 0 12 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 3 1 4 1;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X connect 5 1 9 0;
+#X connect 5 2 10 0;
+#X connect 5 3 11 0;
+#X connect 6 0 4 0;
+#X connect 7 0 8 0;
+#X connect 7 1 2 1;
+#X connect 7 2 6 1;
+#X connect 8 0 2 0;
+#X connect 9 0 12 0;
+#X connect 10 0 12 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 14 0 1 1;
+#X connect 15 0 9 1;
+#X connect 16 0 10 1;
+#X connect 17 0 11 1;
+#X coords 0 -1 1 1 44 48 2 500 100;

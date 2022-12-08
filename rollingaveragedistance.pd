@@ -1,0 +1,39 @@
+#N canvas 103 223 665 419 12;
+#X obj 313 170 inlet;
+#X obj 476 340 rollingaverage \$1;
+#X obj 359 266 t f f b, f 34;
+#X obj 458 364 -;
+#X obj 458 388 outlet;
+#X text 7 6 /// INITIALIZE WITH \$1 BEING THE NUMBER OF FLOATS \; ///
+TO CONSIDER WHEN CALCULATING DISTANCE FROM AVERAGE \; /// (E.G. \,
+\$1 OF 3 MEANS "GIVE ME THE DISTANCE FROM THE \; /// AVERAGE OF THE
+3 MOST RECENT FLOATS \, EXCLUDING THIS \; /// ONE"). IF WE HAVEN'T
+REACHED \$1 ENTRIES YET \, RETURNS \; /// THE DISTANCE FROM THE AVERAGE
+OF THE AMOUNT WE HAVE \; /// SO FAR. \; /// MAX ALLOWED \$1 IS 16 \;
+/// PASS A FLOAT TO FIRST INLET TO RETURN ITS DISTANCE \; /// FROM
+THE CURRENT AVERAGE FROM THE OUTLET \, AND THEN \; /// ADD IT TO THE
+ROLLING AVERAGE.;
+#X obj 313 242 f;
+#X obj 313 218 isfirst;
+#X obj 313 194 t b f f, f 8;
+#X obj 359 242 f;
+#X obj 313 266 t b f;
+#X msg 313 290 0;
+#X text 8 289 if this is the first float we've received \, \; then
+our distance from the average is 0;
+#X connect 0 0 8 0;
+#X connect 1 0 3 1;
+#X connect 2 0 3 0;
+#X connect 2 1 1 0;
+#X connect 2 2 1 1;
+#X connect 3 0 4 0;
+#X connect 6 0 10 0;
+#X connect 7 0 6 0;
+#X connect 7 1 9 0;
+#X connect 8 0 7 0;
+#X connect 8 1 6 1;
+#X connect 8 2 9 1;
+#X connect 9 0 2 0;
+#X connect 10 0 11 0;
+#X connect 10 1 1 0;
+#X connect 11 0 4 0;

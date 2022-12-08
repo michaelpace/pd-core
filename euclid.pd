@@ -1,0 +1,43 @@
+#N canvas 657 56 450 530 12;
+#X obj 71 204 inlet;
+#X obj 71 288 counter \$1, f 13;
+#X obj 138 204 inlet;
+#X obj 71 312 + \$3, f 39;
+#X obj 341 204 inlet;
+#X obj 71 336 * \$2, f 23;
+#X obj 233 204 inlet;
+#X obj 71 360 % \$1, f 10;
+#X obj 71 384 < \$2, f 18;
+#X obj 71 408 sel 1;
+#X obj 71 432 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 71 452 outlet;
+#X text 55 106 /// BASED ON A PATCH SHOWN HERE: \; https://youtu.be/4UDJ1rZi1Yk?t=357
+;
+#X text 73 186 bang;
+#X text 122 185 length of bar;
+#X text 225 185 hits per bar;
+#X text 337 184 offset;
+#X obj 71 228 route bang reset;
+#X text 57 12 /// BANG LEFT INLET EACH BEAT \; /// MAY BANG OUTLET
+DEPENDING ON \$1 - \$3. \; /// \$1 IS LENGTH OF THE BAR \; /// \$2
+IS NUMBER OF HITS PER BAR \; /// \$3 IS OFFSET / ROTATION. \; /// CAN
+ALSO SEND "reset" TO LEFT INLET TO RESET.;
+#X obj 115 268 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X connect 0 0 17 0;
+#X connect 1 0 3 0;
+#X connect 2 0 7 1;
+#X connect 2 0 1 2;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 5 0 7 0;
+#X connect 6 0 5 1;
+#X connect 6 0 8 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 11 0;
+#X connect 17 0 1 0;
+#X connect 17 1 19 0;
+#X connect 19 0 1 1;

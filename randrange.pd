@@ -1,0 +1,38 @@
+#N canvas 0 25 606 348 12;
+#X obj 167 182 inlet;
+#X obj 167 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 277 192 f \$1;
+#X obj 309 192 f \$2;
+#X obj 277 144 loadbang;
+#X obj 277 168 t b b;
+#X obj 277 216 -, f 5;
+#X obj 277 240 abs;
+#X obj 317 90 inlet;
+#X obj 377 90 inlet;
+#X obj 377 114 t b f;
+#X obj 167 314 outlet;
+#X obj 167 266 random;
+#X obj 167 290 + \$1;
+#X obj 317 114 t f b f;
+#X text 17 17 /// BANG FIRST INLET TO RETURN A RANDOM VALUE BETWEEN
+\$1 \; /// (INCLUSIVE) AND \$2 (EXCLUSIVE). SECOND TWO INLETS SET \;
+/// NEW VALUES FOR \$1 AND \$2.;
+#X connect 0 0 1 0;
+#X connect 1 0 12 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 1;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 5 1 3 0;
+#X connect 6 0 7 0;
+#X connect 7 0 12 1;
+#X connect 8 0 14 0;
+#X connect 9 0 10 0;
+#X connect 10 0 5 0;
+#X connect 10 1 3 1;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 14 0 13 1;
+#X connect 14 1 5 0;
+#X connect 14 2 2 1;

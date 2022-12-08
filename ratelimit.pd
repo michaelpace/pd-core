@@ -1,0 +1,22 @@
+#N canvas 81 127 450 300 12;
+#X obj 25 109 inlet;
+#X obj 148 211 outlet;
+#X obj 25 143 spigot 1, f 18;
+#X obj 25 177 t b b f, f 18;
+#X msg 86 211 0;
+#X obj 25 211 del \$1;
+#X msg 25 245 1;
+#X text 13 17 /// ALLOWS THE INLET THROUGH ONCE EVERY \$1 ms. MESSAGES
+THAT DON'T MAKE IT THROUGH ARE DROPPED \; THEY ARE NOT QUEUED.;
+#X obj 124 109 inlet;
+#X text 20 86 message;
+#X text 110 87 delay between messages in ms;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 3 1 4 0;
+#X connect 3 2 1 0;
+#X connect 4 0 2 1;
+#X connect 5 0 6 0;
+#X connect 6 0 2 1;
+#X connect 8 0 5 1;

@@ -1,0 +1,18 @@
+#N canvas 0 25 450 259 12;
+#X floatatom 187 115 5 0 0 0 - - -;
+#X floatatom 187 162 5 0 0 0 - - -;
+#X obj 187 185 % 12;
+#X floatatom 187 209 5 0 0 0 - - -;
+#X obj 187 137 % \$1;
+#X obj 187 91 inlet;
+#X obj 187 232 outlet;
+#X text 11 4 /// INITIALIZE WITH \$1 BEING MIDI BASE NOTE OF KEY. \;
+/// PASS IN AN f REPRESENTINT A MIDI NOTE. \; /// THIS PATCH WILL TRANSPOSE
+THE f SO IT IS WITHIN THE \; /// OCTAVE ABOVE \$1 \, AND RETURN HOW
+MANY HALF-STEPS \; /// ABOVE \$1 THE TRANSPOSED NOTE IS.;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 4 0 1 0;
+#X connect 5 0 0 0;

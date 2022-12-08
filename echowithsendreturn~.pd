@@ -1,0 +1,47 @@
+#N canvas 0 25 501 642 12;
+#X obj 14 200 inlet~;
+#X obj 250 200 inlet;
+#X obj 369 200 inlet;
+#X obj 250 224 f \$1;
+#X obj 301 200 loadbang;
+#X obj 369 224 f \$2;
+#X obj 250 475 *~;
+#X text 13 176 signal;
+#X obj 250 499 outlet~;
+#X obj 250 401 vd~ broadcast-echo-\$0;
+#X msg 369 332 \$1 10;
+#X obj 369 356 line~;
+#X obj 250 248 max 1;
+#X obj 369 248 clip 0 0.95;
+#X text 229 177 \$1 delay time;
+#X text 367 178 \$2 feedback;
+#X obj 250 292 debounce 50;
+#X obj 250 356 sig~;
+#X obj 14 224 delwrite~ broadcast-echo-\$0 60000;
+#X obj 31 451 outlet~;
+#X obj 124 199 inlet~;
+#X text 37 477 send;
+#X text 123 177 return;
+#X text 247 520 main out;
+#X text 18 4 /// LIKE [echo~] BUT BEFORE FEEDING BACK \, OUTPUTS AUDIO
+\; /// FROM FIRST OUTLET. THIS IS LIKE A SEND BUS. AFFECT THE \; ///
+AUDIO HOWEVER YOU WANT AND THEN PASS BACK IN TO SECOND \; /// INLET.
+RESULTING AUDIO COMES OUT OF SECOND OUTLET. \; /// FINAL TWO INLETS
+ARE DELAY TIME AND FEEDBACK \, JUST \; /// LIKE [echo~].;
+#X connect 0 0 18 0;
+#X connect 1 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 12 0;
+#X connect 4 0 3 0;
+#X connect 4 0 5 0;
+#X connect 5 0 13 0;
+#X connect 6 0 8 0;
+#X connect 6 0 18 0;
+#X connect 9 0 19 0;
+#X connect 10 0 11 0;
+#X connect 11 0 6 1;
+#X connect 12 0 16 0;
+#X connect 13 0 10 0;
+#X connect 16 0 17 0;
+#X connect 17 0 9 0;
+#X connect 20 0 6 0;

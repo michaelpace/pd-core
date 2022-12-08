@@ -1,0 +1,24 @@
+#N canvas 527 112 450 300 12;
+#X obj 19 194 vcf~, f 43;
+#X obj 19 104 inlet~;
+#X obj 19 215 outlet~;
+#X obj 168 104 inlet;
+#X text 17 83 audio;
+#X text 164 84 \$1 speed;
+#X obj 317 104 inlet;
+#X obj 317 125 f \$4;
+#X obj 251 111 loadbang;
+#X obj 168 148 scaled~ 0 1 \$2 \$3;
+#X text 317 87 \$4 q;
+#X text 26 18 /// FIRST INLET IS AUDIO TO APPLY EFFECT TO \; /// \$1
+IS SPEED (HZ) \; /// \$2 AND \$3 ARE MIN AND MAX FREQS \; /// \$4 IS
+Q;
+#X obj 168 127 lfo~ sin \$1;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 12 0;
+#X connect 6 0 7 0;
+#X connect 7 0 0 2;
+#X connect 8 0 7 0;
+#X connect 9 0 0 1;
+#X connect 12 0 9 0;

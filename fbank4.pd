@@ -1,0 +1,46 @@
+#N canvas 507 51 477 314 12;
+#X obj 160 73 inlet;
+#X obj 167 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 193 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 218 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 244 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 167 97 inlet;
+#X obj 193 121 inlet;
+#X obj 218 97 inlet;
+#X obj 244 121 inlet;
+#X obj 160 285 outlet;
+#X obj 167 237 outlet;
+#X obj 193 261 outlet;
+#X obj 218 237 outlet;
+#X obj 244 261 outlet;
+#X text 13 6 /// PASS AN f TO FIRST INLET. ITS VALUE GETS RETURNED
+FROM \; /// FIRST OUTLET \, AND CACHED IN A BUNCH OF [f] OBJECTS. \;
+/// BANG ONE OF THE OTHER INLETS TO GET THE VALUE RETURNED \; /// FROM
+THE CORRESPONDING OUTLET.;
+#X obj 160 189 t f f f f f, f 18;
+#X obj 167 213 f \$1;
+#X obj 203 213 f \$1;
+#X obj 238 213 f \$1;
+#X obj 274 213 f \$1;
+#X connect 0 0 15 0;
+#X connect 1 0 16 0;
+#X connect 2 0 17 0;
+#X connect 3 0 18 0;
+#X connect 4 0 19 0;
+#X connect 5 0 1 0;
+#X connect 6 0 2 0;
+#X connect 7 0 3 0;
+#X connect 8 0 4 0;
+#X connect 15 0 9 0;
+#X connect 15 1 16 1;
+#X connect 15 2 17 1;
+#X connect 15 3 18 1;
+#X connect 15 4 19 1;
+#X connect 16 0 10 0;
+#X connect 17 0 11 0;
+#X connect 18 0 12 0;
+#X connect 19 0 13 0;

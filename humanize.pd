@@ -1,0 +1,15 @@
+#N canvas 529 232 236 179 12;
+#X obj 15 37 inlet;
+#X obj 15 121 pipe;
+#X obj 47 91 random \$1;
+#X obj 107 37 inlet;
+#X obj 15 145 outlet;
+#X text 7 17 // trigger;
+#X text 92 18 \$1 max possible del;
+#X obj 15 61 t f b;
+#X connect 0 0 7 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 1;
+#X connect 7 0 1 0;
+#X connect 7 1 2 0;

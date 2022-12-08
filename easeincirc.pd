@@ -1,0 +1,24 @@
+#N canvas 0 25 450 268 12;
+#X obj 167 67 inlet;
+#X text 101 8 /// 1 - sqrt(1 - pow(x \, 2)) per https://easings.net/#easeInCirc
+;
+#X obj 167 91 t b f;
+#X msg 167 187 1;
+#X obj 167 211 -, f 5;
+#X obj 199 115 t b f;
+#X msg 199 139 1;
+#X obj 199 163 -, f 5;
+#X obj 231 139 pow 2;
+#X obj 199 187 sqrt;
+#X obj 167 235 outlet;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 0;
+#X connect 5 0 6 0;
+#X connect 5 1 8 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 8 0 7 1;
+#X connect 9 0 4 1;

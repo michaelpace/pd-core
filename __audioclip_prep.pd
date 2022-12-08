@@ -1,0 +1,30 @@
+#N canvas 227 388 772 300 12;
+#X obj 56 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 56 82 openpanel;
+#X obj 56 130 soundfiler;
+#X text 132 131 NOT AVAILABLE IN HV;
+#X floatatom 56 154 12 0 0 0 - - -;
+#X obj 316 120 savepanel;
+#X obj 316 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 75 60 1 BANG: load in the sample;
+#X text 344 57 2 BANG: save the sample data for both channels.;
+#X obj 316 252 soundfiler;
+#X msg 316 82 symbol /Users/michaelpace/Projects/broadcast/Broadcast/Assets/Audio
+;
+#X text 146 154 <- the # of samples;
+#X obj 316 204 pack s f;
+#X obj 21 10 table monoChannel;
+#X msg 56 106 read -resize \$1 monoChannel;
+#X msg 316 228 write -wave \$1-\$2 monoChannel;
+#X connect 0 0 1 0;
+#X connect 1 0 14 0;
+#X connect 2 0 4 0;
+#X connect 4 0 12 1;
+#X connect 5 0 12 0;
+#X connect 6 0 10 0;
+#X connect 10 0 5 0;
+#X connect 12 0 15 0;
+#X connect 14 0 2 0;
+#X connect 15 0 9 0;

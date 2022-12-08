@@ -1,0 +1,24 @@
+#N canvas 402 209 474 317 12;
+#X obj 17 107 inlet~;
+#X obj 17 131 clip~ 0 1;
+#X obj 17 251 outlet~;
+#X text 14 86 /// audio rate to play clip at that percentage.;
+#X text 16 7 /// TO USE: (1) initialize with creation args \$1 and
+\$2. there must be an [audioclip~ \$1 \$2] in this patch. (2) pass
+audio rate normalized from 0 to 1 into left inlet to play the clip
+at that percentage.;
+#X obj 244 127 r \$1-sample-count;
+#X obj 244 151 f \$2;
+#X obj 244 175 sig~;
+#X obj 17 155 *~;
+#X obj 184 127 loadbang;
+#X text 13 273 /// out;
+#X obj 17 227 tabread4~ clip-\$1;
+#X connect 0 0 1 0;
+#X connect 1 0 8 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 1;
+#X connect 8 0 11 0;
+#X connect 9 0 6 0;
+#X connect 11 0 2 0;

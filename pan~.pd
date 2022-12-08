@@ -1,0 +1,31 @@
+#N canvas 705 168 450 380 12;
+#X obj 66 122 inlet~;
+#X obj 66 341 outlet~;
+#X obj 156 342 outlet~;
+#X obj 173 120 inlet;
+#X obj 66 317 *~;
+#X obj 156 318 *~;
+#X obj 173 144 deff \$1 0.5;
+#X obj 173 168 clip 0 1;
+#X text 11 12 /// FEED AUDIO INTO LEFT INLET. RIGHT INLET CONTROLS
+PAN AMOUNT. 1e-09 == FULLY LEFT \, 1 == FULLY RIGHT \, 0.5 == CENTER.
+DEFAULTS TO 0.5. LEFT CHANNEL COMES OUT OF LEFT OUTLET~ AND RIGHT CHANNEL
+COMES OUT OF RIGHT OUTLET~. NOTE THAT RIGHT NOW THERE IS A BUG WHERE
+INITIALIZING WITH 0 WILL CAUSE IT TO COME OUT CENTER \, NOT LEFT \,
+SO USE SOMETHING LIKE 1e-11 INSTEAD.;
+#X obj 173 216 line~;
+#X obj 84 245 *~ -1;
+#X obj 84 269 +~ 1;
+#X msg 173 192 \$1 1;
+#X connect 0 0 5 0;
+#X connect 0 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 1 0;
+#X connect 5 0 2 0;
+#X connect 6 0 7 0;
+#X connect 7 0 12 0;
+#X connect 9 0 10 0;
+#X connect 9 0 5 1;
+#X connect 10 0 11 0;
+#X connect 11 0 4 1;
+#X connect 12 0 9 0;

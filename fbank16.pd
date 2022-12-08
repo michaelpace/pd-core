@@ -1,0 +1,154 @@
+#N canvas 507 51 608 318 12;
+#X obj 20 75 inlet;
+#X obj 20 191 t f f f f f f f f f f f f f f f f f, f 59;
+#X obj 27 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 53 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 78 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 104 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 130 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 155 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 181 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 207 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 232 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 258 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 283 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 309 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 335 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 360 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 386 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 412 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 27 99 inlet;
+#X obj 53 123 inlet;
+#X obj 78 99 inlet;
+#X obj 104 123 inlet;
+#X obj 130 99 inlet;
+#X obj 155 123 inlet;
+#X obj 181 99 inlet;
+#X obj 207 123 inlet;
+#X obj 232 99 inlet;
+#X obj 258 123 inlet;
+#X obj 283 99 inlet;
+#X obj 309 123 inlet;
+#X obj 335 99 inlet;
+#X obj 360 123 inlet;
+#X obj 386 99 inlet;
+#X obj 412 123 inlet;
+#X obj 20 287 outlet;
+#X obj 27 239 outlet;
+#X obj 53 263 outlet;
+#X obj 78 239 outlet;
+#X obj 104 263 outlet;
+#X obj 130 239 outlet;
+#X obj 155 263 outlet;
+#X obj 181 239 outlet;
+#X obj 207 263 outlet;
+#X obj 232 239 outlet;
+#X obj 259 263 outlet;
+#X obj 283 239 outlet;
+#X obj 310 263 outlet;
+#X obj 335 239 outlet;
+#X obj 361 263 outlet;
+#X obj 386 239 outlet;
+#X obj 413 263 outlet;
+#X text 13 6 /// PASS AN f TO FIRST INLET. ITS VALUE GETS RETURNED
+FROM \; /// FIRST OUTLET \, AND CACHED IN A BUNCH OF [f] OBJECTS. \;
+/// BANG ONE OF THE OTHER INLETS TO GET THE VALUE RETURNED \; /// FROM
+THE CORRESPONDING OUTLET.;
+#X obj 27 215 f \$1;
+#X obj 63 215 f \$1;
+#X obj 98 215 f \$1;
+#X obj 134 215 f \$1;
+#X obj 170 215 f \$1;
+#X obj 205 215 f \$1;
+#X obj 241 215 f \$1;
+#X obj 277 215 f \$1;
+#X obj 312 215 f \$1;
+#X obj 348 215 f \$1;
+#X obj 383 215 f \$1;
+#X obj 419 215 f \$1;
+#X obj 455 215 f \$1;
+#X obj 490 215 f \$1;
+#X obj 526 215 f \$1;
+#X obj 562 215 f \$1;
+#X connect 0 0 1 0;
+#X connect 1 0 34 0;
+#X connect 1 1 52 1;
+#X connect 1 2 53 1;
+#X connect 1 3 54 1;
+#X connect 1 4 55 1;
+#X connect 1 5 56 1;
+#X connect 1 6 57 1;
+#X connect 1 7 58 1;
+#X connect 1 8 59 1;
+#X connect 1 9 60 1;
+#X connect 1 10 61 1;
+#X connect 1 11 62 1;
+#X connect 1 12 63 1;
+#X connect 1 13 64 1;
+#X connect 1 14 65 1;
+#X connect 1 15 66 1;
+#X connect 1 16 67 1;
+#X connect 2 0 52 0;
+#X connect 3 0 53 0;
+#X connect 4 0 54 0;
+#X connect 5 0 55 0;
+#X connect 6 0 56 0;
+#X connect 7 0 57 0;
+#X connect 8 0 58 0;
+#X connect 9 0 59 0;
+#X connect 10 0 60 0;
+#X connect 11 0 61 0;
+#X connect 12 0 62 0;
+#X connect 13 0 63 0;
+#X connect 14 0 64 0;
+#X connect 15 0 65 0;
+#X connect 16 0 66 0;
+#X connect 17 0 67 0;
+#X connect 18 0 2 0;
+#X connect 19 0 3 0;
+#X connect 20 0 4 0;
+#X connect 21 0 5 0;
+#X connect 22 0 6 0;
+#X connect 23 0 7 0;
+#X connect 24 0 8 0;
+#X connect 25 0 9 0;
+#X connect 26 0 10 0;
+#X connect 27 0 11 0;
+#X connect 28 0 12 0;
+#X connect 29 0 13 0;
+#X connect 30 0 14 0;
+#X connect 31 0 15 0;
+#X connect 32 0 16 0;
+#X connect 33 0 17 0;
+#X connect 52 0 35 0;
+#X connect 53 0 36 0;
+#X connect 54 0 37 0;
+#X connect 55 0 38 0;
+#X connect 56 0 39 0;
+#X connect 57 0 40 0;
+#X connect 58 0 41 0;
+#X connect 59 0 42 0;
+#X connect 60 0 43 0;
+#X connect 61 0 44 0;
+#X connect 62 0 45 0;
+#X connect 63 0 46 0;
+#X connect 64 0 47 0;
+#X connect 65 0 48 0;
+#X connect 66 0 49 0;
+#X connect 67 0 50 0;

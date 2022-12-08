@@ -1,0 +1,38 @@
+#N canvas 0 25 450 368 12;
+#X obj 277 109 inlet;
+#X obj 117 106 inlet;
+#X obj 117 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 182 222 spigot;
+#X obj 182 246 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 182 270 outlet;
+#X text 11 9 /// PASS OUTPUT OF [metro] OR [metronome] TO FIRST INLET.
+\; /// PASS 0 OR 1 TO SECOND INLET \, TO CLOSE OR OPEN THE \; /// SPIGOT.
+\; /// IF OPENED AND CLOSED IN BETWEEN METRONOME BEATS \, \; /// (SO
+TECHNICALLY IT SHOULDN'T LET ANY BANGS THROUGH) \, \; /// WILL STILL
+LET A SINGLE BANG THROUGH.;
+#X obj 277 133 sel 0 1, f 11;
+#X obj 117 150 isfirst;
+#X obj 117 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 163 174 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 277 157 0;
+#X msg 314 157 1;
+#X obj 314 181 t b f;
+#X connect 0 0 7 0;
+#X connect 1 0 2 0;
+#X connect 2 0 8 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 7 0 11 0;
+#X connect 7 1 12 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 9 0 4 0;
+#X connect 10 0 3 0;
+#X connect 11 0 3 1;
+#X connect 12 0 13 0;
+#X connect 13 0 8 1;
+#X connect 13 1 3 1;

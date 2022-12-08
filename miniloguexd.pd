@@ -1,0 +1,18 @@
+#N canvas 179 217 579 175 12;
+#X obj 23 44 inlet;
+#X obj 116 44 inlet;
+#X obj 116 68 scaled 0 1 0 127;
+#X obj 23 140 noteout, f 27;
+#X obj 209 92 loadbang;
+#X text 8 15 midi pitch;
+#X text 113 15 velocity (0...1);
+#X msg 209 116 2;
+#X text 418 32 see also:;
+#X obj 422 61 miniloguexdfilter;
+#X obj 422 109 miniloguexdegdecay;
+#X obj 422 85 miniloguexdampdecay;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;
+#X connect 4 0 7 0;
+#X connect 7 0 3 2;

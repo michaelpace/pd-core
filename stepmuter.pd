@@ -1,0 +1,128 @@
+#N canvas 0 25 1269 650 12;
+#X obj 18 88 inlet;
+#X obj 233 476 outlet;
+#X obj 18 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X floatatom 233 436 5 0 0 0 - - -;
+#X obj 77 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 136 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 195 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 254 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 313 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 372 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 431 346 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 18 258 sel 1 2 3 4 5 6 7 8, f 68;
+#X obj 753 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 812 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 871 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 930 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 989 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 1048 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 1107 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 1166 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 753 293 t b f f;
+#X obj 812 293 t b f f;
+#X obj 871 293 t b f f;
+#X obj 930 293 t b f f;
+#X obj 989 293 t b f f;
+#X obj 1048 293 t b f f;
+#X obj 1107 293 t b f f;
+#X obj 1166 293 t b f f;
+#X obj 753 229 inlet;
+#X msg 18 366 1;
+#X msg 77 366 2;
+#X msg 136 366 3;
+#X msg 195 366 4;
+#X msg 254 366 5;
+#X msg 313 366 6;
+#X msg 372 366 7;
+#X msg 431 366 8;
+#X obj 18 312 spigot;
+#X obj 77 312 spigot;
+#X obj 136 312 spigot;
+#X obj 195 312 spigot;
+#X obj 254 312 spigot;
+#X obj 313 312 spigot;
+#X obj 372 312 spigot;
+#X obj 431 312 spigot;
+#X text 423 23 /// PASS OUTPUT OF [metronome] TO LEFT INLET. \; ///
+PASS LISTS LIKE "0 0" OR "8 1" TO RIGHT INLET \; /// (TO SET STEP 0
+TO OFF OR STEP 8 TO ON \, RESPECTIVELY). \; /// IF A STEP IS SET TO
+0 \, THIS OBJECT WON'T OUTPUT \; /// ANYTHING FROM ITS OULET ON THAT
+METRONOME STEP. \; /// IF A STEP IS SET TO 1 \, THIS OBJECT WILL OUTPUT
+THE \; /// SAME THING AS ITS INLET ON THAT METRONOME STEP.;
+#X obj 753 253 route 1 2 3 4 5 6 7 8, f 68;
+#X connect 0 0 11 0;
+#X connect 2 0 29 0;
+#X connect 3 0 1 0;
+#X connect 4 0 30 0;
+#X connect 5 0 31 0;
+#X connect 6 0 32 0;
+#X connect 7 0 33 0;
+#X connect 8 0 34 0;
+#X connect 9 0 35 0;
+#X connect 10 0 36 0;
+#X connect 11 0 37 0;
+#X connect 11 1 38 0;
+#X connect 11 2 39 0;
+#X connect 11 3 40 0;
+#X connect 11 4 41 0;
+#X connect 11 5 42 0;
+#X connect 11 6 43 0;
+#X connect 11 7 44 0;
+#X connect 12 0 20 0;
+#X connect 13 0 21 0;
+#X connect 14 0 22 0;
+#X connect 15 0 23 0;
+#X connect 16 0 24 0;
+#X connect 17 0 25 0;
+#X connect 18 0 26 0;
+#X connect 19 0 27 0;
+#X connect 20 2 37 1;
+#X connect 21 2 38 1;
+#X connect 22 2 39 1;
+#X connect 23 2 40 1;
+#X connect 24 2 41 1;
+#X connect 25 2 42 1;
+#X connect 26 2 43 1;
+#X connect 27 2 44 1;
+#X connect 28 0 46 0;
+#X connect 29 0 3 0;
+#X connect 30 0 3 0;
+#X connect 31 0 3 0;
+#X connect 32 0 3 0;
+#X connect 33 0 3 0;
+#X connect 34 0 3 0;
+#X connect 35 0 3 0;
+#X connect 36 0 3 0;
+#X connect 37 0 2 0;
+#X connect 38 0 4 0;
+#X connect 39 0 5 0;
+#X connect 40 0 6 0;
+#X connect 41 0 7 0;
+#X connect 42 0 8 0;
+#X connect 43 0 9 0;
+#X connect 44 0 10 0;
+#X connect 46 0 12 0;
+#X connect 46 1 13 0;
+#X connect 46 2 14 0;
+#X connect 46 3 15 0;
+#X connect 46 4 16 0;
+#X connect 46 5 17 0;
+#X connect 46 6 18 0;
+#X connect 46 7 19 0;

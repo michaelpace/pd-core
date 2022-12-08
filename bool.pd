@@ -1,0 +1,26 @@
+#N canvas 0 25 450 300 12;
+#X obj 140 159 f;
+#X obj 140 207 sel 1, f 13;
+#X obj 140 106 inlet;
+#X obj 209 106 inlet;
+#X obj 140 183 == 1;
+#X obj 140 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 140 251 outlet;
+#X obj 228 231 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 228 251 outlet;
+#X obj 140 130 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 16 12 /// PASS 1 (TRUE) OR 0 (FALSE) TO RIGHT INLET TO SET
+VALUE \; /// BANG LEFT INLET TO GET VALUE. \; /// LEFT OUTLET WILL
+BANG IF TRUE \, AND RIGHT OUTLET WILL \; /// BANG IF FALSE.;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 1 1 7 0;
+#X connect 2 0 9 0;
+#X connect 3 0 0 1;
+#X connect 4 0 1 0;
+#X connect 5 0 6 0;
+#X connect 7 0 8 0;
+#X connect 9 0 0 0;

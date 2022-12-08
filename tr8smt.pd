@@ -1,0 +1,13 @@
+#N canvas 121 159 591 206 12;
+#X obj 116 124 inlet;
+#X text 113 95 velocity (0...1);
+#X obj 322 120 inlet;
+#X text 461 97 decay (0...1);
+#X obj 482 120 inlet;
+#X text 301 97 tune (0...127);
+#X text 117 6 https://static.roland.com/assets/media/pdf/TR-8S_MIDIImpleChart_eng01_W.pdf
+;
+#X obj 116 148 tr8sdrum 47 49 50, f 54;
+#X connect 0 0 7 0;
+#X connect 2 0 7 1;
+#X connect 4 0 7 2;

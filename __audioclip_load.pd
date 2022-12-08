@@ -1,0 +1,29 @@
+#N canvas 565 119 476 414 12;
+#X obj 33 357 soundfiler;
+#X obj 33 308 pack s s;
+#X msg 33 260 symbol ../Broadcast/Assets/Audio/\$1-\$2.wav;
+#X text 20 16 /// loads a file from ../Broadcast/Assets/Audio into
+an [audioclip~];
+#X text 20 52 /// the file should be named \$1-\$2.wav \, where \$1
+is the name of the [audioclip~] to load into (i.e. \, the [audioclip~]'s
+\$1) \, and \$2 is the number of samples in the file.;
+#X obj 33 110 loadbang;
+#X obj 33 158 symbol \$1;
+#X obj 128 157 f \$2;
+#X obj 33 134 t b b;
+#X obj 33 182 pack s f, f 14;
+#X obj 33 206 t l l, f 8;
+#X msg 86 284 symbol \$1;
+#X msg 33 332 read \$1 clip-\$2;
+#X connect 1 0 12 0;
+#X connect 2 0 1 0;
+#X connect 5 0 8 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 1;
+#X connect 8 0 6 0;
+#X connect 8 1 7 0;
+#X connect 9 0 10 0;
+#X connect 10 0 2 0;
+#X connect 10 1 11 0;
+#X connect 11 0 1 1;
+#X connect 12 0 0 0;

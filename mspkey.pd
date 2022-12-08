@@ -1,0 +1,45 @@
+#N canvas 0 25 523 523 12;
+#X obj 34 152 key;
+#X obj 34 306 sel \$1;
+#X obj 34 330 t b b, f 12;
+#X msg 34 434 1;
+#X obj 34 458 change;
+#X obj 34 482 outlet;
+#X obj 169 152 keyup;
+#X obj 169 306 sel \$1;
+#X obj 169 410 del 50;
+#X msg 169 434 0;
+#X msg 115 354 stop;
+#X text 7 8 based on https://stackoverflow.com/a/24607607/1238989 \;
+to handle how osx sends multiple key up/down events when \; you're
+just holding down a single key...;
+#X text 6 54 to use \, initialize with \$1 being the key you're interested
+\; in. this patch will send out 0 and 1 messages to indicate \; keyup
+and keydown \, respectively. but there is a slight \; delay for keyup
+events unfortunately... \; also \, only works for "printable" keys
+\, i.e. \, those keys \; that work with [key] and [keyup].;
+#X obj 34 282 spigot;
+#X obj 169 282 spigot;
+#X obj 276 180 loadbang;
+#X obj 276 204 f \$1;
+#X obj 276 228 != 0;
+#X text 331 210 keep the spigot closed;
+#X text 331 225 if we didn't receive a;
+#X text 332 238 creation arg;
+#X connect 0 0 13 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 10 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 6 0 14 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 4 0;
+#X connect 10 0 8 0;
+#X connect 13 0 1 0;
+#X connect 14 0 7 0;
+#X connect 15 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 14 1;
+#X connect 17 0 13 1;

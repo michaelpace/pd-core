@@ -1,0 +1,14 @@
+#N canvas 295 333 135 166 12;
+#X obj 9 39 inlet;
+#X obj 9 63 scaled 0 1 0 127;
+#X obj 9 135 ctlout, f 10;
+#X obj 44 87 loadbang;
+#X text 3 9 value (0...1);
+#X msg 76 111 2;
+#X msg 42 111 21;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 5 0;
+#X connect 3 0 6 0;
+#X connect 5 0 2 2;
+#X connect 6 0 2 1;
