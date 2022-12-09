@@ -1,0 +1,26 @@
+#N canvas 103 358 406 338 12;
+#X obj 158 77 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 158 97 t b b;
+#X obj 158 121 timer;
+#X floatatom 158 145 5 0 0 0 - - - 0;
+#X floatatom 158 222 5 0 0 0 - - - 0;
+#X obj 158 168 t b f, f 16;
+#X obj 158 245 mstobpm;
+#X floatatom 158 269 5 0 0 0 - - - 0;
+#X obj 158 53 inlet;
+#X obj 158 292 outlet;
+#X obj 158 198 rollingaverage 4;
+#X text 12 11 /// TAP 4 TIMES TO GET BPM AVERAGE OF PRIOR TAPS.;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 2 1;
+#X connect 2 0 3 0;
+#X connect 3 0 5 0;
+#X connect 4 0 6 0;
+#X connect 5 0 10 1;
+#X connect 5 1 10 0;
+#X connect 6 0 7 0;
+#X connect 7 0 9 0;
+#X connect 8 0 0 0;
+#X connect 10 0 4 0;

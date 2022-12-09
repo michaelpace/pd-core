@@ -1,0 +1,12 @@
+#N canvas 121 159 450 300 12;
+#X obj 141 79 inlet;
+#X text 146 57 ms;
+#X obj 141 103 swap 60000;
+#X obj 141 127 /, f 10;
+#X obj 141 151 outlet;
+#X text 144 175 bpm;
+#X text 82 19 60 \, 0 / (ms) == bpm;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 3 0 4 0;
