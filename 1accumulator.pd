@@ -1,0 +1,31 @@
+#N canvas 817 168 299 429 12;
+#X obj 61 139 inlet;
+#X obj 61 223 +;
+#X obj 61 247 t f f, f 22;
+#X obj 43 353 f;
+#X obj 151 137 inlet;
+#X obj 151 161 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 151 181 t b b;
+#X obj 43 377 outlet;
+#X msg 151 305 0;
+#X obj 61 163 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 61 187 1;
+#X text 3 5 /// BANG THE FIRST INLET \, \; /// AND THEN AGAIN \, AND
+THEN \; /// AGAIN \, ETC. \; /// THEN BANG SECOND INLET. THE NUMBER
+\; /// OF TIMES THE FIRST INLET WAS BANGED \; /// WILL BE EMITTED FROM
+THE OUTLET \, \; /// AND THE INTERNAL STATE WILL BE RESET;
+#X connect 0 0 9 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;
+#X connect 2 1 1 1;
+#X connect 3 0 7 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 1 3 0;
+#X connect 8 0 3 1;
+#X connect 8 0 1 1;
+#X connect 9 0 10 0;
+#X connect 10 0 1 0;
