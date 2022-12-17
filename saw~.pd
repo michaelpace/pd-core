@@ -1,10 +1,8 @@
 #N canvas 401 139 148 167 12;
 #X obj 16 134 outlet~;
-#X obj 16 86 *~ 2;
-#X obj 16 110 -~ 1;
 #X obj 16 14 inlet~;
-#X obj 16 38 phasor~;
+#X obj 16 38 hv.osc saw;
+#X obj 71 14 inlet;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
-#X connect 3 0 4 0;
-#X connect 4 0 1 0;
+#X connect 3 0 2 1;
