@@ -12,6 +12,9 @@ THE LIST ELEMENT-BY-ELEMENT \, \; /// CYCLING AROUND TO THE FIRST ELEMENT
 AFTER RETURNING \; /// THE LAST.;
 #X obj 84 194 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
+#X text 219 151 note that these connections were \; made in a particular
+order. didn't \; use a trigger since can't use l \; within [t] when
+using hvcc;
 #X connect 0 0 5 0;
 #X connect 1 0 4 0;
 #X connect 1 0 8 0;
