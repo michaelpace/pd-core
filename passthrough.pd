@@ -1,0 +1,47 @@
+#N canvas 626 230 450 525 12;
+#X obj 148 182 inlet;
+#X floatatom 148 206 5 0 0 0 - - - 0;
+#X obj 194 317 t f f, f 6;
+#X obj 194 409 spigot;
+#X obj 233 341 absdiff;
+#X obj 175 433 t f f, f 22;
+#X floatatom 175 457 5 0 0 0 - - - 0;
+#X obj 175 480 outlet;
+#X obj 233 389 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 148 229 t b f, f 9;
+#X obj 155 293 fbank2;
+#X obj 148 253 isfirst, f 16;
+#X obj 257 182 inlet;
+#X obj 257 206 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X text 8 4 /// WORKS AS A "PASS-THROUGH" FOR PARAMETERS \, E.G. \,
+ON HARDWARE SYNTHS WHEN YOU CHANGE A PRESET AND THE KNOBS NO LONGER
+REFLECT THE SAME VALUES AS THE UNDERLYING PATCH \, AND CHANGING THE
+KNOB DOESN'T DO ANYTHING UNTIL YOU PASS THE UNDERLYING VALUE.;
+#X obj 300 341 deff \$1 0.1;
+#X obj 233 365 <, f 10;
+#X text 8 84 /// TO USE \, PASS VALUES INTO THE LEFT INLET \, AND THEY
+WILL BE RETURNED FROM THE OUTLET IF THEY WERE CLOSE ENOUGH TO THE PREVIOUS
+KNOB POSITION (DETERMINED BY \$1 \, WHICH DEFAULTS TO 0.1). RESET STATE
+BY BANGING THE RIGHT INLET.;
+#X connect 0 0 1 0;
+#X connect 1 0 9 0;
+#X connect 2 0 3 0;
+#X connect 2 1 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 16 0;
+#X connect 5 0 6 0;
+#X connect 5 1 4 1;
+#X connect 6 0 7 0;
+#X connect 8 0 3 1;
+#X connect 9 0 11 0;
+#X connect 9 1 10 0;
+#X connect 10 1 5 0;
+#X connect 10 2 2 0;
+#X connect 11 0 10 1;
+#X connect 11 1 10 2;
+#X connect 12 0 13 0;
+#X connect 13 0 11 1;
+#X connect 15 0 16 1;
+#X connect 16 0 8 0;

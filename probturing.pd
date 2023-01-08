@@ -1,0 +1,44 @@
+#N canvas 692 256 629 520 12;
+#X obj 179 180 inlet;
+#X obj 179 204 t b b, f 14;
+#X obj 179 276 mtturing;
+#X obj 274 276 mtturing, f 11;
+#X obj 179 420 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 179 440 f, f 14;
+#X obj 179 464 outlet;
+#X obj 179 396 sel 1;
+#X obj 179 372 <;
+#X text 82 16 /// WRAPPER FOR TWO TURING MACHINES. ONE DETERMINES PROBABILITY
+AND THE OTHER DETERMINES THE ACTUAL SEQUENCE. INITIALIZE WITH \$1 BEING
+THE SYMBOL FOR AN [s] FOR THE NORMAL TURING KNOB — IT'LL APPLY TO
+BOTH TURING MACHINES — AND \$2 BEING THE SYMBOL FOR AN [s] FOR THE
+PROBABILITY CUTOFF BETWEEN 0 AND 1 REQUIRED TO EMIT THE EVENT.;
+#X obj 232 228 r \$1;
+#X obj 348 228 r \$1;
+#X obj 197 300 r \$2;
+#X obj 450 186 loadbang;
+#X msg 450 210 0.5;
+#X obj 197 348 easeinsine;
+#X obj 232 252 passthrough 0.2;
+#X obj 348 252 passthrough 0.2;
+#X obj 197 324 passthrough 0.2;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 8 0;
+#X connect 3 0 5 1;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 10 0 16 0;
+#X connect 11 0 17 0;
+#X connect 12 0 18 0;
+#X connect 13 0 14 0;
+#X connect 14 0 17 0;
+#X connect 14 0 16 0;
+#X connect 15 0 8 1;
+#X connect 16 0 2 2;
+#X connect 17 0 3 2;
+#X connect 18 0 15 0;

@@ -1,10 +1,10 @@
-#N canvas 850 487 1015 517 12;
+#N canvas 163 196 1015 517 12;
 #X obj 49 78 inlet;
 #X obj 323 182 mode \$1;
 #X obj 323 158 loadbang;
 #X obj 49 126 t f f;
 #X obj 81 150 / 12;
-#X floatatom 81 174 5 0 0 0 - - -;
+#X floatatom 81 174 5 0 0 0 - - - 0;
 #X obj 81 288 i;
 #X obj 81 312 * 12;
 #X obj 49 150 % 12;
@@ -20,7 +20,6 @@
 #X obj 63 471 outlet;
 #X obj 252 322 sel 0;
 #X obj 284 349 - 1;
-#X obj 323 206 unpack f f f f f f f, f 22;
 #X obj 496 237 + 1;
 #X text 106 287 round toward zero;
 #X obj 164 87 loadbang;
@@ -32,10 +31,12 @@
 #X text 22 3 /// INITIALIZE WITH \$1 BEING A MODE AND \$2 BEING A ROOT
 \; /// NOTE IN MIDI. WILL QUANTTIZE THE INLET TO THE CORRECT \; ///
 MODE.;
-#X text 521 239 hack because [quantizedinlets] doesn't work with values
+#X text 573 234 hack because [quantizedinlets] doesn't work with values
 of 0 (same deal with all other +1 and -1 boxes in this patch);
-#X connect 0 0 27 0;
-#X connect 1 0 21 0;
+#X obj 323 206 unpack f f f f f f f f, f 30;
+#X obj 526 237 + 1;
+#X connect 0 0 26 0;
+#X connect 1 0 31 0;
 #X connect 2 0 1 0;
 #X connect 3 0 8 0;
 #X connect 3 1 4 0;
@@ -52,21 +53,23 @@ of 0 (same deal with all other +1 and -1 boxes in this patch);
 #X connect 14 0 9 5;
 #X connect 15 0 9 6;
 #X connect 16 0 9 0;
-#X connect 17 0 29 0;
+#X connect 17 0 28 0;
 #X connect 19 1 20 0;
 #X connect 20 0 17 0;
-#X connect 21 0 10 0;
-#X connect 21 1 11 0;
-#X connect 21 2 12 0;
-#X connect 21 3 13 0;
-#X connect 21 4 14 0;
-#X connect 21 5 15 0;
-#X connect 21 6 22 0;
-#X connect 22 0 9 7;
+#X connect 21 0 9 7;
+#X connect 23 0 24 0;
 #X connect 24 0 25 0;
-#X connect 25 0 26 0;
-#X connect 26 0 28 0;
-#X connect 27 0 3 0;
-#X connect 28 0 29 1;
-#X connect 28 1 27 1;
-#X connect 29 0 18 0;
+#X connect 25 0 27 0;
+#X connect 26 0 3 0;
+#X connect 27 0 28 1;
+#X connect 27 1 26 1;
+#X connect 28 0 18 0;
+#X connect 31 0 10 0;
+#X connect 31 1 11 0;
+#X connect 31 2 12 0;
+#X connect 31 3 13 0;
+#X connect 31 4 14 0;
+#X connect 31 5 15 0;
+#X connect 31 6 21 0;
+#X connect 31 7 32 0;
+#X connect 32 0 9 8;

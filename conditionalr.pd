@@ -1,0 +1,8 @@
+#N canvas 617 215 450 300 12;
+#X obj 156 98 r \$1;
+#X obj 156 122 spigot;
+#X obj 195 98 r \$2;
+#X obj 156 146 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
