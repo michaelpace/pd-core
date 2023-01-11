@@ -1,0 +1,7 @@
+#N canvas 179 217 396 126 12;
+#X text 14 12 /// x * x * x per https://easings.net/#easeInCubic;
+#X obj 167 47 inlet~;
+#X obj 167 71 pow~ 3;
+#X obj 167 95 outlet~;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;

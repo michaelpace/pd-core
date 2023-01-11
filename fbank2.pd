@@ -1,9 +1,9 @@
 #N canvas 507 51 477 312 12;
 #X obj 200 73 inlet;
-#X obj 208 145 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 242 169 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 208 145 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 242 169 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 208 97 inlet;
 #X obj 242 121 inlet;
 #X obj 200 285 outlet;
@@ -16,7 +16,8 @@ THE CORRESPONDING OUTLET.;
 #X obj 200 189 t f f f, f 10;
 #X obj 208 213 f \$1;
 #X obj 242 213 f \$1;
-#X connect 0 0 9 0;
+#X obj 200 165 f \$1;
+#X connect 0 0 12 0;
 #X connect 1 0 10 0;
 #X connect 2 0 11 0;
 #X connect 3 0 1 0;
@@ -26,3 +27,4 @@ THE CORRESPONDING OUTLET.;
 #X connect 9 2 11 1;
 #X connect 10 0 6 0;
 #X connect 11 0 7 0;
+#X connect 12 0 9 0;

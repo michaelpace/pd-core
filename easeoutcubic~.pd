@@ -1,0 +1,19 @@
+#N canvas 208 246 450 300 12;
+#X text 16 11 /// 1 - pow(1 - x \, 3) per https://easings.net/#easeOutCubic
+;
+#X obj 309 109 inlet~;
+#X obj 204 66 loadbang;
+#X msg 204 90 1;
+#X obj 204 114 sig~;
+#X obj 257 133 -~, f 8;
+#X obj 257 157 pow~ 3;
+#X obj 204 181 -~, f 8;
+#X obj 204 205 outlet~;
+#X connect 1 0 5 1;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 1;
+#X connect 7 0 8 0;

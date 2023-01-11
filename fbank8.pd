@@ -1,21 +1,21 @@
-#N canvas 507 51 477 318 12;
+#N canvas 507 51 477 382 12;
 #X obj 130 75 inlet;
-#X obj 137 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 163 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 188 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 214 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 240 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 265 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 291 147 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 317 171 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 137 147 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 163 201 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 188 147 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 214 201 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 240 147 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 265 201 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 291 147 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 317 201 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 137 99 inlet;
 #X obj 163 123 inlet;
 #X obj 188 99 inlet;
@@ -24,29 +24,30 @@
 #X obj 265 123 inlet;
 #X obj 291 99 inlet;
 #X obj 317 123 inlet;
-#X obj 130 287 outlet;
-#X obj 137 239 outlet;
-#X obj 163 263 outlet;
-#X obj 188 239 outlet;
-#X obj 214 263 outlet;
-#X obj 240 239 outlet;
-#X obj 265 263 outlet;
-#X obj 291 239 outlet;
-#X obj 317 263 outlet;
+#X obj 130 317 outlet;
+#X obj 137 269 outlet;
+#X obj 163 293 outlet;
+#X obj 188 269 outlet;
+#X obj 214 293 outlet;
+#X obj 240 269 outlet;
+#X obj 265 293 outlet;
+#X obj 291 269 outlet;
+#X obj 317 293 outlet;
 #X text 13 6 /// PASS AN f TO FIRST INLET. ITS VALUE GETS RETURNED
 FROM \; /// FIRST OUTLET \, AND CACHED IN A BUNCH OF [f] OBJECTS. \;
 /// BANG ONE OF THE OTHER INLETS TO GET THE VALUE RETURNED \; /// FROM
 THE CORRESPONDING OUTLET.;
-#X obj 130 191 t f f f f f f f f f, f 30;
-#X obj 137 215 f \$1;
-#X obj 173 215 f \$1;
-#X obj 208 215 f \$1;
-#X obj 244 215 f \$1;
-#X obj 280 215 f \$1;
-#X obj 315 215 f \$1;
-#X obj 351 215 f \$1;
-#X obj 387 215 f \$1;
-#X connect 0 0 27 0;
+#X obj 130 221 t f f f f f f f f f, f 30;
+#X obj 137 245 f \$1;
+#X obj 173 245 f \$1;
+#X obj 208 245 f \$1;
+#X obj 244 245 f \$1;
+#X obj 280 245 f \$1;
+#X obj 315 245 f \$1;
+#X obj 351 245 f \$1;
+#X obj 387 245 f \$1;
+#X obj 130 197 f \$1;
+#X connect 0 0 36 0;
 #X connect 1 0 28 0;
 #X connect 2 0 29 0;
 #X connect 3 0 30 0;
@@ -80,3 +81,4 @@ THE CORRESPONDING OUTLET.;
 #X connect 33 0 23 0;
 #X connect 34 0 24 0;
 #X connect 35 0 25 0;
+#X connect 36 0 27 0;
