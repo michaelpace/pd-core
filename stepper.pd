@@ -1,0 +1,44 @@
+#N canvas 759 244 450 462 12;
+#X obj 108 162 inlet;
+#X obj 108 186 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 108 280 counter \$1;
+#X obj 108 328 +, f 27;
+#X obj 108 400 outlet;
+#X obj 152 162 inlet;
+#X obj 196 162 inlet;
+#X obj 196 210 t f f;
+#X obj 294 162 inlet;
+#X obj 108 304 % \$1, f 17;
+#X obj 152 245 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 108 352 % \$1;
+#X obj 383 260 f \$1;
+#X msg 351 260 0;
+#X obj 196 186 clip 0 \$1;
+#X text 24 9 /// INITIALIZE WITH \$1 SET TO MAXIMUM SEQUENCE LENGTH.
+\; /// BANG FIRST INLET TO COUNT FROM 0 (INCLUSIVE) TO THAT \, (EXCLUSIVE).
+\; /// BANG SECOND INLET TO RESET ALL STATE. \; /// PASS A FLOAT (BETWEEN
+0 AND \$1) TO THIRD INLET TO SET SEQUENCE LENGTH TO THAT. \; /// PASS
+A FLOAT TO FOURTH INLET TO OFFSET SEQUENCE BY THAT MANY STEPS.;
+#X obj 108 376 above \$1 -1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 9 0;
+#X connect 3 0 11 0;
+#X connect 5 0 10 0;
+#X connect 6 0 14 0;
+#X connect 7 0 2 2;
+#X connect 7 1 9 1;
+#X connect 8 0 3 1;
+#X connect 9 0 3 0;
+#X connect 10 0 2 1;
+#X connect 10 0 13 0;
+#X connect 10 0 12 0;
+#X connect 11 0 16 0;
+#X connect 12 0 11 1;
+#X connect 12 0 9 1;
+#X connect 12 0 2 2;
+#X connect 13 0 3 1;
+#X connect 14 0 7 0;
+#X connect 16 0 4 0;
