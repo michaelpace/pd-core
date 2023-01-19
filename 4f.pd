@@ -1,0 +1,34 @@
+#N canvas 121 159 936 353 12;
+#X obj 170 129 inlet;
+#X obj 152 280 f;
+#X obj 152 304 outlet;
+#X obj 220 129 inlet;
+#X obj 202 280 f;
+#X obj 202 304 outlet;
+#X obj 270 129 inlet;
+#X obj 252 280 f;
+#X obj 252 304 outlet;
+#X obj 320 129 inlet;
+#X obj 302 280 f;
+#X obj 302 304 outlet;
+#X obj 31 129 inlet;
+#X obj 31 153 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 31 173 16bng, f 124;
+#X text 259 24 /// PASS FLOATS TO ALL INLETS EXCEPT THE FIRST. \; ///
+THEY WILL EACH BE CACHED. \; /// BANG FIRST INLET TO RETURN THE FLOATS
+IN \; /// RIGHT-TO-LEFT ORDER FROM THE OUTLETS.;
+#X connect 0 0 1 1;
+#X connect 1 0 2 0;
+#X connect 3 0 4 1;
+#X connect 4 0 5 0;
+#X connect 6 0 7 1;
+#X connect 7 0 8 0;
+#X connect 9 0 10 1;
+#X connect 10 0 11 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 0;
+#X connect 14 0 1 0;
+#X connect 14 1 4 0;
+#X connect 14 2 7 0;
+#X connect 14 3 10 0;

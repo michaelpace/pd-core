@@ -24,6 +24,9 @@
 #000000 #000000;
 #X obj 45 417 sel 0;
 #X obj 45 396 counter 6;
+#X obj 295 653 outlet;
+#X obj 292 630 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 18 0;
@@ -32,6 +35,7 @@
 #X connect 2 3 4 0;
 #X connect 3 0 13 0;
 #X connect 4 0 9 0;
+#X connect 4 0 20 0;
 #X connect 5 0 13 0;
 #X connect 9 0 10 0;
 #X connect 10 0 14 1;
@@ -43,3 +47,4 @@
 #X connect 16 0 11 0;
 #X connect 17 0 12 0;
 #X connect 18 0 17 0;
+#X connect 20 0 19 0;

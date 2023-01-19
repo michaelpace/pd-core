@@ -20,7 +20,6 @@
 #X obj 99 228 f;
 #X obj 99 193 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000;
-#X text 9 71 midi note to adjust;
 #X obj 67 252 % \$1;
 #X obj 159 339 % \$1;
 #X obj 201 339 / \$1;
@@ -32,14 +31,15 @@
 #X text 158 71 \$2 floor value;
 #X text 12 8 // MOVES THE VALUE SO IT'S ABOVE \$2 FLOOR (EXCLUSIVE).
 ;
+#X text 21 68 value to adjust;
 #X connect 0 0 16 0;
-#X connect 1 0 27 0;
-#X connect 2 0 27 0;
+#X connect 1 0 26 0;
+#X connect 2 0 26 0;
 #X connect 3 0 7 0;
 #X connect 4 0 6 1;
 #X connect 5 0 8 0;
 #X connect 5 1 9 0;
-#X connect 6 0 24 0;
+#X connect 6 0 23 0;
 #X connect 7 0 5 0;
 #X connect 8 0 6 0;
 #X connect 9 0 6 0;
@@ -53,13 +53,13 @@
 #X connect 16 0 14 0;
 #X connect 16 1 17 1;
 #X connect 16 2 18 1;
-#X connect 17 0 21 0;
+#X connect 17 0 20 0;
 #X connect 18 0 12 0;
 #X connect 19 0 18 0;
-#X connect 21 0 10 0;
-#X connect 22 0 7 1;
-#X connect 23 0 4 0;
-#X connect 24 0 11 1;
-#X connect 27 0 14 1;
-#X connect 27 0 22 0;
-#X connect 27 0 23 0;
+#X connect 20 0 10 0;
+#X connect 21 0 7 1;
+#X connect 22 0 4 0;
+#X connect 23 0 11 1;
+#X connect 26 0 14 1;
+#X connect 26 0 21 0;
+#X connect 26 0 22 0;
