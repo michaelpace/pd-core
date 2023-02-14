@@ -65,6 +65,13 @@ right outlet bangs when envelope completes.;
 after adr \, bang;
 #X text 749 82 re-run [stagedaccumulator] with new env values;
 #X obj 228 203 max 1;
+#X obj 262 448 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 468 453 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 315 464 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 532 596 snapshotter~ 0 1;
 #X connect 1 0 45 0;
 #X connect 2 0 47 0;
 #X connect 4 0 48 0;
@@ -86,6 +93,7 @@ after adr \, bang;
 #X connect 23 0 25 0;
 #X connect 24 0 26 0;
 #X connect 25 0 30 0;
+#X connect 25 0 60 0;
 #X connect 25 1 31 0;
 #X connect 25 2 35 0;
 #X connect 25 3 54 0;
@@ -93,12 +101,15 @@ after adr \, bang;
 #X connect 27 0 44 0;
 #X connect 27 0 16 0;
 #X connect 28 0 29 0;
+#X connect 28 0 63 0;
 #X connect 30 0 28 0;
 #X connect 31 0 36 0;
+#X connect 31 0 62 0;
 #X connect 32 0 33 1;
 #X connect 33 0 34 0;
 #X connect 34 0 28 0;
 #X connect 35 0 40 0;
+#X connect 35 0 61 0;
 #X connect 36 0 33 0;
 #X connect 36 1 37 0;
 #X connect 37 0 34 1;
