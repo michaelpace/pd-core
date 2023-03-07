@@ -1,8 +1,8 @@
 #N canvas 401 139 148 167 12;
 #X obj 16 134 outlet~;
 #X obj 16 14 inlet~;
-#X obj 16 38 hv.osc saw;
 #X obj 71 14 inlet;
-#X connect 1 0 2 0;
-#X connect 2 0 0 0;
-#X connect 3 0 2 1;
+#X obj 16 38 heavylib/hv.osc saw;
+#X connect 1 0 3 0;
+#X connect 2 0 3 1;
+#X connect 3 0 0 0;
