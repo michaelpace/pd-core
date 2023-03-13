@@ -12,14 +12,6 @@
 #X obj 208 181 inlet;
 #X obj 264 188 loadbang;
 #X obj 169 391 sampleablerandwalk \$1 \$2;
-#X text 7 17 /// PASS OUTPUT OF [metronome] TO FIRST INLET TO OUTPUT
-\; /// RANDOM VALUES BETWEEN 0 AND 1 \; /// PASS A 0 TO SECOND INLET
-TO LOCK PREVIOUS 8 STEPS \; /// INTO PLACE \, SO THE OUTPUT LOOPS THE
-PREVIOUS 8 VALUES. \; /// PASS A 1 TO SECOND INLET TO RESUME GENERATING
-RANDOM \; /// VALUES. \; /// INITIALIZE WITH \$1 AND \$2 BEING THE
-MIN AND MAX \; /// DURATIONS IN MILLISECONDS TO HAVE A SINGLE NOTE
-RUN \; /// LAST FOR IN THE GENERATIVE ALGORITHM. RECOMMENDED TO \;
-/// SET \$1 TO THE [metronome] RATE.;
 #X obj 137 245 - 1;
 #X text 12 230 because 8step is \; 0-based but \; [metronome] is \;
 1-based.;
@@ -30,37 +22,45 @@ RUN \; /// LAST FOR IN THE GENERATIVE ALGORITHM. RECOMMENDED TO \;
 USE THESE TO SAVE AND RECALL PATTERNS.;
 #X obj 169 511 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;
 #X obj 169 463 % 16;
-#X connect 0 0 19 0;
+#X text 7 17 /// PASS OUTPUT OF [metronome] TO FIRST INLET TO OUTPUT
+\; /// RANDOM VALUES BETWEEN 0 AND 1 \; /// PASS A 0 TO SECOND INLET
+TO LOCK PREVIOUS 16 STEPS \; /// INTO PLACE \, SO THE OUTPUT LOOPS
+THE PREVIOUS 16 VALUES. \; /// PASS A 1 TO SECOND INLET TO RESUME GENERATING
+RANDOM \; /// VALUES. \; /// INITIALIZE WITH \$1 AND \$2 BEING THE
+MIN AND MAX \; /// DURATIONS IN MILLISECONDS TO HAVE A SINGLE NOTE
+RUN \; /// LAST FOR IN THE GENERATIVE ALGORITHM. RECOMMENDED TO \;
+/// SET \$1 TO THE [metronome] RATE.;
+#X connect 0 0 18 0;
 #X connect 1 0 0 0;
 #X connect 1 1 2 1;
-#X connect 2 0 18 0;
-#X connect 3 0 15 0;
+#X connect 2 0 17 0;
+#X connect 3 0 14 0;
 #X connect 3 1 4 0;
 #X connect 4 0 5 0;
 #X connect 5 0 11 0;
 #X connect 5 1 0 1;
 #X connect 6 0 4 1;
-#X connect 8 0 13 0;
+#X connect 8 0 12 0;
 #X connect 9 0 6 0;
 #X connect 10 0 6 0;
 #X connect 11 0 1 0;
-#X connect 13 0 3 0;
-#X connect 15 0 7 0;
-#X connect 16 0 15 17;
-#X connect 18 0 15 1;
-#X connect 18 1 15 2;
-#X connect 18 2 15 3;
-#X connect 18 3 15 4;
-#X connect 18 4 15 5;
-#X connect 18 5 15 6;
-#X connect 18 6 15 7;
-#X connect 18 7 15 8;
-#X connect 18 8 15 9;
-#X connect 18 9 15 10;
-#X connect 18 10 15 11;
-#X connect 18 11 15 12;
-#X connect 18 12 15 13;
-#X connect 18 13 15 14;
-#X connect 18 14 15 15;
-#X connect 18 15 15 16;
-#X connect 19 0 2 0;
+#X connect 12 0 3 0;
+#X connect 14 0 7 0;
+#X connect 15 0 14 17;
+#X connect 17 0 14 1;
+#X connect 17 1 14 2;
+#X connect 17 2 14 3;
+#X connect 17 3 14 4;
+#X connect 17 4 14 5;
+#X connect 17 5 14 6;
+#X connect 17 6 14 7;
+#X connect 17 7 14 8;
+#X connect 17 8 14 9;
+#X connect 17 9 14 10;
+#X connect 17 10 14 11;
+#X connect 17 11 14 12;
+#X connect 17 12 14 13;
+#X connect 17 13 14 14;
+#X connect 17 14 14 15;
+#X connect 17 15 14 16;
+#X connect 18 0 2 0;

@@ -271,12 +271,11 @@ THE FOLDING ISN'T ENOUGH \, WE JUST CLIP \; /// IT TO KEEP IT IN THE
 RANGE OF -1...1. FOLDS WITHOUT \; /// CLIPPING ROUGHLY ON AN INPUT
 RANGE FROM -5...5 \, AND \; /// THEN STARTS CLIPPING.;
 #X obj 181 185 *~;
-#X obj 259 160 inlet;
+#X obj 258 136 inlet;
 #X obj 259 208 ramp~;
-#X obj 354 222 loadbang;
-#X msg 354 246 0;
 #X floatatom 280 237 5 0 0 0 - - - 0;
 #X obj 263 184 scaled 0 1 1 10;
+#X obj 258 160 deff \$1 0;
 #X connect 0 0 5 0;
 #X connect 1 0 10 0;
 #X connect 3 0 4 0;
@@ -285,9 +284,8 @@ RANGE FROM -5...5 \, AND \; /// THEN STARTS CLIPPING.;
 #X connect 7 0 8 0;
 #X connect 8 0 3 0;
 #X connect 10 0 0 0;
-#X connect 11 0 16 0;
+#X connect 11 0 15 0;
 #X connect 12 0 10 1;
-#X connect 13 0 14 0;
-#X connect 14 0 16 0;
-#X connect 16 0 12 0;
-#X connect 16 0 15 0;
+#X connect 14 0 12 0;
+#X connect 14 0 13 0;
+#X connect 15 0 14 0;
