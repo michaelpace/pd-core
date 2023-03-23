@@ -124,15 +124,13 @@ noiselevel 0.1 \, noisevcfmod 0 \, vcfcutoff 0 \, vcfegamount 0.48
 #X obj 523 154 del 1;
 #X text 392 330 ----- mspdfam :) -----;
 #X obj 337 118 scaled 0 1 0 0.4;
-#X obj 9 325 mspparam vco1frequency 0 8000 80;
-#X obj 9 402 mspparam vco2frequency 0 8000 160;
+#X obj 9 325 mspparam vco1frequency;
+#X obj 9 402 mspparam vco2frequency;
 #X obj 619 97 route pitch velocity vcodecay vcoegexponent vco1egamount
 vco1frequency vco1level vco2egamount vco2frequency vco2level fmamount
 syncamount noiselevel noisevcfmod vcfcutoff vcfegamount vcfdecay vcfegexponent
 vcfresonance vcadecay vcaegexponent seqpitchmod vco1wave vco2wave patchpitchtovcf
 patchpitchtonoisemod;
-#X obj 165 122 scaled 0 1 40 8000;
-#X obj 203 154 scaled 0 1 40 8000;
 #X connect 0 0 26 0;
 #X connect 1 0 26 0;
 #X connect 2 0 26 0;
@@ -176,10 +174,10 @@ patchpitchtonoisemod;
 #X connect 38 2 15 0;
 #X connect 38 3 31 0;
 #X connect 38 4 1 0;
-#X connect 38 5 52 0;
+#X connect 38 5 49 0;
 #X connect 38 6 3 0;
 #X connect 38 7 2 0;
-#X connect 38 8 53 0;
+#X connect 38 8 50 0;
 #X connect 38 9 4 0;
 #X connect 38 10 5 0;
 #X connect 38 11 6 0;
@@ -233,6 +231,5 @@ patchpitchtonoisemod;
 #X connect 51 23 17 0;
 #X connect 51 24 22 0;
 #X connect 51 25 23 0;
-#X connect 52 0 49 0;
-#X connect 53 0 50 0;
+#X connect 51 26 30 0;
 #X coords 0 0 1 1 580 535 2 0 200;
