@@ -1,13 +1,13 @@
-#N canvas 77 25 450 300 12;
-#X obj 3 0 hsl 60 18 0 1 0 0 empty empty empty -2 -8 0 10 -262144 -1
--1 1800 1;
+#N canvas 77 38 450 300 12;
+#X obj 3 0 hsl 60 18 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 88 130 loadbang;
 #X obj 246 178 f \$2;
 #X obj 167 178 f \$1;
 #X obj 167 202 pack f f, f 11;
 #X msg 167 226 range \$1 \$2;
 #X obj 1 103 outlet;
-#X floatatom 65 0 7 0 0 0 - - -;
+#X floatatom 65 0 7 0 0 0 - - - 0;
 #X obj 289 94 inlet;
 #X obj 289 118 clip \$1 \$2;
 #X obj 152 76 clip \$1 \$2;

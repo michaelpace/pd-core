@@ -1,0 +1,9 @@
+#N canvas 745 117 450 300 12;
+#X obj 1 1 swarm~.params;
+#X obj 1 262 outlet~;
+#X obj 1 238 swarm~.impl;
+#X obj 388 136 inlet;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X coords 0 -1 1 1 350 231 2 1 1;

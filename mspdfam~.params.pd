@@ -1,0 +1,238 @@
+#N canvas 0 38 1512 884 12;
+#X obj 9 576 mspparam vcfcutoff;
+#X obj 9 306 mspparam vco1egamount;
+#X obj 9 383 mspparam vco2egamount;
+#X obj 9 344 mspparam vco1level;
+#X obj 9 421 mspparam vco2level;
+#X obj 9 460 mspparam fmamount;
+#X obj 9 479 mspparam syncamount;
+#X obj 9 518 mspparam noiselevel;
+#X obj 9 537 mspparam noisevcfmod;
+#X obj 9 595 mspparam vcfegamount;
+#X obj 9 614 mspparam vcfdecay;
+#X obj 9 652 mspparam vcfresonance;
+#X obj 9 691 mspparam vcadecay;
+#X obj 9 210 mspparam pitch;
+#X obj 9 229 mspparam velocity;
+#X obj 9 248 mspparam vcodecay;
+#X obj 385 537 hradio 15 1 0 4 empty empty vco1wave 62 6 0 10 #fcfcfc
+#000000 #000000 0;
+#X obj 385 554 hradio 15 1 0 4 empty empty vco2wave 62 6 0 10 #fcfcfc
+#000000 #000000 0;
+#X msg 493 805 vco1wave \$1;
+#X msg 579 805 vco2wave \$1;
+#X obj 385 520 hradio 15 1 0 3 empty empty seqpitchmod 50 6 0 10 #fcfcfc
+#000000 #000000 0;
+#X msg 385 805 seqpitchmod \$1;
+#X obj 385 571 tgl 15 0 empty empty patchpitchtovcf 17 7 0 10 #fcfcfc
+#000000 #000000 0 1;
+#X obj 385 588 tgl 15 0 empty empty patchpitchtonoisemod 17 7 0 10
+#fcfcfc #000000 #000000 0 1;
+#X msg 666 805 patchpitchtovcf \$1;
+#X msg 802 805 patchpitchtonoisemod \$1;
+#X obj 8 750 outlet;
+#X obj 619 73 inlet;
+#X obj 537 214 hradio 15 1 0 2 empty empty presets 0 -8 0 10 #fcfcfc
+#000000 #000000 0;
+#X obj 1001 238 sel 0 1, f 84;
+#X obj 1086 149 print INVALID PARAM;
+#X obj 9 267 mspparam vcoegexponent;
+#X obj 9 633 mspparam vcfegexponent;
+#X obj 9 710 mspparam vcaegexponent;
+#X msg 1001 262 vcodecay 0.3 \, vcoegexponent 0.3 \, vco1egamount 0.5
+\, vco1frequency 0.3 \, vco1level 1 \, vco2egamount 0.5 \, vco2frequency
+0.35 \, vco2level 1 \, fmamount 0 \, syncamount 0 \, noiselevel 0.1
+\, noisevcfmod 0 \, vcfcutoff 0.05 \, vcfegamount 0.5 \, vcfdecay 0.2
+\, vcfegexponent 0.3 \, vcfresonance 0.2 \, vcadecay 0.3 \, vcaegexponent
+0.3 \, seqpitchmod 1 \, vco1wave 2 \, vco2wave 2 \, patchpitchtovcf
+0 \, patchpitchtonoisemod 0;
+#X msg 1001 382 vcodecay 0.11 \, vcoegexponent 0.787 \, vco1egamount
+0.629 \, vco1frequency 0.314 \, vco1level 1 \, vco2egamount 0.37 \,
+vco2frequency 0.527 \, vco2level 1 \, fmamount 0 \, syncamount 0 \,
+noiselevel 0.1 \, noisevcfmod 0 \, vcfcutoff 0 \, vcfegamount 0.48
+\, vcfdecay 0.055 \, vcfegexponent 0.574 \, vcfresonance 0.393 \, vcadecay
+0.181 \, vcaegexponent 0.629 \, seqpitchmod 2 \, vco1wave 2 \, vco2wave
+3 \, patchpitchtovcf 0 \, patchpitchtonoisemod 0;
+#X obj 451 214 bng 15 250 50 0 empty empty randomize 17 7 0 10 #fcfcfc
+#000000 #000000;
+#N canvas 121 159 450 300 randomize_floats 0;
+#X obj 116 124 t b f, f 8;
+#X obj 116 148 random 1000;
+#X obj 116 172 / 1000;
+#X obj 116 196 swap, f 8;
+#X obj 116 220 pack f f;
+#X obj 116 43 inlet;
+#X obj 116 67 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 116 244 outlet;
+#X obj 116 100 countrange 0 100;
+#X connect 0 0 1 0;
+#X connect 0 1 3 1;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 8 0 0 0;
+#X restore 98 55 pd randomize_floats;
+#X obj 97 78 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
+20;
+#N canvas 150 188 657 125 randomize_ints 0;
+#X obj 303 15 inlet;
+#X obj 14 65 random 100;
+#X obj 94 65 random 100;
+#X obj 174 65 random 100;
+#X obj 254 65 random 100;
+#X obj 334 65 random 100;
+#X obj 414 65 random 100;
+#X obj 494 65 random 100;
+#X obj 574 65 random 100;
+#X obj 14 89 outlet;
+#X obj 94 89 outlet;
+#X obj 174 89 outlet;
+#X obj 254 89 outlet;
+#X obj 334 89 outlet;
+#X obj 414 89 outlet;
+#X obj 494 89 outlet;
+#X obj 574 89 outlet;
+#X connect 0 0 1 0;
+#X connect 0 0 2 0;
+#X connect 0 0 8 0;
+#X connect 0 0 7 0;
+#X connect 0 0 6 0;
+#X connect 0 0 5 0;
+#X connect 0 0 4 0;
+#X connect 0 0 3 0;
+#X connect 1 0 9 0;
+#X connect 2 0 10 0;
+#X connect 3 0 11 0;
+#X connect 4 0 12 0;
+#X connect 5 0 13 0;
+#X connect 6 0 14 0;
+#X connect 7 0 15 0;
+#X connect 8 0 16 0;
+#X restore 339 27 pd randomize_ints;
+#X f 34;
+#X obj 339 51 % 3;
+#X obj 372 51 % 4;
+#X obj 406 51 % 4;
+#X obj 439 51 % 2;
+#X obj 473 51 % 2;
+#X obj 523 130 loadbang;
+#X obj 523 154 del 1;
+#X text 392 330 ----- mspdfam :) -----;
+#X obj 337 118 scaled 0 1 0 0.4;
+#X obj 9 325 mspparam vco1frequency 0 8000 80;
+#X obj 9 402 mspparam vco2frequency 0 8000 160;
+#X obj 619 97 route pitch velocity vcodecay vcoegexponent vco1egamount
+vco1frequency vco1level vco2egamount vco2frequency vco2level fmamount
+syncamount noiselevel noisevcfmod vcfcutoff vcfegamount vcfdecay vcfegexponent
+vcfresonance vcadecay vcaegexponent seqpitchmod vco1wave vco2wave patchpitchtovcf
+patchpitchtonoisemod;
+#X obj 165 122 scaled 0 1 40 8000;
+#X obj 203 154 scaled 0 1 40 8000;
+#X connect 0 0 26 0;
+#X connect 1 0 26 0;
+#X connect 2 0 26 0;
+#X connect 3 0 26 0;
+#X connect 4 0 26 0;
+#X connect 5 0 26 0;
+#X connect 6 0 26 0;
+#X connect 7 0 26 0;
+#X connect 8 0 26 0;
+#X connect 9 0 26 0;
+#X connect 10 0 26 0;
+#X connect 11 0 26 0;
+#X connect 12 0 26 0;
+#X connect 13 0 26 0;
+#X connect 14 0 26 0;
+#X connect 15 0 26 0;
+#X connect 16 0 18 0;
+#X connect 17 0 19 0;
+#X connect 18 0 26 0;
+#X connect 19 0 26 0;
+#X connect 20 0 21 0;
+#X connect 21 0 26 0;
+#X connect 22 0 24 0;
+#X connect 23 0 25 0;
+#X connect 24 0 26 0;
+#X connect 25 0 26 0;
+#X connect 27 0 51 0;
+#X connect 28 0 29 0;
+#X connect 29 0 34 0;
+#X connect 29 1 35 0;
+#X connect 31 0 26 0;
+#X connect 32 0 26 0;
+#X connect 33 0 26 0;
+#X connect 34 0 51 0;
+#X connect 35 0 51 0;
+#X connect 36 0 37 0;
+#X connect 36 0 39 0;
+#X connect 37 0 38 0;
+#X connect 38 0 13 0;
+#X connect 38 1 14 0;
+#X connect 38 2 15 0;
+#X connect 38 3 31 0;
+#X connect 38 4 1 0;
+#X connect 38 5 52 0;
+#X connect 38 6 3 0;
+#X connect 38 7 2 0;
+#X connect 38 8 53 0;
+#X connect 38 9 4 0;
+#X connect 38 10 5 0;
+#X connect 38 11 6 0;
+#X connect 38 12 7 0;
+#X connect 38 13 8 0;
+#X connect 38 14 48 0;
+#X connect 38 15 9 0;
+#X connect 38 16 10 0;
+#X connect 38 17 32 0;
+#X connect 38 18 11 0;
+#X connect 38 19 12 0;
+#X connect 38 20 33 0;
+#X connect 39 0 40 0;
+#X connect 39 1 41 0;
+#X connect 39 2 42 0;
+#X connect 39 3 43 0;
+#X connect 39 4 44 0;
+#X connect 40 0 20 0;
+#X connect 41 0 16 0;
+#X connect 42 0 17 0;
+#X connect 43 0 22 0;
+#X connect 44 0 23 0;
+#X connect 45 0 46 0;
+#X connect 46 0 36 0;
+#X connect 48 0 0 0;
+#X connect 49 0 26 0;
+#X connect 50 0 26 0;
+#X connect 51 0 13 0;
+#X connect 51 1 14 0;
+#X connect 51 2 15 0;
+#X connect 51 3 31 0;
+#X connect 51 4 1 0;
+#X connect 51 5 49 0;
+#X connect 51 6 3 0;
+#X connect 51 7 2 0;
+#X connect 51 8 50 0;
+#X connect 51 9 4 0;
+#X connect 51 10 5 0;
+#X connect 51 11 6 0;
+#X connect 51 12 7 0;
+#X connect 51 13 8 0;
+#X connect 51 14 0 0;
+#X connect 51 15 9 0;
+#X connect 51 16 10 0;
+#X connect 51 17 32 0;
+#X connect 51 18 11 0;
+#X connect 51 19 12 0;
+#X connect 51 20 33 0;
+#X connect 51 21 20 0;
+#X connect 51 22 16 0;
+#X connect 51 23 17 0;
+#X connect 51 24 22 0;
+#X connect 51 25 23 0;
+#X connect 52 0 49 0;
+#X connect 53 0 50 0;
+#X coords 0 0 1 1 580 535 2 0 200;

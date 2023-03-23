@@ -1,0 +1,12 @@
+#N canvas 92 130 450 300 12;
+#X obj 280 40 table \$0-graph;
+#X obj 73 86 loadbang;
+#X obj 73 110 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 73 134 metro 100;
+#X obj 73 158 tabwrite~ \$0-graph;
+#X obj 171 65 inlet~;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 4 0;

@@ -1,84 +1,9 @@
-#N canvas 0 25 1027 747 12;
-#X obj 37 159 line~;
-#X obj 37 515 cos~;
-#X obj 37 493 -~ 0.25;
-#X text 83 160 ramp from 0 to 1;
-#X text 77 669 filter out the click;
-#X obj 37 36 inlet;
-#X obj 37 87 t b b;
-#X msg 69 111 0;
-#X obj 174 38 inlet;
-#X obj 174 62 deff \$1 200;
-#X obj 37 135 pack f f, f 20;
-#X msg 37 111 1;
-#X obj 438 30 inlet;
-#X obj 38 346 *~;
-#X obj 641 33 inlet;
-#X obj 641 57 deff \$3 1000;
-#X obj 37 669 lop~;
-#X obj 37 712 outlet~;
-#X text 37 15 bang;
-#X text 118 15 \$1 duration in ms (linked w/ pitch);
-#X text 382 10 \$2 pitch (linked w/ duration);
-#X text 625 9 \$3 lop cutoff;
-#X obj 37 233 sqrt~;
-#X text 96 437 feed the sqrt ramp into a sine waveshaper (which is
-a cosine object with offset of -0.5pi on the input (recall that [cos~]
-multiplies its input by 2pi)). this will limit it from -1 to 1 instead
-of 0 to the scaled-up value. having scaled it up to 20 (by default)
-means that we will go around the unit circle 20 times faster than we
-would have otherwise. so \, the scaling-up is effectively affecting
-frequency \, not amplitude \, since it comes before this [cos~] (which
-is behaving like a sine b/c of the offset). if it came after \, it'd
-make it 20 times louder. recall that as you trace angles from pointing
-right counter-clockwise around a unit circle \, sin reports the y value
-(and cos reports the x value).;
-#X obj 438 54 deff \$2 20;
-#X floatatom 704 157 5 0 0 0 - - -;
-#X text 745 158 duration;
-#X floatatom 704 177 5 0 0 0 - - -;
-#X text 745 178 pitch;
-#X floatatom 704 197 5 0 0 0 - - -;
-#X text 744 198 lop cutoff;
-#X text 84 192 give it an exponential (or something? logarithmic?)
-shape instead of linear. we are still going from 0 to 1 \, just quickly
-from 0 to ~0.4 \, and then more slowly from there to 1 this shape means
-that we will be oscillating quickly between 1 and -1 in the sine waveshaper
-below at first \, and then we'll slow down. basically \, the slope
-of this line — steep at first \, and then levelling off — is what
-gives the kick the descending pitch envelope.;
-#X text 75 328 scale that up. now going from 0 to 20 (by default) instead
-of 0 to 1 this means that we'll pump out 20 complete sine wavelengths
-\, but with fluctuating rate (due to the [sqrt~] above). if we didn't
-have the [sqrt~] \, this would multiplier in conjunction with the duration
-ms would determine constant pitch (e.g. \, 20 wavelengths in 200ms
-would be 100hz).;
-#X obj 438 102 line~;
-#X msg 438 78 \$1 100;
-#X connect 0 0 22 0;
-#X connect 1 0 16 0;
-#X connect 2 0 1 0;
-#X connect 5 0 6 0;
-#X connect 6 0 11 0;
-#X connect 6 1 7 0;
-#X connect 7 0 0 0;
-#X connect 8 0 9 0;
-#X connect 9 0 10 1;
-#X connect 9 0 25 0;
-#X connect 10 0 0 0;
-#X connect 11 0 10 0;
-#X connect 12 0 24 0;
-#X connect 13 0 2 0;
-#X connect 14 0 15 0;
-#X connect 15 0 16 1;
-#X connect 15 0 29 0;
-#X connect 16 0 17 0;
-#X connect 22 0 13 0;
-#X connect 24 0 27 0;
-#X connect 24 0 34 0;
-#X connect 25 0 10 1;
-#X connect 27 0 34 0;
-#X connect 29 0 16 1;
-#X connect 33 0 13 1;
-#X connect 34 0 33 0;
-#X coords 0 -1 1 1 120 80 1 700 140;
+#N canvas 0 38 1512 884 12;
+#X obj 1 1 kick~.params;
+#X obj 467 163 inlet;
+#X obj 62 258 kick~.impl;
+#X obj 62 282 outlet~;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X coords 0 -1 1 1 351 175 2 1 1;
