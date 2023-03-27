@@ -1,21 +1,31 @@
-#N canvas 88 64 447 261 12;
-#X text 189 104 /// \$1 the clip NAME in this patch;
-#X text 187 119 /// \$2 the # of samples;
-#X obj 22 96 loadbang;
-#X obj 22 120 t b b, f 13;
-#X obj 22 144 samplerate~;
-#X obj 110 144 f \$2;
-#X obj 22 168 /, f 13;
-#X obj 22 192 print \$1_hz;
+#N canvas 88 64 957 342 12;
+#X text 499 86 /// \$1 the clip NAME in this patch;
 #X text 7 5 /// TO USE: (1) initialize with creation args \$1 and \$2.
 there needs to be a file at Broadcast/Assets/Audio/\$1-\$2.wav for
 this to work. (2) if using hv/unity \, load the audio file into clip-\$1
 with heavy's API. if just using pd \, use [__audioclip_load \$1 \$2].
 (3) prints out 1x playback rate.;
-#X obj 192 151 table clip-\$1 \$2;
+#X obj 15 285 f;
+#X obj 15 309 s \$1-sample-count;
+#X obj 27 241 r \$1-sample-count-request;
+#X obj 27 265 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 14 112 r registered_for_send_hook @hv_event;
+#X obj 14 136 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
+#X msg 14 156 1;
+#X obj 14 180 s audio_clip_setup_request_\$1 @hv_param;
+#X obj 15 217 r audio_clip_setup_response_sample_count_\$1 @hv_param
+0 2.646e+06 0, f 79;
+#X obj 748 87 table clip-\$1 999999;
+#X text 501 109 supports ~22 seconds 999999 samples) at most for now
+due to a bug in heavy that i reported at the following link. hopefully
+it'll get fixed and i can increase this amount. https://discord.com/channels/705820271910715474/939227639057641542/1089940016085602404
+;
 #X connect 2 0 3 0;
-#X connect 3 0 4 0;
-#X connect 3 1 5 0;
-#X connect 4 0 6 0;
-#X connect 5 0 6 1;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
 #X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 10 0 2 0;

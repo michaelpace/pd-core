@@ -1,0 +1,16 @@
+#N canvas 498 536 664 281 12;
+#X obj 251 121 loadbang;
+#X obj 251 145 s \$1-sample-count-request;
+#X obj 251 169 r \$1-sample-count;
+#X obj 251 216 outlet;
+#X floatatom 73 188 10 0 0 0 - - - 0;
+#X obj 297 216 print \$1_sample_count;
+#X obj 251 193 t f f, f 7;
+#X text 93 20 //// WRAPS REQUEST AND RESPONSE FOR SAMPLE COUNT. THIS
+CAN BE FULFILLED BY [audioclip~] WHEN USING HVCC \, OR [__sample~]
+FOR PD-ONLY PATCHES.;
+#X connect 0 0 1 0;
+#X connect 2 0 4 0;
+#X connect 2 0 6 0;
+#X connect 6 0 3 0;
+#X connect 6 1 5 0;

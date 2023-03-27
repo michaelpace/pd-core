@@ -46,10 +46,10 @@
 #X obj 904 86 r \$0-phase;
 #X obj 982 383 del;
 #X msg 327 403 1;
-#X obj 162 80 t b b b;
+#X obj 162 80 t b b b, f 20;
 #X obj 904 431 t b b;
 #X obj 951 358 - 5;
-#X obj 528 163 s \$0-phase;
+#X obj 529 163 s \$0-phase;
 #X obj 904 333 t f f b, f 14;
 #X obj 332 33 t b f f f, f 37;
 #X obj 730 17 sign;
@@ -77,6 +77,8 @@
 #X obj 18 294 r \$0-\$1-sample-count;
 #X floatatom 1160 213 10 0 0 0 - - - 0;
 #X obj 1055 179 f;
+#X obj 512 266 r \$0-did-wrap;
+#X obj 512 290 print didwrap;
 #X connect 0 0 12 0;
 #X connect 0 0 29 0;
 #X connect 0 0 58 0;
@@ -149,34 +151,33 @@
 #X connect 62 0 13 0;
 #X connect 64 0 17 1;
 #X connect 64 0 63 0;
+#X connect 65 0 66 0;
 #X restore 21 324 pd playatrate~;
 #X obj 21 206 inlet;
 #X text 17 183 /// hot: bang to play clip.;
-#X obj 470 155 swap, f 6;
-#X obj 470 179 /, f 6;
-#X obj 509 131 samplerate~;
-#X obj 470 204 s \$0-hz;
-#X text 5 10 /// TO USE: (1) initialize with creation args \$1 and
-\$2. there needs to be an [audioclip~ \$1 \$2] in this patch. (2) bang
-the left outlet to play the clip once \, from start to finish. it plays
-at the playback rate specified by the right inlet. 1 represents the
-original playback rate \, 2 is double speed \, -0.5 is half-speed and
-backwards \, etc. all audio comes out of the first two outlets \, which
-are audio-rate \, one for L and one for R. the rightmost outlet bangs
-when playback of the sample is complete.;
+#X obj 482 153 swap, f 6;
+#X obj 482 177 /, f 6;
+#X obj 521 129 samplerate~;
+#X obj 482 202 s \$0-hz;
 #X obj 235 277 s \$0-playback-rate;
 #X floatatom 316 225 5 0 0 0 - - - 0;
 #X text 231 382 /// bangs when playback is 5ms from complete;
 #X floatatom 364 242 5 0 0 0 - - - 0;
-#X obj 498 54 r \$1-sample-count;
-#X obj 456 35 __samplecountrequest \$1;
-#X obj 470 131 f \$2;
-#X obj 443 231 s \$0-\$1-sample-count;
-#X obj 470 107 t b b, f 6;
-#X obj 498 78 t b f;
-#X connect 0 0 19 0;
+#X obj 459 226 s \$0-\$1-sample-count;
+#X obj 459 83 samplecountprovider \$1;
+#X obj 459 107 t f f b;
+#X text 5 10 /// TO USE: (1) initialize with creation args \$1 being
+sample name. there needs to be an [audioclip~ \$1] or [__sample~ \$1]
+in this patch. (2) bang the left outlet to play the clip once \, from
+start to finish. it plays at the playback rate specified by the right
+inlet. 1 represents the original playback rate \, 2 is double speed
+\, -0.5 is half-speed and backwards \, etc. all audio comes out of
+the first two outlets \, which are audio-rate \, one for L and one
+for R. the rightmost outlet bangs when playback of the sample is complete.
+;
+#X connect 0 0 18 0;
 #X connect 0 0 1 0;
-#X connect 1 0 16 0;
+#X connect 1 0 15 0;
 #X connect 2 0 1 0;
 #X connect 8 0 6 0;
 #X connect 8 1 5 0;
@@ -185,12 +186,8 @@ when playback of the sample is complete.;
 #X connect 11 1 12 1;
 #X connect 12 0 14 0;
 #X connect 13 0 11 1;
-#X connect 17 0 1 0;
-#X connect 20 0 25 0;
-#X connect 21 0 24 0;
-#X connect 22 0 11 0;
-#X connect 22 0 23 0;
-#X connect 24 0 22 0;
-#X connect 24 1 13 0;
-#X connect 25 0 24 0;
-#X connect 25 1 22 1;
+#X connect 16 0 1 0;
+#X connect 20 0 21 0;
+#X connect 21 0 19 0;
+#X connect 21 1 11 0;
+#X connect 21 2 13 0;
