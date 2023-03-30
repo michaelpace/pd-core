@@ -1,31 +1,40 @@
-#N canvas 705 168 450 380 12;
-#X obj 66 122 inlet~;
-#X obj 66 341 outlet~;
-#X obj 156 342 outlet~;
-#X obj 173 120 inlet;
-#X obj 66 317 *~;
-#X obj 156 318 *~;
-#X obj 173 144 deff \$1 0.5;
-#X obj 173 168 clip 0 1;
-#X text 11 12 /// FEED AUDIO INTO LEFT INLET. RIGHT INLET CONTROLS
+#N canvas 705 168 524 454 12;
+#X obj 96 152 inlet~;
+#X obj 96 371 outlet~;
+#X obj 186 372 outlet~;
+#X obj 203 150 inlet;
+#X obj 96 347 *~;
+#X obj 186 348 *~;
+#X obj 203 198 clip 0 1;
+#X text 41 42 /// FEED AUDIO INTO LEFT INLET. RIGHT INLET CONTROLS
 PAN AMOUNT. 1e-09 == FULLY LEFT \, 1 == FULLY RIGHT \, 0.5 == CENTER.
 DEFAULTS TO 0.5. LEFT CHANNEL COMES OUT OF LEFT OUTLET~ AND RIGHT CHANNEL
 COMES OUT OF RIGHT OUTLET~. NOTE THAT RIGHT NOW THERE IS A BUG WHERE
 INITIALIZING WITH 0 WILL CAUSE IT TO COME OUT CENTER \, NOT LEFT \,
 SO USE SOMETHING LIKE 1e-11 INSTEAD.;
-#X obj 173 216 line~;
-#X obj 84 245 *~ -1;
-#X obj 84 269 +~ 1;
-#X msg 173 192 \$1 1;
+#X obj 203 246 line~;
+#X obj 114 275 *~ -1;
+#X obj 114 299 +~ 1;
+#X msg 203 222 \$1 1;
+#X obj 1 23 msphsl 0 1 0.5;
+#X text 10 2 --- pan :) --, f 14;
+#X obj 336 173 loadbang;
+#X obj 336 197 deff \$1 0.5;
+#X obj 203 174 f;
 #X connect 0 0 5 0;
 #X connect 0 0 4 0;
-#X connect 3 0 6 0;
+#X connect 3 0 16 0;
 #X connect 4 0 1 0;
 #X connect 5 0 2 0;
-#X connect 6 0 7 0;
-#X connect 7 0 12 0;
+#X connect 6 0 11 0;
+#X connect 8 0 9 0;
+#X connect 8 0 5 1;
 #X connect 9 0 10 0;
-#X connect 9 0 5 1;
-#X connect 10 0 11 0;
-#X connect 11 0 4 1;
-#X connect 12 0 9 0;
+#X connect 10 0 4 1;
+#X connect 11 0 8 0;
+#X connect 12 0 16 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 15 0 12 0;
+#X connect 16 0 6 0;
+#X coords 0 -1 1 1 117 40 2 1 1;

@@ -1,0 +1,13 @@
+#N canvas 208 246 589 300 12;
+#X obj 1 1 reverb~.params;
+#X obj 474 13 inlet;
+#X obj 56 209 inlet~;
+#X obj 56 233 reverb~.impl;
+#X obj 56 257 outlet~;
+#X obj 137 257 outlet~;
+#X connect 0 0 3 1;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 1 5 0;
+#X coords 0 -1 1 1 351 172 2 1 1;
