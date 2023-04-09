@@ -1,9 +1,9 @@
-#N canvas 0 38 1512 884 12;
-#X obj 1 1 mspdfam~.params;
-#X obj 80 594 mspdfam~.impl;
-#X obj 80 618 outlet~;
-#X obj 682 188 inlet;
+#N canvas 0 38 744 656 12;
+#X obj 2 2 mspdfam~.params;
+#X obj 81 595 mspdfam~.impl;
+#X obj 81 619 outlet~;
+#X obj 683 189 inlet;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 3 0 0 0;
-#X coords 0 -1 1 1 580 535 2 1 1;
+#X coords 0 -1 1 1 580 535 2 2 2;
