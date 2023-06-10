@@ -1,4 +1,4 @@
-#N canvas 759 244 450 462 12;
+#N canvas 253 266 450 462 12;
 #X obj 108 162 inlet;
 #X obj 108 186 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;

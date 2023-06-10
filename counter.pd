@@ -1,9 +1,9 @@
-#N canvas 722 235 554 500 12;
+#N canvas 114 142 554 500 12;
 #X obj 96 296 + 1;
 #X obj 176 356 == 0;
 #X obj 176 380 sel 1;
 #X msg 176 404 1;
-#X floatatom 66 344 5 0 0 0 - - -;
+#X floatatom 66 344 5 0 0 0 - - - 0;
 #X obj 66 296 f;
 #X obj 66 127 inlet;
 #X obj 66 447 outlet;
@@ -12,16 +12,16 @@
 #X obj 256 292 f \$1;
 #X obj 188 267 loadbang;
 #X obj 66 320 %;
-#X obj 120 210 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 120 210 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X obj 120 230 f \$1;
 #X obj 120 127 inlet;
 #X text 37 12 /// COUNTS FROM 0 TO \$1 \, EXCLUSIVE \, INCREMENTING
 WITH EACH BANG \, AND WRAPPING AROUND AFTER \$1 \; /// BANG FIRST INLET
 TO GET NEXT NUMBER \; /// BANG SECOND INLET TO RESET STATE \; /// PASS
 A FLOAT TO THIRD INLET TO CHANGE LENGTH;
-#X obj 66 211 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 66 211 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000;
 #X connect 0 0 5 1;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -31,7 +31,6 @@ A FLOAT TO THIRD INLET TO CHANGE LENGTH;
 #X connect 5 0 12 0;
 #X connect 6 0 17 0;
 #X connect 8 0 10 0;
-#X connect 8 0 14 0;
 #X connect 10 0 12 1;
 #X connect 11 0 10 0;
 #X connect 12 0 1 0;
