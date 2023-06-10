@@ -86,6 +86,9 @@
 #X obj 1065 63 - 1;
 #X obj 613 516 loadbang;
 #X msg 409 31 1;
+#X obj 445 59 s \$0-length;
+#X obj 374 117 s \$0-density;
+#X obj 511 45 s \$0-offset;
 #X connect 0 0 6 0;
 #X connect 1 0 4 0;
 #X connect 2 0 3 0;
@@ -99,11 +102,13 @@
 #X connect 7 0 14 0;
 #X connect 8 0 61 0;
 #X connect 9 0 10 0;
-#X connect 9 0 11 0;
 #X connect 9 0 74 0;
 #X connect 9 0 78 0;
+#X connect 9 0 11 0;
 #X connect 10 0 15 0;
+#X connect 10 0 79 0;
 #X connect 11 0 16 0;
+#X connect 11 0 81 0;
 #X connect 14 0 13 0;
 #X connect 15 0 17 0;
 #X connect 16 0 46 0;
@@ -190,6 +195,7 @@
 #X connect 71 0 72 0;
 #X connect 71 1 33 0;
 #X connect 74 0 8 0;
+#X connect 74 0 80 0;
 #X connect 75 0 1 0;
 #X connect 76 0 0 0;
 #X connect 77 0 54 0;
