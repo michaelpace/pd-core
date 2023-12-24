@@ -130,7 +130,7 @@ noiselevel 0.1 \, noisevcfmod 0 \, vcfcutoff 0 \, vcfegamount 0.48
 vco1frequency vco1level vco2egamount vco2frequency vco2level fmamount
 syncamount noiselevel noisevcfmod vcfcutoff vcfegamount vcfdecay vcfegexponent
 vcfresonance vcadecay vcaegexponent seqpitchmod vco1wave vco2wave patchpitchtovcf
-patchpitchtonoisemod;
+patchpitchtonoisemod preset;
 #X connect 0 0 26 0;
 #X connect 1 0 26 0;
 #X connect 2 0 26 0;
@@ -231,5 +231,6 @@ patchpitchtonoisemod;
 #X connect 51 23 17 0;
 #X connect 51 24 22 0;
 #X connect 51 25 23 0;
-#X connect 51 26 30 0;
+#X connect 51 26 29 0;
+#X connect 51 27 30 0;
 #X coords 0 0 1 1 580 535 2 0 200;
