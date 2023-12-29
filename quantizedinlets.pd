@@ -1,4 +1,4 @@
-#N canvas 0 25 1920 860 12;
+#N canvas 4 50 1912 860 12;
 #X obj 18 18 inlet;
 #X obj 71 150 abs;
 #X obj 131 150 abs;
@@ -133,6 +133,10 @@
 \; /// OTHER INLETS.;
 #X obj 33 773 first, f 150;
 #X obj 18 42 t b f f f f f f f f f f f f f f f f b, f 148;
+#X obj 1806 46 inlet reset;
+#X obj 1806 70 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 1806 90 0;
 #X connect 0 0 132 0;
 #X connect 1 0 63 0;
 #X connect 2 0 61 0;
@@ -327,3 +331,21 @@
 #X connect 132 15 31 0;
 #X connect 132 16 32 0;
 #X connect 132 17 131 2;
+#X connect 133 0 134 0;
+#X connect 134 0 135 0;
+#X connect 135 0 128 0;
+#X connect 135 0 127 0;
+#X connect 135 0 126 0;
+#X connect 135 0 125 0;
+#X connect 135 0 124 0;
+#X connect 135 0 123 0;
+#X connect 135 0 122 0;
+#X connect 135 0 121 0;
+#X connect 135 0 120 0;
+#X connect 135 0 119 0;
+#X connect 135 0 118 0;
+#X connect 135 0 117 0;
+#X connect 135 0 116 0;
+#X connect 135 0 115 0;
+#X connect 135 0 114 0;
+#X connect 135 0 113 0;
