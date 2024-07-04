@@ -1,9 +1,9 @@
 #N canvas 0 38 1512 884 12;
 #X obj 1 1 kick~.params;
 #X obj 467 163 inlet;
-#X obj 62 258 kick~.impl;
-#X obj 62 282 outlet~;
+#X obj 2 258 kick~.impl;
+#X obj 2 282 outlet~;
 #X connect 0 0 2 0;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
-#X coords 0 -1 1 1 351 175 2 1 1;
+#X coords 0 -1 1 1 351 194 2 1 1;
