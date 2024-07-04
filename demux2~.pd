@@ -1,0 +1,13 @@
+#N canvas 405 245 450 300 12;
+#X obj 89 188 demux~, f 39;
+#X obj 68 23 tgl 30 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
+#X obj 70 105 inlet~;
+#X obj 134 105 inlet~;
+#X obj 89 212 outlet~;
+#X text 1 3 ----- demux2~ :) -----;
+#X connect 0 0 4 0;
+#X connect 1 0 0 8;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X coords 0 -1 1 1 160 60 2 0 0;
