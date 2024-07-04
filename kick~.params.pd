@@ -8,9 +8,9 @@
 #X obj 2 157 mspparam velocity;
 #X obj 181 201 inlet;
 #X text 111 3 ----- kick :) -----;
-#X obj 181 225 route frequency range attack decay shape velocity fold
+#X obj 181 225 route frequency range attack decay shape velocity clip
 ;
-#X obj 2 176 mspparam fold 0 1;
+#X obj 2 176 mspparam clip 0 1 0;
 #X connect 0 0 5 0;
 #X connect 1 0 5 0;
 #X connect 2 0 5 0;
@@ -24,5 +24,6 @@
 #X connect 9 3 2 0;
 #X connect 9 4 3 0;
 #X connect 9 5 6 0;
+#X connect 9 6 10 0;
 #X connect 10 0 5 0;
 #X coords 0 -1 1 1 351 194 2 1 1;
