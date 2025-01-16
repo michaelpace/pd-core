@@ -1,4 +1,4 @@
-#N canvas 0 23 1802 788 12;
+#N canvas 0 38 1512 788 12;
 #X msg 22 148 open \$1;
 #X obj 22 172 hid 0;
 #X obj 22 196 route key rel abs syn, f 251;
@@ -7,47 +7,47 @@
 #X msg 137 148 print;
 #X obj 22 220 route btn_0 btn_1 btn_2 btn_3 btn_4 btn_5 btn_6 btn_7
 btn_8 btn_9 btn_10 btn_11 btn_12 btn_13 btn_14 btn_15;
-#X obj 22 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 47 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 73 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 98 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 124 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 150 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 175 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 201 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 227 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 252 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 278 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 303 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 329 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 355 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 380 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
-#X obj 406 259 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 22 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 47 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 73 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 98 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 124 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 150 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 175 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 201 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 227 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 252 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 278 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 303 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 329 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 355 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 380 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 406 259 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 899 220 route abs_x abs_y abs_z abs_rx abs_ry abs_rz abs_throttle
 ;
-#X floatatom 899 244 5 0 0 0 - - -;
-#X floatatom 955 244 5 0 0 0 - - -;
-#X floatatom 1012 244 5 0 0 0 - - -;
-#X floatatom 1068 244 5 0 0 0 - - -;
-#X floatatom 1125 244 5 0 0 0 - - -;
-#X floatatom 1181 244 5 0 0 0 - - -;
-#X floatatom 1238 244 5 0 0 0 - - -;
+#X floatatom 899 244 5 0 0 0 - - - 0;
+#X floatatom 955 244 5 0 0 0 - - - 0;
+#X floatatom 1012 244 5 0 0 0 - - - 0;
+#X floatatom 1068 244 5 0 0 0 - - - 0;
+#X floatatom 1125 244 5 0 0 0 - - - 0;
+#X floatatom 1181 244 5 0 0 0 - - - 0;
+#X floatatom 1238 244 5 0 0 0 - - - 0;
 #X text 16 274 sqr;
 #X text 49 274 x;
 #X text 74 273 o;
@@ -72,11 +72,10 @@ btn_8 btn_9 btn_10 btn_11 btn_12 btn_13 btn_14 btn_15;
 #X obj 22 755 outlet;
 #X obj 899 282 scaled 0 255 -1 1;
 #X obj 1012 368 scaled 0 255 -1 1;
-#X obj 1181 478 scaled 0 255 -1 1;
+#X obj 1181 438 scaled 0 255 -1 1;
 #X obj 22 109 t b f;
 #X obj 955 320 * -1;
 #X obj 955 344 scaled -255 0 -1 1;
-#X obj 1181 454 * -1;
 #X text 475 8 /// NOTE: NOT COMPATIBLE WITH HEAVY.;
 #X text 38 8 /// USAGE: OBSERVE DEBUG LOG TO SEE CORRECT DEVICE NUMBER
 FOR PS4 CONTROLLER. SEND INLET THAT DEVICE NUMBER. WILL SEND OUT MESSAGES
@@ -96,6 +95,7 @@ BUTTONS ARE 0 OR 1 \, JOYSTICKS AND SHOULDER BUTTONS ARE -1 TO 1;
 #X msg 1181 545 axis4 \$1;
 #X msg 1068 498 axis5 \$1;
 #X msg 1125 521 axis6 \$1;
+#X obj 1181 462 * -1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 2 0 6 0;
@@ -119,12 +119,12 @@ BUTTONS ARE 0 OR 1 \, JOYSTICKS AND SHOULDER BUTTONS ARE -1 TO 1;
 #X connect 6 13 20 0;
 #X connect 6 14 21 0;
 #X connect 6 15 22 0;
-#X connect 7 0 65 0;
-#X connect 8 0 64 0;
-#X connect 9 0 67 0;
-#X connect 10 0 66 0;
-#X connect 11 0 68 0;
-#X connect 12 0 69 0;
+#X connect 7 0 64 0;
+#X connect 8 0 63 0;
+#X connect 9 0 66 0;
+#X connect 10 0 65 0;
+#X connect 11 0 67 0;
+#X connect 12 0 68 0;
 #X connect 23 0 24 0;
 #X connect 23 1 25 0;
 #X connect 23 2 26 0;
@@ -135,20 +135,20 @@ BUTTONS ARE 0 OR 1 \, JOYSTICKS AND SHOULDER BUTTONS ARE -1 TO 1;
 #X connect 24 0 53 0;
 #X connect 25 0 57 0;
 #X connect 26 0 54 0;
-#X connect 27 0 62 0;
-#X connect 28 0 63 0;
-#X connect 29 0 59 0;
+#X connect 27 0 61 0;
+#X connect 28 0 62 0;
+#X connect 29 0 55 0;
 #X connect 51 0 56 0;
-#X connect 53 0 70 0;
-#X connect 54 0 72 0;
-#X connect 55 0 73 0;
+#X connect 53 0 69 0;
+#X connect 54 0 71 0;
+#X connect 55 0 75 0;
 #X connect 56 0 4 0;
 #X connect 56 1 0 0;
 #X connect 57 0 58 0;
-#X connect 58 0 71 0;
-#X connect 59 0 55 0;
+#X connect 58 0 70 0;
+#X connect 61 0 73 0;
 #X connect 62 0 74 0;
-#X connect 63 0 75 0;
+#X connect 63 0 52 0;
 #X connect 64 0 52 0;
 #X connect 65 0 52 0;
 #X connect 66 0 52 0;
@@ -160,4 +160,4 @@ BUTTONS ARE 0 OR 1 \, JOYSTICKS AND SHOULDER BUTTONS ARE -1 TO 1;
 #X connect 72 0 52 0;
 #X connect 73 0 52 0;
 #X connect 74 0 52 0;
-#X connect 75 0 52 0;
+#X connect 75 0 72 0;
