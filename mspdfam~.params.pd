@@ -1,43 +1,37 @@
-#N canvas 4 50 1598 884 12;
-#X obj 9 576 mspparam vcfcutoff;
-#X obj 9 306 mspparam vco1egamount;
-#X obj 9 383 mspparam vco2egamount;
-#X obj 9 344 mspparam vco1level;
-#X obj 9 421 mspparam vco2level;
-#X obj 9 460 mspparam fmamount;
-#X obj 9 479 mspparam syncamount;
-#X obj 9 518 mspparam noiselevel;
-#X obj 9 537 mspparam noisevcfmod;
-#X obj 9 595 mspparam vcfegamount;
-#X obj 9 614 mspparam vcfdecay;
-#X obj 9 652 mspparam vcfresonance;
-#X obj 9 691 mspparam vcadecay;
-#X obj 9 210 mspparam pitch;
-#X obj 9 229 mspparam velocity;
-#X obj 9 248 mspparam vcodecay;
-#X obj 385 537 hradio 15 1 0 4 empty empty vco1wave 62 6 0 10 -262144
--1 -1 3;
-#X obj 385 554 hradio 15 1 0 4 empty empty vco2wave 62 6 0 10 -262144
--1 -1 3;
+#N canvas 0 38 1512 884 12;
+#X obj 0 502 mspparam vcfcutoff;
+#X obj 0 282 mspparam vco1egamount;
+#X obj 0 346 mspparam vco2egamount;
+#X obj 0 318 mspparam vco1level;
+#X obj 0 382 mspparam vco2level;
+#X obj 0 410 mspparam fmamount;
+#X obj 0 428 mspparam syncamount;
+#X obj 0 456 mspparam noiselevel;
+#X obj 0 474 mspparam noisevcfmod;
+#X obj 0 520 mspparam vcfegamount;
+#X obj 0 538 mspparam vcfdecay;
+#X obj 0 574 mspparam vcfresonance;
+#X obj 0 602 mspparam vcadecay;
+#X obj 0 200 mspparam pitch;
+#X obj 0 218 mspparam velocity;
+#X obj 0 236 mspparam vcodecay;
+#X obj 225 537 hradio 15 1 0 4 empty empty vco1wave 62 6 0 10 #fcfcfc #000000 #000000 0;
+#X obj 225 554 hradio 15 1 0 4 empty empty vco2wave 62 6 0 10 #fcfcfc #000000 #000000 0;
 #X msg 493 805 vco1wave \$1;
 #X msg 579 805 vco2wave \$1;
-#X obj 385 520 hradio 15 1 0 3 empty empty seqpitchmod 50 6 0 10 -262144
--1 -1 2;
+#X obj 225 520 hradio 15 1 0 3 empty empty seqpitchmod 50 6 0 10 #fcfcfc #000000 #000000 0;
 #X msg 385 805 seqpitchmod \$1;
-#X obj 385 571 tgl 15 0 empty empty patchpitchtovcf 17 7 0 10 -262144
--1 -1 0 1;
-#X obj 385 588 tgl 15 0 empty empty patchpitchtonoisemod 17 7 0 10
--262144 -1 -1 1 1;
+#X obj 225 571 tgl 15 0 empty empty patchpitchtovcf 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 225 588 tgl 15 0 empty empty patchpitchtonoisemod 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 666 805 patchpitchtovcf \$1;
 #X msg 802 805 patchpitchtonoisemod \$1;
 #X obj 8 750 outlet;
 #X obj 619 73 inlet;
 #X obj 1086 149 print INVALID PARAM;
-#X obj 9 267 mspparam vcoegexponent;
-#X obj 9 633 mspparam vcfegexponent;
-#X obj 9 710 mspparam vcaegexponent;
-#X obj 451 214 bng 15 250 50 0 empty empty randomize 17 7 0 10 -262144
--1 -1;
+#X obj 0 254 mspparam vcoegexponent;
+#X obj 0 556 mspparam vcfegexponent;
+#X obj 0 620 mspparam vcaegexponent;
+#X obj 267 214 bng 15 250 50 0 empty empty randomize 17 7 0 10 #fcfcfc #000000 #000000;
 #N canvas 121 159 450 300 randomize_floats 0;
 #X obj 116 124 t b f, f 8;
 #X obj 116 148 random 1000;
@@ -45,8 +39,7 @@
 #X obj 116 196 swap, f 8;
 #X obj 116 220 pack f f;
 #X obj 116 43 inlet;
-#X obj 116 67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#X obj 116 67 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 116 244 outlet;
 #X obj 116 100 countrange 0 100;
 #X connect 0 0 1 0;
@@ -60,8 +53,7 @@
 #X connect 6 0 8 0;
 #X connect 8 0 0 0;
 #X restore 98 55 pd randomize_floats;
-#X obj 97 78 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19
-20;
+#X obj 97 78 route 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20;
 #N canvas 150 188 657 125 randomize_ints 0;
 #X obj 303 15 inlet;
 #X obj 14 65 random 100;
@@ -105,116 +97,27 @@
 #X obj 473 51 % 2;
 #X obj 523 130 loadbang;
 #X obj 523 154 del 1;
-#X text 392 330 ----- mspdfam :) -----;
+#X text 226 330 ----- mspdfam :) -----;
 #X obj 337 118 scaled 0 1 0 0.4;
-#X obj 9 325 mspparam vco1frequency;
-#X obj 9 402 mspparam vco2frequency;
-#X obj 619 97 route pitch velocity vcodecay vcoegexponent vco1egamount
-vco1frequency vco1level vco2egamount vco2frequency vco2level fmamount
-syncamount noiselevel noisevcfmod vcfcutoff vcfegamount vcfdecay vcfegexponent
-vcfresonance vcadecay vcaegexponent seqpitchmod vco1wave vco2wave patchpitchtovcf
-patchpitchtonoisemod preset randomize;
-#X floatatom 528 219 6 0 13 2 presets - -;
-#X msg 999 773 vcodecay 0.844 \, vcoegexponent 0.29 \, vco1egamount
-0.696 \, vco1frequency 0.12 \, vco1level 0.527 \, vco2egamount 0.249
-\, vco2frequency 0.921 \, vco2level 0.267 \, fmamount 0.559 \, syncamount
-0.086 \, noiselevel 0.267 \, noisevcfmod 0.213 \, vcfcutoff 0.366 \,
-vcfegamount 0.52 \, vcfdecay 0.496 \, vcfegexponent 0.588 \, vcfresonance
-0.735 \, vcadecay 0.357 \, vcaegexponent 0.98 \, seqpitchmod 0 \, vco1wave
-0 \, vco2wave 0 \, patchpitchtovcf 0 \, patchpitchtonoisemod 0;
-#X msg 981 1286 vcodecay 0.595 \, vcoegexponent 0.277 \, vco1egamount
-0.903 \, vco1frequency 0.69 \, vco1level 0.428 \, vco2egamount 0.674
-\, vco2frequency 0.294 \, vco2level 0.636 \, fmamount 0.165 \, syncamount
-0.969 \, noiselevel 0.106 noisevcfmod 0.299 \, vcfcutoff 0.038 \, vcfegamount
-0.127 \, vcfdecay 0.677 \, vcfegexponent 0.361 \, vcfresonance 0.233
-\, vcadecay 0.233 \, vcaegexponent 0.432 \, seqpitchmod 0 \, vco1wave
-2 \, vco2wave 3 \, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
-#X msg 976 1413 vcodecay 0.595 \, vcoegexponent 0.277 \, vco1egamount
-0.903 \, vco1frequency 0.69 \, vco1level 0.428 \, vco2egamount 0.674
-\, vco2frequency 0.294 \, vco2level 0.636 \, fmamount 0 \, syncamount
-1 \, noiselevel 0.106 noisevcfmod 0.026 \, vcfcutoff 0.038 \, vcfegamount
-0.127 \, vcfdecay 0.677 \, vcfegexponent 0.291 \, vcfresonance 0.11
-\, vcadecay 0.233 \, vcaegexponent 0.85 \, seqpitchmod 0 \, vco1wave
-0 \, vco2wave 0 \, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
-#X msg 972 1546 vcodecay 0.381 \, vcoegexponent 0.837 \, vco1egamount
-0.2 \, vco1frequency 0.234 \, vco1level 0.892 \, vco2egamount 0.306
-\, vco2frequency 0.979 \, vco2level 0.117 \, fmamount 0.748 \, syncamount
-0.726 \, noiselevel 0.294 \, noisevcfmod 0.078 \, vcfcutoff 0.1 \,
-vcfegamount 0.677 \, vcfdecay 0.59 \, vcfegexponent 0.616 \, vcfresonance
-0.108 \, vcadecay 0.063 \, vcaegexponent 0.05 \, seqpitchmod 0 \, vco1wave
-0 \, vco2wave 0 \, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
-#X msg 1002 272 vcodecay 0.047 \, vcoegexponent 1 \, vco1egamount 0.755
-\, vco1frequency 0.236 \, vco1level 0.837 \, vco2egamount 0.244 \,
-vco2frequency 0.244 \, vco2level 0.795 \, fmamount 0.803 \, syncamount
-0 \, noiselevel 0.22 \, noisevcfmod 0.026 \, vcfcutoff 0 \, vcfegamount
-0 \, vcfdecay 0 \, vcfegexponent 0 \, vcfresonance 1 \, vcadecay 0.149
-\, vcaegexponent 1 \, seqpitchmod 0 \, vco1wave 1 \, vco2wave 1 \,
-patchpitchtovcf 0 \, patchpitchtonoisemod 1;
-#X msg 997 907 vcodecay 0 \, vcoegexponent 1 \, vco1egamount 0.677
-\, vco1frequency 0.118 \, vco1level 0.212 \, vco2egamount 0.543 \,
-vco2frequency 0.921 \, vco2level 0.149 \, fmamount 0.204 \, syncamount
-0.086 \, noiselevel 0 \, noisevcfmod 0.204 \, vcfcutoff 0.062 \, vcfegamount
-0.417 \, vcfdecay 0.11 \, vcfegexponent 1 \, vcfresonance 0 \, vcadecay
-0.196 \, vcaegexponent 0.98 \, seqpitchmod 1 \, vco1wave 0 \, vco2wave
-3 \, patchpitchtovcf 0 \, patchpitchtonoisemod 0;
-#X msg 1472 358 vcodecay 0.72 \, vcoegexponent 0.902 \, vco1egamount
-0.295 \, vco1frequency 0.086 \, vco1level 0.226 \, vco2egamount 0.279
-\, vco2frequency 0.233 \, vco2level 0.569 \, fmamount 0.314 \, syncamount
-0 \, noiselevel 0.026 \, noisevcfmod 0.251 \, vcfcutoff 0.04 \, vcfegamount
-0.431 \, vcfdecay 0.005 \, vcfegexponent 0.029 \, vcfresonance 0.376
-\, vcadecay 0.174 \, vcaegexponent 0.835 \, seqpitchmod 2 \, vco1wave
-0 \, vco2wave 0 \, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
-#X msg 1000 644 vcodecay 0.078 \, vcoegexponent 0.976 \, vco1egamount
-0.755 \, vco1frequency 0.094 \, vco1level 0.196 \, vco2egamount 0.333
-\, vco2frequency 0.48 \, vco2level 0.118 \, fmamount 0.931 \, syncamount
-0.926 \, noiselevel 0.026 \, noisevcfmod 0.259 \, vcfcutoff 0.01 \,
-vcfegamount 0.852 \, vcfdecay 0.032 \, vcfegexponent 0.349 \, vcfresonance
-0.392 \, vcadecay 0.351 \, vcaegexponent 0.509 \, seqpitchmod 1 \,
-vco1wave 2 \, vco2wave 0 \, patchpitchtovcf 0 \, patchpitchtonoisemod
-0;
-#X msg 986 1032 vcodecay 0.118 \, vcoegexponent 0.133 \, vco1egamount
-0.614 \, vco1frequency 0.125 \, vco1level 0.85 \, vco2egamount 0.531
-\, vco2frequency 0.37 \, vco2level 0.383 \, fmamount 0.092 \, syncamount
-0.181 \, noiselevel 0.33 \, noisevcfmod 0.026 \, vcfcutoff 0.002 \,
-vcfegamount 0 \, vcfdecay 0 \, vcfegexponent 0 \, vcfresonance 0.598
-\, vcadecay 0.078 \, vcaegexponent 0.496 \, seqpitchmod 0 \, vco1wave
-1 \, vco2wave 1 \, patchpitchtovcf 1 \, patchpitchtonoisemod 1;
-#X msg 991 1162 vcodecay 0.047 \, vcoegexponent 0.393 \, vco1egamount
-0.755 \, vco1frequency 0.173 \, vco1level 0.837 \, vco2egamount 0.078
-\, vco2frequency 0.181 \, vco2level 0.748 \, fmamount 0 \, syncamount
-0 \, noiselevel 0 \, noisevcfmod 0.275 \, vcfcutoff 0 \, vcfegamount
-0 \, vcfdecay 0 \, vcfegexponent 0 \, vcfresonance 1 \, vcadecay 0.11
-\, vcaegexponent 0.732 \, seqpitchmod 0 \, vco1wave 0 \, vco2wave 2
-\, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
+#X obj 0 300 mspparam vco1frequency;
+#X obj 0 364 mspparam vco2frequency;
+#X obj 619 97 route pitch velocity vcodecay vcoegexponent vco1egamount vco1frequency vco1level vco2egamount vco2frequency vco2level fmamount syncamount noiselevel noisevcfmod vcfcutoff vcfegamount vcfdecay vcfegexponent vcfresonance vcadecay vcaegexponent seqpitchmod vco1wave vco2wave patchpitchtovcf patchpitchtonoisemod preset randomize;
+#X floatatom 344 219 6 0 13 2 presets - - 0;
+#X msg 999 773 vcodecay 0.844 \, vcoegexponent 0.29 \, vco1egamount 0.696 \, vco1frequency 0.12 \, vco1level 0.527 \, vco2egamount 0.249 \, vco2frequency 0.921 \, vco2level 0.267 \, fmamount 0.559 \, syncamount 0.086 \, noiselevel 0.267 \, noisevcfmod 0.213 \, vcfcutoff 0.366 \, vcfegamount 0.52 \, vcfdecay 0.496 \, vcfegexponent 0.588 \, vcfresonance 0.735 \, vcadecay 0.357 \, vcaegexponent 0.98 \, seqpitchmod 0 \, vco1wave 0 \, vco2wave 0 \, patchpitchtovcf 0 \, patchpitchtonoisemod 0;
+#X msg 981 1286 vcodecay 0.595 \, vcoegexponent 0.277 \, vco1egamount 0.903 \, vco1frequency 0.69 \, vco1level 0.428 \, vco2egamount 0.674 \, vco2frequency 0.294 \, vco2level 0.636 \, fmamount 0.165 \, syncamount 0.969 \, noiselevel 0.106 noisevcfmod 0.299 \, vcfcutoff 0.038 \, vcfegamount 0.127 \, vcfdecay 0.677 \, vcfegexponent 0.361 \, vcfresonance 0.233 \, vcadecay 0.233 \, vcaegexponent 0.432 \, seqpitchmod 0 \, vco1wave 2 \, vco2wave 3 \, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
+#X msg 976 1413 vcodecay 0.595 \, vcoegexponent 0.277 \, vco1egamount 0.903 \, vco1frequency 0.69 \, vco1level 0.428 \, vco2egamount 0.674 \, vco2frequency 0.294 \, vco2level 0.636 \, fmamount 0 \, syncamount 1 \, noiselevel 0.106 noisevcfmod 0.026 \, vcfcutoff 0.038 \, vcfegamount 0.127 \, vcfdecay 0.677 \, vcfegexponent 0.291 \, vcfresonance 0.11 \, vcadecay 0.233 \, vcaegexponent 0.85 \, seqpitchmod 0 \, vco1wave 0 \, vco2wave 0 \, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
+#X msg 972 1546 vcodecay 0.381 \, vcoegexponent 0.837 \, vco1egamount 0.2 \, vco1frequency 0.234 \, vco1level 0.892 \, vco2egamount 0.306 \, vco2frequency 0.979 \, vco2level 0.117 \, fmamount 0.748 \, syncamount 0.726 \, noiselevel 0.294 \, noisevcfmod 0.078 \, vcfcutoff 0.1 \, vcfegamount 0.677 \, vcfdecay 0.59 \, vcfegexponent 0.616 \, vcfresonance 0.108 \, vcadecay 0.063 \, vcaegexponent 0.05 \, seqpitchmod 0 \, vco1wave 0 \, vco2wave 0 \, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
+#X msg 1002 272 vcodecay 0.047 \, vcoegexponent 1 \, vco1egamount 0.755 \, vco1frequency 0.236 \, vco1level 0.837 \, vco2egamount 0.244 \, vco2frequency 0.244 \, vco2level 0.795 \, fmamount 0.803 \, syncamount 0 \, noiselevel 0.22 \, noisevcfmod 0.026 \, vcfcutoff 0 \, vcfegamount 0 \, vcfdecay 0 \, vcfegexponent 0 \, vcfresonance 1 \, vcadecay 0.149 \, vcaegexponent 1 \, seqpitchmod 0 \, vco1wave 1 \, vco2wave 1 \, patchpitchtovcf 0 \, patchpitchtonoisemod 1;
+#X msg 997 907 vcodecay 0 \, vcoegexponent 1 \, vco1egamount 0.677 \, vco1frequency 0.118 \, vco1level 0.212 \, vco2egamount 0.543 \, vco2frequency 0.921 \, vco2level 0.149 \, fmamount 0.204 \, syncamount 0.086 \, noiselevel 0 \, noisevcfmod 0.204 \, vcfcutoff 0.062 \, vcfegamount 0.417 \, vcfdecay 0.11 \, vcfegexponent 1 \, vcfresonance 0 \, vcadecay 0.196 \, vcaegexponent 0.98 \, seqpitchmod 1 \, vco1wave 0 \, vco2wave 3 \, patchpitchtovcf 0 \, patchpitchtonoisemod 0;
+#X msg 1472 358 vcodecay 0.72 \, vcoegexponent 0.902 \, vco1egamount 0.295 \, vco1frequency 0.086 \, vco1level 0.226 \, vco2egamount 0.279 \, vco2frequency 0.233 \, vco2level 0.569 \, fmamount 0.314 \, syncamount 0 \, noiselevel 0.026 \, noisevcfmod 0.251 \, vcfcutoff 0.04 \, vcfegamount 0.431 \, vcfdecay 0.005 \, vcfegexponent 0.029 \, vcfresonance 0.376 \, vcadecay 0.174 \, vcaegexponent 0.835 \, seqpitchmod 2 \, vco1wave 0 \, vco2wave 0 \, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
+#X msg 1000 644 vcodecay 0.078 \, vcoegexponent 0.976 \, vco1egamount 0.755 \, vco1frequency 0.094 \, vco1level 0.196 \, vco2egamount 0.333 \, vco2frequency 0.48 \, vco2level 0.118 \, fmamount 0.931 \, syncamount 0.926 \, noiselevel 0.026 \, noisevcfmod 0.259 \, vcfcutoff 0.01 \, vcfegamount 0.852 \, vcfdecay 0.032 \, vcfegexponent 0.349 \, vcfresonance 0.392 \, vcadecay 0.351 \, vcaegexponent 0.509 \, seqpitchmod 1 \, vco1wave 2 \, vco2wave 0 \, patchpitchtovcf 0 \, patchpitchtonoisemod 0;
+#X msg 986 1032 vcodecay 0.118 \, vcoegexponent 0.133 \, vco1egamount 0.614 \, vco1frequency 0.125 \, vco1level 0.85 \, vco2egamount 0.531 \, vco2frequency 0.37 \, vco2level 0.383 \, fmamount 0.092 \, syncamount 0.181 \, noiselevel 0.33 \, noisevcfmod 0.026 \, vcfcutoff 0.002 \, vcfegamount 0 \, vcfdecay 0 \, vcfegexponent 0 \, vcfresonance 0.598 \, vcadecay 0.078 \, vcaegexponent 0.496 \, seqpitchmod 0 \, vco1wave 1 \, vco2wave 1 \, patchpitchtovcf 1 \, patchpitchtonoisemod 1;
+#X msg 991 1162 vcodecay 0.047 \, vcoegexponent 0.393 \, vco1egamount 0.755 \, vco1frequency 0.173 \, vco1level 0.837 \, vco2egamount 0.078 \, vco2frequency 0.181 \, vco2level 0.748 \, fmamount 0 \, syncamount 0 \, noiselevel 0 \, noisevcfmod 0.275 \, vcfcutoff 0 \, vcfegamount 0 \, vcfdecay 0 \, vcfegexponent 0 \, vcfresonance 1 \, vcadecay 0.11 \, vcaegexponent 0.732 \, seqpitchmod 0 \, vco1wave 0 \, vco2wave 2 \, patchpitchtovcf 1 \, patchpitchtonoisemod 0;
 #X obj 1001 237 sel 0 1 2 3 4 5 6 7 8 9 10 11 12 13, f 65;
-#X msg 1001 382 vcodecay 0.247 \, vcoegexponent 0.253 \, vco1egamount
-0.129 \, vco1frequency 0.055 \, vco1level 0.677 \, vco2egamount 0.212
-\, vco2frequency 0.447 \, vco2level 0.874 \, fmamount 0 \, syncamount
-0.086 \, noiselevel 0.291 \, noisevcfmod 0 \, vcfcutoff 0 \, vcfegamount
-0 \, vcfdecay 0 \, vcfegexponent 0 \, vcfresonance 0 \, vcadecay 0.267
-\, vcaegexponent 0.685 \, seqpitchmod 0 \, vco1wave 3 \, vco2wave 3
-\, patchpitchtovcf 1 \, patchpitchtonoisemod 1;
-#X msg 1003 516 vcodecay 0.236 \, vcoegexponent 0.661 vco1egamount
-1 \, vco1frequency 0.228 \, vco1level 0 \, vco2egamount 0.5 \, vco2frequency
-0.283 \, vco2level 0.602 \, fmamount 0.519 \, syncamount 0 \, noiselevel
-0.026 \, noisevcfmod 0 \, vcfcutoff 0 \, vcfegamount 0.33 \, vcfdecay
-0.149 \, vcfegexponent 0.748 \, vcfresonance 0 \, vcadecay 0.33 \,
-vcaegexponent 0.722 \, seqpitchmod 2 \, vco1wave 1 \, vco2wave 2 \,
-patchpitchtovcf 0 \, patchpitchtonoisemod 0;
-#X msg 1461 631 vcodecay 0.31 \, vcoegexponent 0.868 vco1egamount 0.253
-\, vco1frequency 0.278 \, vco1level 0.244 \, vco2egamount 0.772 \,
-vco2frequency 0.12 \, vco2level 0.293 \, fmamount 0.049 syncamount
-0.437 noiselevel 0.026 \, noisevcfmod 0.106 \, vcfcutoff 0.262 \, vcfegamount
-0.558 \, vcfdecay 0.078 \, vcfegexponent 0.905 \, vcfresonance 0.334
-\, vcadecay 0.157 \, vcaegexponent 0.481 \, seqpitchmod 0 \, vco1wave
-0 \, vco2wave 0 \, patchpitchtovcf 0 \, patchpitchtonoisemod 0;
-#X msg 1486 499 vcodecay 0.784 \, vcoegexponent 0.253 vco1egamount
-0.687 \, vco1frequency 0.408 \, vco1level 0 \, vco2egamount 0.35 \,
-vco2frequency 0.71 \, vco2level 0.228 \, fmamount 0.437 \, syncamount
-0.041 \, noiselevel 0.181 \, noisevcfmod 0.27 \, vcfcutoff 0.262 \,
-vcfegamount 0.805 \, vcfdecay 0.067 \, vcfegexponent 0.562 \, vcfresonance
-0.673 \, vcadecay 0.18 \, vcaegexponent 0.738 \, seqpitchmod 2 \, vco1wave
-3 \, vco2wave 3 \, patchpitchtovcf 0 \, patchpitchtonoisemod 1;
+#X msg 1001 382 vcodecay 0.247 \, vcoegexponent 0.253 \, vco1egamount 0.129 \, vco1frequency 0.055 \, vco1level 0.677 \, vco2egamount 0.212 \, vco2frequency 0.447 \, vco2level 0.874 \, fmamount 0 \, syncamount 0.086 \, noiselevel 0.291 \, noisevcfmod 0 \, vcfcutoff 0 \, vcfegamount 0 \, vcfdecay 0 \, vcfegexponent 0 \, vcfresonance 0 \, vcadecay 0.267 \, vcaegexponent 0.685 \, seqpitchmod 0 \, vco1wave 3 \, vco2wave 3 \, patchpitchtovcf 1 \, patchpitchtonoisemod 1;
+#X msg 1003 516 vcodecay 0.236 \, vcoegexponent 0.661 vco1egamount 1 \, vco1frequency 0.228 \, vco1level 0 \, vco2egamount 0.5 \, vco2frequency 0.283 \, vco2level 0.602 \, fmamount 0.519 \, syncamount 0 \, noiselevel 0.026 \, noisevcfmod 0 \, vcfcutoff 0 \, vcfegamount 0.33 \, vcfdecay 0.149 \, vcfegexponent 0.748 \, vcfresonance 0 \, vcadecay 0.33 \, vcaegexponent 0.722 \, seqpitchmod 2 \, vco1wave 1 \, vco2wave 2 \, patchpitchtovcf 0 \, patchpitchtonoisemod 0;
+#X msg 1461 631 vcodecay 0.31 \, vcoegexponent 0.868 vco1egamount 0.253 \, vco1frequency 0.278 \, vco1level 0.244 \, vco2egamount 0.772 \, vco2frequency 0.12 \, vco2level 0.293 \, fmamount 0.049 syncamount 0.437 noiselevel 0.026 \, noisevcfmod 0.106 \, vcfcutoff 0.262 \, vcfegamount 0.558 \, vcfdecay 0.078 \, vcfegexponent 0.905 \, vcfresonance 0.334 \, vcadecay 0.157 \, vcaegexponent 0.481 \, seqpitchmod 0 \, vco1wave 0 \, vco2wave 0 \, patchpitchtovcf 0 \, patchpitchtonoisemod 0;
+#X msg 1486 499 vcodecay 0.784 \, vcoegexponent 0.253 vco1egamount 0.687 \, vco1frequency 0.408 \, vco1level 0 \, vco2egamount 0.35 \, vco2frequency 0.71 \, vco2level 0.228 \, fmamount 0.437 \, syncamount 0.041 \, noiselevel 0.181 \, noisevcfmod 0.27 \, vcfcutoff 0.262 \, vcfegamount 0.805 \, vcfdecay 0.067 \, vcfegexponent 0.562 \, vcfresonance 0.673 \, vcadecay 0.18 \, vcaegexponent 0.738 \, seqpitchmod 2 \, vco1wave 3 \, vco2wave 3 \, patchpitchtovcf 0 \, patchpitchtonoisemod 1;
 #X connect 0 0 26 0;
 #X connect 1 0 26 0;
 #X connect 2 0 26 0;
@@ -342,4 +245,4 @@ vcfegamount 0.805 \, vcfdecay 0.067 \, vcfegexponent 0.562 \, vcfresonance
 #X connect 61 0 47 0;
 #X connect 62 0 47 0;
 #X connect 63 0 47 0;
-#X coords 0 0 1 1 580 535 2 0 200;
+#X coords 0 0 1 1 400 438 2 0 200;

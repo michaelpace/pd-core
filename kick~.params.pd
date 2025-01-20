@@ -1,16 +1,15 @@
 #N canvas 121 159 645 481 12;
-#X obj 2 25 mspparam frequency 0 400;
-#X obj 2 81 mspparam attack;
-#X obj 2 100 mspparam decay;
-#X obj 2 119 mspparam shape;
-#X obj 2 44 mspparam range;
+#X obj 1 25 mspparam frequency 0 400;
+#X obj 1 66 mspparam attack;
+#X obj 1 84 mspparam decay;
+#X obj 1 102 mspparam shape;
+#X obj 1 43 mspparam range;
 #X obj 2 355 outlet;
-#X obj 2 157 mspparam velocity;
+#X obj 1 125 mspparam velocity;
 #X obj 181 201 inlet;
-#X text 111 3 ----- kick :) -----;
-#X obj 181 225 route frequency range attack decay shape velocity clip
-;
-#X obj 2 176 mspparam clip 0 1 0;
+#X text 33 3 ----- kick :) -----;
+#X obj 181 225 route frequency range attack decay shape velocity clip;
+#X obj 1 143 mspparam clip 0 1 0;
 #X connect 0 0 5 0;
 #X connect 1 0 5 0;
 #X connect 2 0 5 0;
@@ -26,4 +25,4 @@
 #X connect 9 5 6 0;
 #X connect 9 6 10 0;
 #X connect 10 0 5 0;
-#X coords 0 -1 1 1 351 194 2 1 1;
+#X coords 0 -1 1 1 204 160 2 1 1;

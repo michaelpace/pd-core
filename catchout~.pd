@@ -1,0 +1,10 @@
+#N canvas 60 621 310 91 12;
+#X obj 25 21 catch~ outL;
+#X obj 106 21 catch~ outC;
+#X obj 187 21 catch~ outR;
+#X obj 25 45 outlet~;
+#X obj 187 45 outlet~;
+#X connect 0 0 3 0;
+#X connect 1 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
