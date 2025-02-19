@@ -1,4 +1,4 @@
-#N canvas 4 50 1512 884 12;
+#N canvas 0 38 1512 884 12;
 #X obj 54 999 *~;
 #X obj 619 541 noise~;
 #X obj 72 926 msphsl 0 1;
@@ -14,11 +14,10 @@
 #X obj 54 372 *;
 #X obj 54 503 +;
 #X obj 54 528 +;
-#X floatatom 175 485 5 0 0 0 - - -;
+#X floatatom 175 485 5 0 0 0 - - - 0;
 #X obj 897 921 +~;
-#X obj 75 277 hsl 40 20 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2453 1;
-#X floatatom 72 350 5 0 0 0 - - -;
+#X obj 75 277 hsl 40 20 -1 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 72 350 5 0 0 0 - - - 0;
 #X obj 72 302 easeinoutcubic;
 #X obj 54 480 *;
 #X obj 897 898 *~;
@@ -29,22 +28,17 @@
 #X obj 338 370 *;
 #X obj 338 501 +;
 #X obj 338 526 +;
-#X floatatom 459 483 5 0 0 0 - - -;
-#X obj 359 275 hsl 40 20 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 1443 1;
-#X floatatom 356 348 5 0 0 0 - - -;
+#X floatatom 459 483 5 0 0 0 - - - 0;
+#X obj 359 275 hsl 40 20 -1 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 356 348 5 0 0 0 - - - 0;
 #X obj 356 300 easeinoutcubic;
 #X obj 338 478 *;
-#X obj 1032 771 hsl 50 20 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 1032 771 hsl 50 20 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 1029 796 easeincubic;
-#X obj 993 640 hsl 50 20 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 269 1;
-#X obj 900 556 hsl 50 20 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 2352 1;
+#X obj 993 640 hsl 50 20 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 900 556 hsl 50 20 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 897 581 easeincubic;
-#X obj 1068 1036 hsl 50 20 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 1068 1036 hsl 50 20 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 407 275 vco 2 eg amount;
 #X text 121 276 vco 1 eg amount;
 #X text 193 925 vco 1 level;
@@ -57,8 +51,7 @@
 #X text 251 48 vco decay;
 #N canvas 0 38 314 300 seqpitchmodtoggle 0;
 #X obj 32 210 spigot, f 26;
-#X obj 163 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 163 92 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 163 112 sel 0 1, f 15;
 #X obj 163 136 t b b;
 #X msg 195 160 0;
@@ -89,8 +82,7 @@
 #X restore 170 532 pd seqpitchmodtoggle;
 #N canvas 0 368 314 300 seqpitchmodtoggle 0;
 #X obj 32 210 spigot, f 26;
-#X obj 163 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 163 92 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 163 112 sel 0 1, f 15;
 #X obj 163 136 t b b;
 #X msg 195 160 0;
@@ -121,13 +113,13 @@
 #X restore 454 529 pd seqpitchmodtoggle;
 #X obj 320 794 +~;
 #X text 150 724 fm amount;
-#X floatatom 108 726 5 0 1000 0 - - -;
+#X floatatom 108 726 5 0 1000 0 - - - 0;
 #N canvas 0 38 189 221 fm 0;
 #X obj 60 164 *~;
 #X obj 15 22 inlet~;
 #X obj 77 22 inlet;
-#X floatatom 77 46 5 0 0 0 - - -;
-#X floatatom 77 93 5 0 0 0 - - -;
+#X floatatom 77 46 5 0 0 0 - - - 0;
+#X floatatom 77 93 5 0 0 0 - - - 0;
 #X obj 60 188 outlet~;
 #X obj 77 69 clip 0 1000;
 #X obj 77 140 line~;
@@ -141,14 +133,12 @@
 #X connect 7 0 0 1;
 #X connect 8 0 7 0;
 #X restore 76 750 pd fm;
-#X obj 205 48 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 5 1;
-#X floatatom 202 122 5 0 0 0 - - -;
+#X obj 205 48 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
+#X floatatom 202 122 5 0 0 0 - - - 0;
 #X obj 633 837 *~, f 7;
 #X text 728 737 noise / vcf mod;
 #X obj 879 945 +~;
-#X obj 682 738 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 682 738 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 879 969 +~, f 44;
 #X obj 642 884 +~;
 #N canvas 0 38 208 181 patch_pitch_to_vcf~ 0;
@@ -203,7 +193,7 @@
 #X msg 45 137 \$1 20;
 #X obj 45 161 line~;
 #X obj 45 66 easeincubic;
-#X floatatom 45 114 5 0 0 0 - - -;
+#X floatatom 45 114 5 0 0 0 - - - 0;
 #X obj 45 17 inlet;
 #X obj 45 41 clip 0 1;
 #X obj 45 185 outlet~;
@@ -219,14 +209,10 @@
 #X obj 8 626 oscillators~;
 #X obj 273 818 oscillators~;
 #X text 462 767 sync amount;
-#X obj 419 766 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+#X obj 419 766 hsl 40 20 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 1586 974 *~ 1;
 #X obj 542 21 inlet;
-#X obj 542 45 route vcodecay vco1egamount vco2egamount vco1frequency
-vco2frequency vco1wave vco2wave vco1level vco2level fmamount syncamount
-noiselevel noisevcfmod vcfegamount vcfdecay vcfcutoff vcfresonance
-vcadecay pitch velocity, f 361;
+#X obj 542 45 route vcodecay vco1egamount vco2egamount vco1frequency vco2frequency vco1wave vco2wave vco1level vco2level fmamount syncamount noiselevel noisevcfmod vcfegamount vcfdecay vcfcutoff vcfresonance vcadecay pitch velocity, f 361;
 #X obj 3385 635 print UNKNOWN_PARAMETER;
 #X obj 542 69 clip 0 1;
 #X obj 542 117 s \$0-vcodecay;
@@ -287,13 +273,11 @@ vcadecay pitch velocity, f 361;
 #X obj 2813 93 easeincubic;
 #X obj 3066 158 int;
 #X obj 3066 182 clip 0 1;
-#X obj 3066 206 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+#X obj 3066 206 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 3066 226 s \$0-patch_pitch_to_vcf;
 #X obj 3191 258 int;
 #X obj 3191 282 clip 0 1;
-#X obj 3191 306 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+#X obj 3191 306 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 3191 326 s \$0-patch_pitch_to_noisemod;
 #X obj 3316 158 int;
 #X obj 3316 182 clip 0 2;
@@ -303,8 +287,7 @@ vcadecay pitch velocity, f 361;
 #X obj 54 129 r \$0-tick;
 #X obj 338 127 r \$0-tick;
 #X obj 915 690 r \$0-tick;
-#X obj 3316 206 hradio 15 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+#X obj 3316 206 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 2813 117 scaled 0 1 30 800;
 #X obj 1682 762 msphsl 0 1;
 #X msg 897 629 \$1 10;
@@ -338,10 +321,8 @@ vcadecay pitch velocity, f 361;
 #X obj 1664 664 scaled 0 1 0 7500;
 #X obj 990 689 scaled 0 1 5 7500;
 #X obj 202 98 * 7500;
-#X obj 3066 134 route patchpitchtovcf patchpitchtonoisemod seqpitchmod
-, f 79;
-#X obj 3030 434 route vcoegexponent vcfegexponent vcaegexponent, f
-79;
+#X obj 3066 134 route patchpitchtovcf patchpitchtonoisemod seqpitchmod, f 79;
+#X obj 3030 434 route vcoegexponent vcfegexponent vcaegexponent, f 79;
 #X obj 3030 458 scaled 0 1 1 8;
 #X obj 3213 458 scaled 0 1 1 8;
 #X obj 3396 458 scaled 0 1 1 8;
@@ -368,8 +349,6 @@ vcadecay pitch velocity, f 361;
 #X obj 920 69 clip 0 1;
 #X obj 1046 69 clip 0 1;
 #X obj 804 1034 bob~, f 26;
-#X obj 169 610 quantizedmode aeolian 60;
-#X obj 401 612 quantizedmode aeolian 60;
 #X connect 0 0 197 0;
 #X connect 1 0 5 0;
 #X connect 1 0 58 0;
@@ -385,7 +364,7 @@ vcadecay pitch velocity, f 361;
 #X connect 11 0 21 0;
 #X connect 12 0 20 0;
 #X connect 13 0 14 0;
-#X connect 14 0 210 0;
+#X connect 14 0 159 0;
 #X connect 15 0 13 1;
 #X connect 16 0 60 1;
 #X connect 17 0 19 0;
@@ -399,7 +378,7 @@ vcadecay pitch velocity, f 361;
 #X connect 25 0 22 1;
 #X connect 26 0 33 0;
 #X connect 27 0 28 0;
-#X connect 28 0 211 0;
+#X connect 28 0 157 0;
 #X connect 29 0 27 1;
 #X connect 30 0 32 0;
 #X connect 31 0 26 1;
@@ -571,5 +550,3 @@ vcadecay pitch velocity, f 361;
 #X connect 207 0 81 0;
 #X connect 208 0 82 0;
 #X connect 209 0 9 0;
-#X connect 210 0 159 0;
-#X connect 211 0 157 0;

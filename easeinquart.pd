@@ -1,0 +1,7 @@
+#N canvas 208 246 450 129 12;
+#X obj 167 47 inlet;
+#X obj 167 95 outlet;
+#X obj 167 71 pow 4;
+#X text 14 12 /// x * x * x * x per https://easings.net/#easeInQuart;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

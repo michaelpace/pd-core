@@ -36,12 +36,9 @@
 #X obj 621 644 spigot;
 #X obj 479 543 r \$0-begin-recall;
 #X obj 602 543 r \$0-end-recall;
-#X obj 350 597 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 452 605 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
-#X obj 656 594 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 350 597 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 452 605 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 656 594 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 479 567 0;
 #X msg 602 567 1;
 #X obj 638 437 s \$0-recall-length;
@@ -66,8 +63,7 @@
 #X obj 374 117 s \$0-density;
 #X obj 511 45 s \$0-offset;
 #X floatatom 42 46 3 1 1e+07 0 div - - 12;
-#X obj 908 29 route generate length offset save recall density clockdivision
-, f 72;
+#X obj 908 29 route generate length offset save recall density clockdivision, f 72;
 #X obj 280 176 i;
 #X msg 284 231 clockdivision \$1;
 #X obj 295 212 s \$0-clockdivision;
@@ -81,34 +77,24 @@
 #X msg 535 129 1;
 #X obj 535 153 s \$0-clockdivision;
 #X floatatom 37 28 4 0 1 1 - - - 0;
-#X obj 25 28 tgl 12 0 empty empty gen -22 8 0 12 #fcfcfc #000000 #000000
-0 1;
+#X obj 25 28 tgl 12 0 empty empty gen -22 8 0 12 #fcfcfc #000000 #000000 0 1;
 #X obj 355 153 sel 1;
 #X msg 344 176 set 1;
 #X msg 392 176 set 0;
 #X floatatom 42 64 3 1 16 0 len - - 12;
 #X floatatom 42 82 3 0 15 0 off - - 12;
-#X obj 5 149 hsl 60 10 0 1 0 0 empty empty empty -55 7 0 12 #fcfcfc
-#000000 #000000 0 1;
+#X obj 5 149 hsl 60 10 0 1 0 0 empty empty empty -55 7 0 12 #fcfcfc #000000 #000000 0 1;
 #X text 4 5 sequ :);
 #X obj 457 367 + 0;
 #X obj 619 70 - 0;
-#X obj 2 100 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 2 112 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 2 124 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 2 136 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 14 100 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 14 112 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 14 124 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 14 136 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 2 100 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 2 112 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 2 124 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 2 136 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 14 100 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 14 112 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 14 124 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 14 136 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X msg -10 455 1;
 #X msg 20 455 2;
 #X msg 50 455 3;
@@ -118,22 +104,14 @@
 #X msg 170 455 7;
 #X msg 200 455 8;
 #X msg -10 479 save \$1;
-#X obj 43 100 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 43 112 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 43 124 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 43 136 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 55 100 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 55 112 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 55 124 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
-#X obj 55 136 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 43 100 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 43 112 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 43 124 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 43 136 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 55 100 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 55 112 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 55 124 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 55 136 bng 12 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X msg 241 468 1;
 #X msg 271 468 2;
 #X msg 301 468 3;
@@ -148,8 +126,7 @@
 #X obj 78 138 outlet;
 #X msg 10 95 label .\$1;
 #X obj 116 14 inlet;
-#X obj 116 38 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 116 38 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 10 65 fbank2, f 11;
 #X msg 113 100 label .\$1*;
 #X connect 0 0 5 0;
@@ -160,10 +137,17 @@
 #X connect 5 1 6 0;
 #X connect 6 0 1 0;
 #X restore 182 166 pd labeller;
-#X obj 30 110 bng 8 50 10 0 empty empty .1* -6 20 0 10 #ffffff #ffffff
-#000000;
+#X obj 30 110 bng 8 50 10 0 empty empty .3 -6 20 0 10 #ffffff #ffffff #000000;
 #X obj 372 277 s \$0-dirty-recall-display;
 #X obj 138 140 r \$0-dirty-recall-display;
+#X floatatom 1179 88 5 0 0 0 - - - 0;
+#X floatatom 1075 85 5 0 0 0 - - - 0;
+#X obj 1075 108 s \$0-save-in;
+#X obj 1179 111 s \$0-recall-in;
+#X obj 86 11 r \$0-save-in;
+#X obj 229 11 r \$0-recall-in;
+#X obj 86 35 sel 1 2 3 4 5 6 7 8;
+#X obj 229 35 sel 1 2 3 4 5 6 7 8;
 #X connect 0 0 1 0;
 #X connect 0 0 57 0;
 #X connect 0 0 59 0;
@@ -261,6 +245,8 @@
 #X connect 64 0 77 0;
 #X connect 64 1 87 0;
 #X connect 64 2 83 0;
+#X connect 64 3 127 0;
+#X connect 64 4 126 0;
 #X connect 64 5 84 0;
 #X connect 64 6 63 0;
 #X connect 65 0 66 0;
@@ -361,4 +347,24 @@
 #X connect 121 0 3 0;
 #X connect 122 0 123 0;
 #X connect 125 0 122 1;
+#X connect 126 0 129 0;
+#X connect 127 0 128 0;
+#X connect 130 0 132 0;
+#X connect 131 0 133 0;
+#X connect 132 0 88 0;
+#X connect 132 1 89 0;
+#X connect 132 2 90 0;
+#X connect 132 3 91 0;
+#X connect 132 4 92 0;
+#X connect 132 5 93 0;
+#X connect 132 6 94 0;
+#X connect 132 7 95 0;
+#X connect 133 0 105 0;
+#X connect 133 1 106 0;
+#X connect 133 2 107 0;
+#X connect 133 3 108 0;
+#X connect 133 4 109 0;
+#X connect 133 5 110 0;
+#X connect 133 6 111 0;
+#X connect 133 7 112 0;
 #X coords 0 -1 1 1 65 157 2 2 2;

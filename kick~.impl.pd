@@ -44,8 +44,7 @@
 #X obj 518 355 *~ 0.0025;
 #X obj 727 433 pow~ 20;
 #X obj 516 206 t b b b, f 9;
-#X obj 172 63 route frequency attack decay shape range velocity clip
-, f 125;
+#X obj 172 63 route frequency attack decay shape range velocity clip, f 125;
 #X obj 919 87 clip 0 1;
 #X obj 919 111 s \$0-clip;
 #X obj 37 547 softclip~;
@@ -55,6 +54,7 @@
 #X obj 296 87 easeinsine;
 #X obj 669 110 scaled 0 1 0 400;
 #X obj 296 111 scaled 0 1 1 60;
+#X obj 693 564 outlet~;
 #X connect 1 0 2 0;
 #X connect 2 0 16 0;
 #X connect 3 0 16 1;
@@ -88,6 +88,7 @@
 #X connect 38 0 1 0;
 #X connect 39 0 21 1;
 #X connect 39 0 43 0;
+#X connect 39 0 55 0;
 #X connect 40 0 28 0;
 #X connect 41 0 42 0;
 #X connect 42 0 40 0;

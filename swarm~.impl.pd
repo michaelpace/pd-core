@@ -1,8 +1,7 @@
 #N canvas 0 38 1512 884 12;
 #X floatatom 795 257 5 0 0 0 - - - 0;
 #X obj 942 282 loadbang;
-#X obj 942 306 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 942 306 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X msg 942 326 0;
 #X obj 57 671 wavefolder~;
 #X obj 498 979 outlet~;
@@ -22,8 +21,7 @@
 #X obj 726 699 r \$0-resonance;
 #X obj 817 95 s \$0-attack;
 #X obj 1005 650 r \$0-frequency;
-#X obj 1005 742 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 1005 742 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 494 837 *~;
 #X obj 1005 765 ahdsr~, f 63;
 #X obj 1092 742 r \$0-attack;
@@ -37,8 +35,7 @@
 #X obj 1028 142 s \$0-noisemix;
 #X obj 83 556 r \$0-noisemix;
 #X obj 69 629 *~;
-#X obj 429 571 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 429 571 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 691 567 r \$0-decay;
 #X obj 26 578 *~;
 #X obj 429 591 ahdsr~ 5, f 63;
@@ -68,8 +65,7 @@
 #X obj 54 204 *~;
 #X obj 126 209 *~;
 #X obj 197 212 *~;
-#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 283 50 sel 0 1 2;
 #X msg 211 90 1;
 #X msg 242 90 0;
@@ -130,8 +126,7 @@
 #X obj 54 204 *~;
 #X obj 126 209 *~;
 #X obj 197 212 *~;
-#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 283 50 sel 0 1 2;
 #X msg 211 90 1;
 #X msg 242 90 0;
@@ -192,8 +187,7 @@
 #X obj 54 204 *~;
 #X obj 126 209 *~;
 #X obj 197 212 *~;
-#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 283 50 sel 0 1 2;
 #X msg 211 90 1;
 #X msg 242 90 0;
@@ -254,8 +248,7 @@
 #X obj 54 204 *~;
 #X obj 126 209 *~;
 #X obj 197 212 *~;
-#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 283 50 sel 0 1 2;
 #X msg 211 90 1;
 #X msg 242 90 0;
@@ -316,8 +309,7 @@
 #X obj 54 204 *~;
 #X obj 126 209 *~;
 #X obj 197 212 *~;
-#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 283 50 sel 0 1 2;
 #X msg 211 90 1;
 #X msg 242 90 0;
@@ -378,8 +370,7 @@
 #X obj 54 204 *~;
 #X obj 126 209 *~;
 #X obj 197 212 *~;
-#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 283 50 sel 0 1 2;
 #X msg 211 90 1;
 #X msg 242 90 0;
@@ -440,8 +431,7 @@
 #X obj 54 204 *~;
 #X obj 126 209 *~;
 #X obj 197 212 *~;
-#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 283 50 sel 0 1 2;
 #X msg 211 90 1;
 #X msg 242 90 0;
@@ -502,8 +492,7 @@
 #X obj 54 204 *~;
 #X obj 126 209 *~;
 #X obj 197 212 *~;
-#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000
-#000000 0;
+#X obj 283 30 hradio 15 1 0 3 empty empty empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 283 50 sel 0 1 2;
 #X msg 211 90 1;
 #X msg 242 90 0;
@@ -557,8 +546,7 @@
 #X connect 23 0 2 0;
 #X connect 23 0 1 0;
 #X restore 643 345 pd multiosc~;
-#X obj 1151 330 hradio 15 1 0 3 empty empty sine_saw_tri 50 6 0 10
-#fcfcfc #000000 #000000 0;
+#X obj 1151 330 hradio 15 1 0 3 empty empty sine_saw_tri 50 6 0 10 #fcfcfc #000000 #000000 0;
 #X obj 1161 257 sel 0 1 2 3, f 23;
 #X msg 1151 301 0;
 #X msg 1184 301 1;
@@ -621,8 +609,7 @@
 #X obj 1005 789 pow~, f 30;
 #X obj 1501 164 loadbang;
 #X msg 1501 188 0;
-#X obj 1656 66 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 1656 66 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 1656 90 s \$0-frequencytriggersgate;
 #X obj 1044 674 r \$0-frequencytriggersgate;
 #X obj 1005 698 spigot;
@@ -631,16 +618,14 @@
 #X obj 429 547 spigot;
 #X obj 1600 158 loadbang;
 #X msg 1600 182 1;
-#X obj 26 40 route frequency spread character type highcutoff lowcutoff
-resonance attack decay noisemix reverbmix velocity noiseshape decayshape
-frequencytriggersgate gate, f 267;
-#X obj 1776 119 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
-#000000 #000000;
+#X obj 26 40 route frequency spread character type highcutoff lowcutoff resonance attack decay noisemix reverbmix velocity noiseshape decayshape frequencytriggersgate gate, f 267;
+#X obj 1776 119 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 1776 143 s \$0-gate;
 #X obj 932 698 r \$0-gate;
 #X obj 355 547 r \$0-gate;
 #X obj 679 200 r \$0-spread;
 #X obj 680 224 easeinoutcubic;
+#X obj 863 975 outlet~;
 #X connect 0 0 102 0;
 #X connect 0 0 96 0;
 #X connect 0 0 97 0;
@@ -784,6 +769,7 @@ frequencytriggersgate gate, f 267;
 #X connect 125 0 126 0;
 #X connect 126 0 127 1;
 #X connect 127 0 23 1;
+#X connect 127 0 146 0;
 #X connect 128 0 129 0;
 #X connect 129 0 123 0;
 #X connect 130 0 131 0;

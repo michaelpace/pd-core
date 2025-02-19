@@ -1,49 +1,34 @@
-#N canvas 0 38 771 597 12;
+#N canvas 268 112 771 597 12;
 #X obj 136 177 inlet;
 #X obj 43 177 inlet~;
 #X text 38 153 signal;
 #X text 133 153 \$1 distortion %;
-#X obj 136 205 f \$1;
 #X obj 177 177 loadbang;
-#X text 30 30 // applies clipping and make-up gain to the original
-signal \,;
-#X text 31 15 // based on https://www.youtube.com/watch?v=hIkpUGbfI8o
-;
-#X text 31 61 // sums them all together.;
-#X text 31 77 // NOTE: there's a lot of room for customization which
-i'm not doing yet... like applying different clip amounts or make-up
-amounts to different bands. right now the bands don't really matter.
-;
-#X text 31 45 // and also to 3 bands (poles specified with \$2 and
-\$3) \, and;
 #X obj 43 504 outlet~;
-#X obj 108 373 * -1;
-#X obj 43 397 clip~, f 19;
+#X obj 43 397 clip~ -1 1, f 19;
+#X obj 43 201 *~;
+#X obj 136 201 clip 0 1;
+#X obj 136 289 ramp~;
+#X obj 218 345 ramp~;
 #X obj 43 463 *~, f 24;
-#X msg 210 402 \$1 10;
-#X obj 210 426 line~;
-#X floatatom 347 460 5 0 0 0 - - - 0;
-#X obj 136 349 t f f, f 6;
-#X obj 136 277 absdiff 1;
-#X obj 136 253 t f f, f 11;
-#X obj 210 378 scaled 0 1 1 3;
-#X obj 136 229 clip 0 0.9;
-#X obj 136 325 scaled 0 1 0 0.99;
-#X connect 0 0 4 0;
-#X connect 1 0 13 0;
-#X connect 4 0 22 0;
-#X connect 5 0 4 0;
-#X connect 12 0 13 1;
-#X connect 13 0 14 0;
-#X connect 14 0 11 0;
-#X connect 15 0 16 0;
-#X connect 15 0 17 0;
-#X connect 16 0 14 1;
-#X connect 18 0 12 0;
-#X connect 18 1 13 2;
-#X connect 19 0 23 0;
-#X connect 20 0 19 0;
-#X connect 20 1 21 0;
-#X connect 21 0 15 0;
-#X connect 22 0 20 0;
-#X connect 23 0 18 0;
+#X floatatom 323 217 5 0 0 0 - - - 0;
+#X floatatom 308 354 12 0 0 0 - - - 0;
+#X obj 136 265 scaled 0 1 1 200;
+#X obj 218 321 scaled 0 1 1 0.1;
+#X obj 223 294 easeoutquint;
+#X obj 136 225 easeinquart;
+#X connect 0 0 8 0;
+#X connect 1 0 7 0;
+#X connect 6 0 11 0;
+#X connect 7 0 6 0;
+#X connect 8 0 16 0;
+#X connect 8 0 17 0;
+#X connect 9 0 7 1;
+#X connect 10 0 11 1;
+#X connect 11 0 5 0;
+#X connect 14 0 9 0;
+#X connect 14 0 12 0;
+#X connect 15 0 10 0;
+#X connect 15 0 13 0;
+#X connect 16 0 15 0;
+#X connect 17 0 14 0;

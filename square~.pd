@@ -6,7 +6,9 @@
 #X obj 121 7 inlet;
 #X obj 47 88 hv.osc square;
 #X obj 121 31 deff \$1 0.5;
+#X obj 121 55 ramp;
 #X connect 3 0 5 0;
 #X connect 4 0 6 0;
 #X connect 5 0 0 0;
-#X connect 6 0 5 1;
+#X connect 6 0 7 0;
+#X connect 7 0 5 1;

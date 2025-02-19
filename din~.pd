@@ -1,0 +1,9 @@
+#N canvas 295 333 659 431 12;
+#X obj 1 1 din~.params;
+#X obj 19 340 outlet~;
+#X obj 19 316 din~.impl;
+#X obj 469 229 inlet;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X coords 0 -1 1 1 204 295 2 1 1;

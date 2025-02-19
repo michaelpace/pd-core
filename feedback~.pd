@@ -1,0 +1,7 @@
+#N canvas 123 159 200 116 12;
+#X obj 16 11 inlet~;
+#X obj 16 35 delwrite~ \$0-feedback 1;
+#X obj 16 59 delread~ \$0-feedback 1;
+#X obj 16 83 outlet~;
+#X connect 0 0 1 0;
+#X connect 2 0 3 0;
