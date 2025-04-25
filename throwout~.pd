@@ -12,10 +12,14 @@
 #X text 2 3 -- throwout~ :) --;
 #X obj 317 23 inlet;
 #X floatatom 317 47 5 0 0 0 - - - 0;
+#X obj 109 194 outlet~;
+#X obj 230 194 outlet~;
 #X connect 0 0 4 0;
 #X connect 2 0 5 0;
 #X connect 4 0 1 0;
+#X connect 4 0 13 0;
 #X connect 5 0 3 0;
+#X connect 5 0 14 0;
 #X connect 6 0 7 0;
 #X connect 7 0 9 0;
 #X connect 8 0 4 1;

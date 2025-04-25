@@ -34,10 +34,9 @@
 #X text 421 297 ramp from 1 to 0;
 #X text 427 321 for snapiness;
 #X obj 41 416 *~;
-#X obj 57 392 ramp~;
+#X obj 59 392 ramp~;
 #X obj 41 320 pow~ 20;
-#X obj 41 73 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000;
+#X obj 41 73 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X text 427 202 noise;
 #X obj 896 19 inlet;
 #X obj 1077 396 print UNKNOWN_PARAMETER;
@@ -52,10 +51,9 @@
 #X obj 676 44 r \$0-filteroffset;
 #X obj 920 272 r \$0-q;
 #X obj 920 296 f;
-#X obj 57 368 r \$0-tonelevel;
+#X obj 59 368 r \$0-tonelevel;
 #X obj 248 296 ramp~;
-#X obj 896 43 route duration tonefreq filteroffset q tonelevel clip
-, f 83;
+#X obj 896 43 route duration tonefreq filteroffset q tonelevel clip, f 83;
 #X obj 1383 115 s \$0-clip;
 #X obj 41 574 softclip~;
 #X obj 384 526 r \$0-clip;

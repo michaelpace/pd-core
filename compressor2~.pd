@@ -12,7 +12,7 @@
 #X text 68 49 // L;
 #X text 123 49 // R;
 #X text 249 22 // \$1 THRESHOLD (0-1);
-#X obj 248 67 deff \$1 1;
+#X obj 248 67 deff \$1 0.85;
 #X connect 0 0 2 0;
 #X connect 1 0 2 1;
 #X connect 2 0 8 0;

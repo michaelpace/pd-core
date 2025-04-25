@@ -1,6 +1,5 @@
 #N canvas 452 223 461 381 12;
-#X obj 30 189 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#X obj 30 189 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000 0 1;
 #X floatatom 30 270 5 0 0 0 - - - 0;
 #X obj 30 79 inlet;
 #X obj 202 79 inlet;
@@ -15,8 +14,11 @@
 #X obj 30 293 + 1;
 #X floatatom 30 317 5 0 0 0 - - - 0;
 #X obj 30 242 counter;
-#X text 11 14 emits ticks at rate \$1 from 1 to loop length (\$2) \,
-inclusive;
+#X text 11 14 emits ticks at rate \$1 from 1 to loop length (\$2) \, inclusive;
+#X obj 243 222 reset-clockdiv-counters;
+#X obj 146 270 sel 0;
+#X obj 146 318 s reset-clockdiv-counters;
+#X obj 146 294 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
 #X connect 0 0 7 0;
 #X connect 1 0 12 0;
 #X connect 2 0 0 0;
@@ -28,3 +30,6 @@ inclusive;
 #X connect 12 0 13 0;
 #X connect 13 0 5 0;
 #X connect 14 0 1 0;
+#X connect 14 0 17 0;
+#X connect 17 0 19 0;
+#X connect 19 0 18 0;
