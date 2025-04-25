@@ -278,6 +278,7 @@
 #X obj 139 638 t b f f, f 43;
 #X text 450 716 ^ sequence of values;
 #X text 157 694 gate probability >;
+#X obj 1428 265 r reset-clockdiv-counters;
 #X connect 0 0 77 0;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
@@ -402,3 +403,4 @@
 #X connect 111 0 110 0;
 #X connect 111 1 7 0;
 #X connect 111 2 8 0;
+#X connect 114 0 55 0;
