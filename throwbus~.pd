@@ -9,7 +9,7 @@
 #X obj 1 23 level;
 #X obj 21 197 loadbang;
 #X obj 21 220 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 54 9 bng 8 250 50 0 empty empty bus-1 9 4 0 12 #fcfcfc #000000 #000000;
+#X obj 54 9 bng 8 250 50 0 empty empty bus-2 9 4 0 12 #fcfcfc #000000 #000000;
 #X obj 21 244 f \$1;
 #X msg 21 268 symbol bus-\$1;
 #X msg 21 292 label \$1;
@@ -18,10 +18,14 @@
 #X obj 252 128 throw~ bus-\$1-r;
 #X obj 327 22 inlet;
 #X floatatom 327 46 5 0 0 0 - - - 0;
+#X obj 150 193 outlet~;
+#X obj 276 202 outlet~;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 15 0;
+#X connect 2 0 19 0;
 #X connect 3 0 16 0;
+#X connect 3 0 20 0;
 #X connect 4 0 5 0;
 #X connect 5 0 7 0;
 #X connect 6 0 2 1;

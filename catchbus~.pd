@@ -7,7 +7,7 @@
 #X obj 1 23 level;
 #X obj 21 197 loadbang;
 #X obj 21 220 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
-#X obj 34 9 bng 8 250 50 0 empty empty bus-45 9 4 0 12 #fcfcfc #000000 #000000;
+#X obj 34 9 bng 8 250 50 0 empty empty bus-2 9 4 0 12 #fcfcfc #000000 #000000;
 #X obj 21 244 f \$1;
 #X msg 21 268 symbol bus-\$1;
 #X msg 21 292 label \$1;

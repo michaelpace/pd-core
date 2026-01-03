@@ -1,5 +1,4 @@
 #N canvas 92 130 679 517 12;
-#X obj 116 345 dt2~.impl, f 38;
 #X obj 264 173 inlet;
 #X obj 353 173 inlet~;
 #X obj 399 173 inlet~;
@@ -11,12 +10,13 @@
 #X text 378 148 signals;
 #X text 493 146 params;
 #X obj 379 369 outlet~;
-#X connect 0 0 5 0;
-#X connect 0 1 6 0;
-#X connect 0 2 11 0;
-#X connect 1 0 0 0;
-#X connect 2 0 0 1;
-#X connect 3 0 0 2;
-#X connect 4 0 7 0;
-#X connect 7 0 0 3;
-#X coords 0 -1 1 1 204 241 2 2 1;
+#X obj 116 345 dt2~.impl, f 38;
+#X connect 0 0 11 0;
+#X connect 1 0 11 1;
+#X connect 2 0 11 2;
+#X connect 3 0 6 0;
+#X connect 6 0 11 3;
+#X connect 11 0 4 0;
+#X connect 11 1 5 0;
+#X connect 11 2 10 0;
+#X coords 0 -1 1 1 201 264 2 2 1;

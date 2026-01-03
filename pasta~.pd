@@ -1,0 +1,11 @@
+#N canvas 501 25 1088 994 12;
+#X obj 0 0 pasta~.params;
+#X obj 125 147 pasta~.impl;
+#X obj 352 140 inlet~;
+#X obj 435 140 inlet;
+#X obj 125 171 outlet~;
+#X connect 0 0 1 1;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
+#X coords 0 -1 1 1 201 109 2 0 0;

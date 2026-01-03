@@ -4,36 +4,30 @@
 #X obj 121 3 loadbang;
 #X floatatom 20 101 9 0 0 0 - - - 0;
 #X obj 13 154 outlet;
-#X obj 23 120 hsl 155 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 0 1;
+#X obj 23 120 hsl 155 15 1000 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X text 88 101 snapshotter~;
 #X msg 373 270 range \$1 \$2;
 #X obj 350 205 f;
 #X obj 437 206 f;
 #X obj 350 229 pack f f;
-#X obj 221 59 deff \$1 20;
-#X obj 121 53 metro;
 #X obj 121 27 t b b b b, f 58;
-#X obj 373 182 deff \$2 0;
-#X obj 447 182 deff \$3 1;
-#X text 577 39 /// \$1 IS SNAPSHOT CADENCE IN MS. \; /// \$2 AND \$3
-ARE RANGE OF VALUES TO PLOT. \; /// \$2 AND \$3 DEFAULT TO 0 AND 1
-;
+#X obj 121 53 metro 20;
+#X obj 373 182 deff \$1 -1;
+#X obj 457 182 deff \$2 1;
+#X text 577 39 /// \$1 AND \$2 ARE RANGE OF VALUES TO PLOT. \; /// \$1 AND \$2 DEFAULT TO -1 AND 1;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
-#X connect 2 0 13 0;
+#X connect 2 0 11 0;
 #X connect 3 0 4 0;
 #X connect 3 0 5 0;
 #X connect 7 0 5 0;
 #X connect 8 0 10 0;
 #X connect 9 0 10 1;
 #X connect 10 0 7 0;
-#X connect 11 0 12 1;
+#X connect 11 0 12 0;
+#X connect 11 2 8 0;
+#X connect 11 3 9 0;
 #X connect 12 0 1 0;
-#X connect 13 0 12 0;
-#X connect 13 1 11 0;
-#X connect 13 2 8 0;
-#X connect 13 3 9 0;
-#X connect 14 0 8 1;
-#X connect 15 0 9 1;
+#X connect 13 0 8 1;
+#X connect 14 0 9 1;
 #X coords 0 -1 1 1 160 35 2 20 100;

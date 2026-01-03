@@ -61,8 +61,8 @@
 #X obj 93 278 r \$0-reroll;
 #X obj 473 278 r \$0-reroll;
 #X obj 4 118 loadbang;
-#X obj 185 21 bng 19 250 50 0 empty empty reroll -30 10 0 8 #fcfcfc #000000 #000000;
-#X msg 208 21 reroll;
+#X obj 183 21 bng 19 250 50 0 empty empty reroll -30 10 0 8 #fcfcfc #000000 #000000;
+#X msg 206 21 reroll;
 #X obj 20 165 symbol \$1;
 #X symbolatom 1 23 11 0 0 1 \$2 - - 0;
 #X obj 4 141 bng 19 250 50 0 empty empty empty 0 -10 0 12 #fcfcfc #000000 #000000;
@@ -326,4 +326,4 @@
 #X connect 144 1 110 2;
 #X connect 144 1 108 2;
 #X connect 146 0 144 0;
-#X coords 0 -1 1 1 204 112 2 1 1;
+#X coords 0 -1 1 1 201 112 2 1 1;
