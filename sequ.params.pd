@@ -80,8 +80,8 @@
 #X obj 355 153 sel 1;
 #X msg 344 176 set 1;
 #X msg 392 176 set 0;
-#X floatatom 42 64 3 1 16 0 len - - 12;
-#X floatatom 42 82 3 0 15 0 off - - 12;
+#X floatatom 42 64 3 1 64 0 len - - 12;
+#X floatatom 42 82 3 0 63 0 off - - 12;
 #X obj 5 149 hsl 60 10 0 1 0 0 empty empty empty -55 7 0 12 #fcfcfc #000000 #000000 0 1;
 #X text 4 5 sequ :);
 #X obj 457 367 + 0;
